@@ -1,0 +1,2 @@
+[[plugins]]
+repo = 'neoclide/coc.nvim'

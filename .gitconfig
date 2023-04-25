@@ -1,0 +1,14 @@
+[user]
+	name = OJII3
+	email = 84656786+OJII3@users.noreply.github.com
+	signingkey = CE757E28813F9CA7AFF6D7FE422DA46FD288520B
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main

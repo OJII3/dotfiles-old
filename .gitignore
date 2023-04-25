@@ -1,0 +1,18 @@
+/*
+
+# /dir
+!/.config/
+!/.vim/
+
+/.config/**
+!/.config/starship.toml
+!/.config/nvim/
+
+# /files
+!.vimrc
+!.bashrc
+!.zshrc
+!README.md
+!.gitignore
+!.tmux.conf
+!.gitconfig
