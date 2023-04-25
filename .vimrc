@@ -1,3 +1,4 @@
+" Dein settings ======================================================
 let $CACHE = expand('~/.cache')
 if !isdirectory($CACHE)
   call mkdir($CACHE, 'p')
@@ -18,26 +19,16 @@ endif
 " well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
-" Set dein base path (required)
-let s:dein_base = '~/.cache/dein/'
-
-" Set dein source path (required)
-let s:dein_src = '~/.cache/dein/repos/github.com/Shougo/dein.vim'
-
-" Set dein runtime path (required)
-execute 'set runtimepath+=' .. s:dein_src
-
-" Call dein initialization (required)
-call dein#begin(s:dein_base)
-
-call dein#add(s:dein_src)
-
-" Your plugins go here:
-"call dein#add('Shougo/neosnippet.vim')
-"call dein#add('Shougo/neosnippet-snippets')
-
-" Finish dein initialization (required)
-call dein#end()
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+  let g:rc_dir = expand('$HOME/.vim')
+  let s:toml = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+  call dein#load_toml(s:toml, { 'lazy': 0 })
+  call dein#load_toml(s:lazy_toml, { 'lazy': 1 })
+  call dein#end()
+  call dein#save_state()
+endif
 
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
@@ -55,3 +46,15 @@ if dein#check_install()
 endif
 
 
+" Other options ======================================================
+
+set number
+set updatetime=50
+
+nmap <leader>rn <Plug>(coc-rename)
+xmap <leader>a <Plug>(coc-codeaction-selected)
+
+nmap <leader>f [fzf-p]
+xmap <leader>f [fzf-p]
+
+nnoremap <silent> [fzf-p]p :<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>

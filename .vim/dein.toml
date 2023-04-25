@@ -1,2 +1,16 @@
 [[plugins]]
 repo = 'neoclide/coc.nvim'
+rev = 'release'
+merged = false
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+build = './install --all'
+merged = false
+
+[[plugins]]
+repo = 'antoinemadec/coc-fzf'
+rev = 'release'
