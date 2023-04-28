@@ -1,12 +1,16 @@
-/*
+*
 
 # /dir
 !/.config/
 !/.vim/
+!/.vim/*
+!/.vim/*/*
 
-/.config/**
 !/.config/starship.toml
 !/.config/nvim/
+!/.config/nvim/*
+!/.config/nvim/*/*
+!/.config/nvim/*/*/*
 
 # /files
 !.vimrc
@@ -17,3 +21,4 @@
 !.tmux.conf
 !.gitconfig
 !.gitmodules
+
