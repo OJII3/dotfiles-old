@@ -13,6 +13,7 @@
 !/.config/nvim/*/*/*
 
 # /files
+!.profile
 !.vimrc
 !.bashrc
 !.zshrc
