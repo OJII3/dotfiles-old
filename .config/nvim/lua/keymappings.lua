@@ -24,4 +24,4 @@ keymap.set('c', '<C-j>', '<Plug>(skkeleton-enable)', { noremap = false, silent =
 keymap.set('n', '<Space>m', '<Plug>MarkdownPreviewToggle', { noremap = false, silent = true })
 -- toggleterm
 keymap.set('n', '<Space>t', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
-keymap.set('t', '<C-j>', '<C-\\><C-n><cmd>ToggleTerm<CR>', { noremap = true, silent = true })
+keymap.set('t', '<C-[><Space>t', '<C-\\><C-n><cmd>ToggleTerm<CR>', { noremap = true, silent = true })

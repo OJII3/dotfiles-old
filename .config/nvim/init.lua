@@ -1,17 +1,17 @@
 require('base')
 
-vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
-  pattern = {"*.sql"},
-  callback = function () vim.opt.expandtab = true end
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
+  pattern = { "*.sql" },
+  callback = function() vim.opt.expandtab = true end
 })
 
-vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
-  pattern = {"*.go"},
-  callback = function () vim.opt.expandtab = false end
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
+  pattern = { "*.go" },
+  callback = function() vim.opt.expandtab = false end
 })
 
-vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
-  pattern = {"*.ts", "*.tsx", "*.vue", "*.lua"},
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
+  pattern = { "*.ts", "*.tsx", "*.vue", "*.lua" },
   command = 'set shiftwidth=2',
 })
 
