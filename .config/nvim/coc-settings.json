@@ -1,17 +1,9 @@
 {
-  "rome.bin": "$HOME/.volta/bin/rome",
   "coc.preferences.formatOnSave": true,
   "eslint.autoFixOnSave": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
   "stylelintplus.autoFixOnFormat": true,
   "stylelintplus.autoFixOnSave": true,
   "css.validate": false,
-  "scss.validate": false,
-  "languageserver": {
-    "csharp-ls": {
-      "command": "csharp-ls",
-      "filetypes": ["cs"],
-      "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
-    }
-  }
+  "scss.validate": false
 }
