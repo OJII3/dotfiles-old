@@ -21,7 +21,9 @@ keymap.set('n', '<Leader>ca', '<Plug>(coc-codeaction)', { silent = true })    --
 keymap.set('n', '<Leader>gr', '<Plug>(coc-references)', { silent = true })    -- references
 -- skkeleton
 keymap.set('i', '<C-j>', '<Plug>(skkeleton-enable)', { noremap = false, silent = true })
+keymap.set('i', '<C-k>', '<Plug>(skkeleton-disable)', { noremap = false, silent = true })
 keymap.set('c', '<C-j>', '<Plug>(skkeleton-enable)', { noremap = false, silent = true })
+keymap.set('c', '<C-k>', '<Plug>(skkeleton-disable)', { noremap = false, silent = true })
 -- markdown-preview
 keymap.set('n', '<Space>m', '<Plug>MarkdownPreviewToggle', { noremap = false, silent = true })
 -- toggleterm
