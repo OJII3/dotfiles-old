@@ -15,3 +15,4 @@
 
 - Node.js
 - Deno
+- lazygit

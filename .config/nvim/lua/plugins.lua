@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- setup lazy.nivm ==========================================================
 
-vim.g.mapleader = ' ' -- make sure to set `mapleader` before lazy so your mappings are correct
+-- vim.g.mapleader = ' ' -- make sure to set `mapleader` before lazy so your mappings are correct
 
 require('lazy').setup({
   { 'folke/which-key.nvim' },
