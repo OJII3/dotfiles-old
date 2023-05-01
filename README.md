@@ -3,8 +3,7 @@
 ## Install
 
 ```shell
-
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply OJII3
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/OJII3/dotfiles/main/install.sh)"
 ```
 
 ## Tools
