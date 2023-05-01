@@ -22,4 +22,5 @@
 !.tmux.conf
 !.gitconfig
 !.gitmodules
-
+!install.sh
+!update.sh
