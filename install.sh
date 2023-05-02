@@ -22,11 +22,13 @@ if [ ! -d "$DOTFILES_DIR" ]; then
           echo "Invalid input"
           exit 1
         fi
-    else 
+        fi
+    else
         echo "git required"
         exit 1
     fi
 
+    mkdir -p "$DOTFILES_DIR"
     cd "$DOTFILES_DIR"
 
     for f in *;
