@@ -5,5 +5,12 @@
   "stylelintplus.autoFixOnFormat": true,
   "stylelintplus.autoFixOnSave": true,
   "css.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "args": ["--background-index"],
+      "filetypes": ["c", "cpp", "cc", "h", "hpp", "objc", "objcpp"]
+    }
+  }
 }
