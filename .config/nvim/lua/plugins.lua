@@ -43,7 +43,7 @@ require('lazy').setup({
   -- { 'hrsh7th/cmp-nvim-lsp-signature-help' },
   -- { 'onsails/lspkind.nvim' },
   -- { 'williamboman/mason.nvim', build = ":MasonUpdate" },
-  { 'L3MON4D3/LuaSnip' },
+  -- { 'L3MON4D3/LuaSnip' },
   { 'windwp/nvim-autopairs',          init = function() require('nvim-autopairs').setup() end },
   { 'kylechui/nvim-surround' },
   { 'lewis6991/gitsigns.nvim' },

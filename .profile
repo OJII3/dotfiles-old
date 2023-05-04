@@ -37,3 +37,6 @@ export PATH=$PATH:/usr/local/bin
 
 # go
 export PATH=$PATH:/usr/local/go/bin
+
+# clangd language server
+export PATH="/usr/local/opt/llvm/bin:$PATH"

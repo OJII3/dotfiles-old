@@ -27,7 +27,7 @@ keymap.set('c', '<C-k>', '<Plug>(skkeleton-disable)', { noremap = false, silent 
 -- markdown-preview
 keymap.set('n', '<Space>m', '<Plug>MarkdownPreviewToggle', { noremap = false, silent = true })
 -- toggleterm
-keymap.set('n', '<Space>t', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
-keymap.set('t', '<C-[><Space>t', '<C-\\><C-n><cmd>ToggleTerm<CR>', { noremap = true, silent = true })
-keymap.set('t', '<C-[><C-[>', '<C-\\><C-n><cmd>ToggleTerm<CR>', { noremap = true, silent = true })
-keymap.set('n', '<Leader>g', '<cmd>lua Lazygit_toggle()<CR>', { noremap = true, silent = true })
+keymap.set('n', '<C-j>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
+keymap.set('t', '<C-j>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
+keymap.set('t', '<C-[>', '<C-\\><C-n>', { noremap = true, silent = true })
+keymap.set('n', '<Space>lg', '<cmd>lua Lazygit_toggle()<CR>', { noremap = true, silent = true })
