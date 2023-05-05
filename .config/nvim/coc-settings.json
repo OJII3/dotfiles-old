@@ -6,5 +6,6 @@
   "stylelintplus.autoFixOnSave": true,
   "css.validate": false,
   "scss.validate": false,
-  "clangd.arguments": ["--background-index"]
+  "clangd.arguments": ["--background-index"],
+  "clangd.path": "/home/linuxbrew/.linuxbrew/bin/clangd"
 }
