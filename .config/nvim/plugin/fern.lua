@@ -1,4 +1,2 @@
-vim.cmd([[
-  let g:fern#default_hidden = 1
-  let g:fern#renderer = 'nerdfont'
-]])
+vim.g["fern#default_hidden"] = 1
+vim.g["fern#renderer"] = "nerdfont"

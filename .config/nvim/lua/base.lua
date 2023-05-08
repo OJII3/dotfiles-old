@@ -38,4 +38,4 @@ opt.swapfile = false
 opt.wrap = true
 opt.pumblend = 7
 
--- opt.list = false
+opt.list = true
