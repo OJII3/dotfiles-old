@@ -18,17 +18,18 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
   { 'folke/which-key.nvim' },
-  { 'folke/neoconf.nvim',             cmd = 'Neoconf' },
+  { 'folke/neoconf.nvim',                    cmd = 'Neoconf' },
   { 'nvim-lua/plenary.nvim' },
+  { 'lambdalisue/nerdfont.vim' },
+  { 'kyazdani42/nvim-web-devicons' },
   -- colorscheme
   { 'folke/tokyonight.nvim' },
   { 'EdenEast/nightfox.nvim' },
-  { 'kyazdani42/nvim-web-devicons' },
   { 'nvim-lualine/lualine.nvim' },
-  { 'lambdalisue/nerdfont.vim' },
-  { 'lambdalisue/fern.vim' },
+  { 'lambdalisue/fern-renderer-nerdfont.vim' },
   { 'lambdalisue/fern-git-status.vim' },
-  { 'neoclide/coc.nvim',              branch = 'release' },
+  { 'lambdalisue/fern.vim',                  lazy = false },
+  { 'neoclide/coc.nvim',                     branch = 'release' },
   -- lsp
   -- { 'neovim/nvim-lspconfig' },
   -- { 'jose-elias-alvarez/null-ls.nvim' },
@@ -44,13 +45,13 @@ require('lazy').setup({
   -- { 'onsails/lspkind.nvim' },
   -- { 'williamboman/mason.nvim', build = ":MasonUpdate" },
   -- { 'L3MON4D3/LuaSnip' },
-  { 'windwp/nvim-autopairs',          init = function() require('nvim-autopairs').setup() end },
-  { 'kylechui/nvim-surround' },
+  { 'windwp/nvim-autopairs',                 init = function() require('nvim-autopairs').setup() end },
+  { 'kylechui/nvim-surround',                init = function() require('nvim-surround').setup() end },
   { 'lewis6991/gitsigns.nvim' },
   { 'nvim-telescope/telescope.nvim' },
   { 'windwp/nvim-ts-autotag' },
   { 'ggandor/lightspeed.nvim' },
-  { 'glepnir/lspsaga.nvim',           branch = 'main' },
+  { 'glepnir/lspsaga.nvim',                  branch = 'main' },
   {
     'nvim-treesitter/nvim-treesitter',
     init = function() require('nvim-treesitter.install').update({ with_sync = true }) end
@@ -65,4 +66,5 @@ require('lazy').setup({
   { 'iamcco/markdown-preview.nvim', config = function() vim.fn["mkdp#util#install"]() end },
   { 'akinsho/toggleterm.nvim',      config = true },
   { 'goolord/alpha-nvim' },
+  { 'TimUntersberger/neogit' },
 })

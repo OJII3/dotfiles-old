@@ -6,5 +6,6 @@
   "stylelintplus.autoFixOnSave": true,
   "css.validate": false,
   "scss.validate": false,
-  "clangd.arguments": ["-background-index", "-j", "20"]
+  "less.validate": false,
+  "clangd.arguments": ["-background-index", "-j", "8"]
 }
