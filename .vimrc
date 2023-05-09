@@ -54,7 +54,3 @@ set updatetime=50
 nmap <leader>rn <Plug>(coc-rename)
 xmap <leader>a <Plug>(coc-codeaction-selected)
 
-nmap <leader>f [fzf-p]
-xmap <leader>f [fzf-p]
-
-nnoremap <silent> [fzf-p]p :<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>
