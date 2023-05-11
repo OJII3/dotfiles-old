@@ -1,7 +1,7 @@
 local keymap = vim.keymap
 
 -- builtin
-keymap.set('n', '<F1>', ':edit $MYVIMRC<CR>')
+-- keymap.set('n', '<F1>', ':edit $MYVIMRC<CR>')
 keymap.set('t', '<ESC>', '<C-\\><C-n>', { noremap = true, silent = true })
 keymap.set('t', '<C-w>', '<C-\\><C-n><C-w>', { noremap = true, silent = true })
 -- fern
@@ -27,7 +27,7 @@ keymap.set('c', '<C-k>', '<Plug>(skkeleton-disable)', { noremap = false, silent 
 -- markdown-preview
 keymap.set('n', '<Space>m', '<Plug>MarkdownPreviewToggle', { noremap = false, silent = true })
 -- toggleterm
-keymap.set('n', '<C-j>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
-keymap.set('t', '<C-j>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
+keymap.set('n', '<C-@>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
+keymap.set('t', '<C-@>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
 keymap.set('t', '<C-[>', '<C-\\><C-n>', { noremap = true, silent = true })
 keymap.set('n', '<Space>lg', '<cmd>lua Lazygit_toggle()<CR>', { noremap = true, silent = true })
