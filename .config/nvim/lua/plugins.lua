@@ -108,4 +108,5 @@ require('lazy').setup({
   },
   { 'goolord/alpha-nvim' },
   { 'TimUntersberger/neogit' },
+  { 'vim-latex/vim-latex' },
 })
