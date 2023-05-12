@@ -1,8 +1,8 @@
 vim.cmd([[
-filetype plugin on
-filetype indent on
-set shellslash
-set grepprg=grep\ -nH\ $*
+"filetype plugin on
+"filetype indent on
+"set shellslash
+"set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Imap_UsePlaceHolders = 1
 let g:Imap_DeleteEmptyPlaceHolders = 1
