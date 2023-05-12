@@ -3,8 +3,12 @@ if not status then
   return
 end
 
+vim.api.nvim_set_hl(0, 'CustomAlphaHeader', { fg = '#00ff00', bold = true })
+vim.api.nvim_set_hl(0, 'CustomAlphaFooter', { fg = '#00ffff', bold = true })
 local dashboard = require('alpha.themes.dashboard')
+dashboard.section.header.opts.hl = 'CustomAlphaHeader'
 dashboard.section.buttons.val = {}
+dashboard.section.footer.opts.hl = 'CustomAlphaFooter'
 dashboard.section.footer.val = {
   [[                       ';;;'','                   ]],
   [[                   .,cddxkxc,:o.                  ]],
@@ -48,6 +52,7 @@ dashboard.section.footer.val = {
 }
 
 dashboard.config.opts.noautocmd = true
+
 vim.cmd [[
   autocmd User AlphaReady echo 'Ready!'
 ]]

@@ -1,7 +1,7 @@
 {
   "Copilot.vim": { "branch": "release", "commit": "1358e8e45ecedc53daf971924a0541ddf6224faf" },
-  "alpha-nvim": { "branch": "main", "commit": "1838ae926e8d49fe5330d1498ee8289ae2c340bc" },
   "coc.nvim": { "branch": "release", "commit": "bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043" },
+  "dashboard-nvim": { "branch": "master", "commit": "0af0ad181db271ef8d5a332f4cfcec9118340497" },
   "deepl.vim": { "branch": "main", "commit": "2397b16d4070080b695321a1fe7958fd0812176b" },
   "denops.vim": { "branch": "main", "commit": "6b29032365f82fc1ef78d206e4019fd510ea51fb" },
   "fern-git-status.vim": { "branch": "master", "commit": "151336335d3b6975153dad77e60049ca7111da8e" },

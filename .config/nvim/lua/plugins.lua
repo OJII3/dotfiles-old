@@ -23,7 +23,7 @@ require('lazy').setup({
     cmd = 'Neoconf'
   },
   { 'nvim-lua/plenary.nvim' },
-  { 'kyazdani42/nvim-web-devicons' },
+  { 'nvim-tree/nvim-web-devicons' },
   { 'lambdalisue/fern.vim' },
   {
     'lambdalisue/nerdfont.vim',
@@ -106,7 +106,10 @@ require('lazy').setup({
     'akinsho/toggleterm.nvim',
     config = true
   },
-  { 'goolord/alpha-nvim' },
+  {
+    'goolord/alpha-nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+  },
   { 'TimUntersberger/neogit' },
   { 'vim-latex/vim-latex' },
 })
