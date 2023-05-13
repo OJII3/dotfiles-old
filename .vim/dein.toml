@@ -15,5 +15,3 @@ merged = false
 repo = 'antoinemadec/coc-fzf'
 rev = 'release'
 
-[[plugins]]
-repo = "altercation/vim-colors-solarized"

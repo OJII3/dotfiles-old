@@ -1,4 +1,3 @@
-" Dein settings ======================================================
 let $CACHE = expand('~/.cache')
 if !isdirectory($CACHE)
   call mkdir($CACHE, 'p')
@@ -15,20 +14,33 @@ if &runtimepath !~# '/dein.vim'
         \ fnamemodify(s:dein_dir, ':p') , '[/\\]$', '', '')
 endif
 
-" Ward off unexpected things that your distro might have made, as
+" ======================================================================================
+"
+" " Ward off unexpected things that your distro might have made, as
 " well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
-  let g:rc_dir = expand('$HOME/.vim')
-  let s:toml = g:rc_dir . '/dein.toml'
-  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
-  call dein#load_toml(s:toml, { 'lazy': 0 })
-  call dein#load_toml(s:lazy_toml, { 'lazy': 1 })
-  call dein#end()
-  call dein#save_state()
-endif
+" Set dein base path (required)
+let s:dein_base = '~/.cache/dein/'
+
+" Set dein source path (required)
+let s:dein_src = '~/.cache/dein/repos/github.com/Shougo/dein.vim'
+
+" Set dein runtime path (required)
+execute 'set runtimepath+=' .. s:dein_src
+
+" Call dein initialization (required)
+call dein#begin(s:dein_base)
+
+call dein#add(s:dein_src)
+
+" Your plugins go here:
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('altercation/vim-colors-solarized')
+
+" Finish dein initialization (required)
+call dein#end()
 
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
@@ -38,24 +50,12 @@ filetype indent plugin on
 " Enable syntax highlighting
 if has('syntax')
   syntax on
+  set background=dark
+  let g:solarized_termcolors=256
+  colorscheme solarized
 endif
 
 " Uncomment if you want to install not-installed plugins on startup.
 if dein#check_install()
  call dein#install()
 endif
-
-
-" Other options ======================================================
-
-set number
-set updatetime=50
-
-syntax enable
-let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
-
-nmap <leader>rn <Plug>(coc-rename)
-xmap <leader>a <Plug>(coc-codeaction-selected)
-
