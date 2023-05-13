@@ -51,6 +51,11 @@ endif
 set number
 set updatetime=50
 
+syntax enable
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+
 nmap <leader>rn <Plug>(coc-rename)
 xmap <leader>a <Plug>(coc-codeaction-selected)
 
