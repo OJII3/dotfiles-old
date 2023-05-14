@@ -127,7 +127,7 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="/home/ojii3/.local/share/pnpm"
+export PNPM_HOME="/$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -136,8 +136,10 @@ esac
 
 source ~/.ws_gateway_secret.sh
 
-export DENO_INSTALL="/home/ojii3/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 eval "$(starship init bash)"
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
