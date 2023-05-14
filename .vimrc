@@ -10,6 +10,10 @@ endif
 call plug#begin() " Make sure you use single quotes
 
 Plug 'altercation/vim-colors-solarized'
+Plug 'prabirshrestha/vim-lsprshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/vim-lsp'
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
@@ -37,7 +41,8 @@ call plug#end()
 " colorscheme  ==================================================================================
 
 syntax on
-colorscheme solarized
+
+set background=dark
 
 " ================================================================
 
