@@ -9,12 +9,7 @@ endif
 
 call plug#begin() " Make sure you use single quotes
 
-Plug 'altercation/vim-colors-solarized'
-Plug 'prabirshrestha/vim-lsprshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/vim-lsp'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 " Any valid git URL is allowed
@@ -57,28 +52,5 @@ set statusline=2
 set wildmenu
 
 nnoremap <Space>e :NERDTreeToggle<CR> 
-
-" lsp      ==========================================================================
-
-if (executable('pylsp'))
-	au User lsp_setup call lsp#register_server({
-		\ 'name': 'pylsp',
-		\ 'cmd': {server_info->['pylsp']},
-		\ 'allowlist': ['python']
-		\ })
-endif
-
-
-function! s:on_lsp_buffer_enabled() abort
-	setlocal omnifunc=lsp#complete
-	setlocal signcolumn=yes
-	nmap <buffer> <leader>gd <plug>(lsp-definition)
-	nmap <buffer> <leader>rn <plug>(lsp-rename)
-endfunction
-
-augroup lsp_insall
-	au!
-	autocmd User lsp_buffer_enanbled call s:on_lsp_buffer_enabled()
-augroup END
 
 

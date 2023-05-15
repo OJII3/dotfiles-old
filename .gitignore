@@ -1,10 +1,6 @@
 *
 
-# /dir
 !/.config/
-!/.vim/
-!/.vim/*
-!/.vim/*/*
 
 !/.config/starship.toml
 !/.config/nvim/
@@ -12,9 +8,14 @@
 !/.config/nvim/*/*
 !/.config/nvim/*/*/*
 
-# /files
-!.profile
+# vim
 !.vimrc
+!/.vim/
+!/.vim/*
+!/.vim/*/*
+/.vim/plugged/*
+
+!.profile
 !.bashrc
 !.zshrc
 !README.md
