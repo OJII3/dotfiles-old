@@ -3,17 +3,22 @@
 !/.config/
 
 !/.config/starship.toml
+
+# neovim
 !/.config/nvim/
 !/.config/nvim/*
 !/.config/nvim/*/*
 !/.config/nvim/*/*/*
 
+# vscode
+!/.config/Code/User/settings.json
+!/.config/Code/User/keybindings.json
+
 # vim
 !.vimrc
 !/.vim/
 !/.vim/*
-!/.vim/*/*
-/.vim/plugged/*
+/.vim/*/*
 
 !.profile
 !.bashrc

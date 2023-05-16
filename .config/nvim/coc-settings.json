@@ -7,5 +7,5 @@
   "css.validate": false,
   "scss.validate": false,
   "less.validate": false,
-  "clangd.arguments": ["-background-index", "-std=c++20", "-stdlib=libc++"]
+  "clangd.arguments": ["-background-index"]
 }
