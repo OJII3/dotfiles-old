@@ -3,7 +3,7 @@ local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     'git',
-    'clone',
+    o 'clone',
     '--filter=blob:none',
     'https://github.com/folke/lazy.nvim.git',
     '--branch=stable', -- latest stable release
@@ -19,42 +19,44 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   { 'folke/which-key.nvim' },
   {
-    'folke/neoconf.nvim',
-    cmd = 'Neoconf'
+    'folke/neoconf.nvim', cmd = 'Neoconf',
   },
   { 'nvim-lua/plenary.nvim' },
-  { 'nvim-tree/nvim-web-devicons' },
-  { 'lambdalisue/fern.vim' },
   {
-    'lambdalisue/nerdfont.vim',
-    lazy = true
+    'nvim-tree/nvim-web-devicons', lazy = true
   },
   {
-    'lambdalisue/fern-git-status.vim',
-    dependencies = { "lambdalisue/fern.vim" }
-  },
-  {
-    'lambdalisue/fern-renderer-nerdfont.vim',
+    'lambdalisue/fern.vim',
     dependencies = {
       'lambdalisue/nerdfont.vim',
-      'lambdalisue/fern.vim'
+      'lambdalisue/fern-renderer-nerdfont.vim',
+      'lambdalisue/fern-git-status.vim',
+      'lambdalisue/glyph-palette.vim',
     }
   },
   {
-    'lambdalisue/glyph-palette.vim',
-    dependencies = {
-      'lambdalisue/nerdfont.vim',
-      'lambdalisue/fern.vim',
-    },
+    'lambdalisue/nerdfont.vim', lazy = true
+  },
+  {
+    'lambdalisue/fern-git-status.vim', lazy = true
+  },
+  {
+    'lambdalisue/fern-renderer-nerdfont.vim', lazy = true
+  },
+  {
+    'lambdalisue/glyph-palette.vim', lazy = true
   },
   { 'nvim-lualine/lualine.nvim' },
   -- colorscheme
-  { 'folke/tokyonight.nvim' },
-  { 'EdenEast/nightfox.nvim' },
+  {
+    'folke/tokyonight.nvim', lazy = true
+  },
+  {
+    'EdenEast/nightfox.nvim', lazy = true
+  },
   --
   {
-    'neoclide/coc.nvim',
-    branch = 'release',
+    'neoclide/coc.nvim', branch = 'release',
   },
   -- lsp
   -- { 'neovim/nvim-lspconfig' },
@@ -84,8 +86,7 @@ require('lazy').setup({
   { 'windwp/nvim-ts-autotag' },
   { 'ggandor/lightspeed.nvim' },
   {
-    'glepnir/lspsaga.nvim',
-    branch = 'main'
+    'glepnir/lspsaga.nvim', branch = 'main'
   },
   {
     'nvim-treesitter/nvim-treesitter',
@@ -94,8 +95,11 @@ require('lazy').setup({
   { 'github/Copilot.vim' },
   { 'vim-denops/denops.vim' },
   { 'vim-skk/skkeleton' },
-  { 'ryicoh/deepl.vim' },
-  { 'haya14busa/vim-edgemotion' },
+  {
+    'ryicoh/deepl.vim',
+    lazy = true
+  },
+  -- { 'haya14busa/vim-edgemotion' },
   { 'tpope/vim-commentary' },
   { 'johngrib/vim-game-code-break' },
   {
@@ -103,8 +107,7 @@ require('lazy').setup({
     config = function() vim.fn["mkdp#util#install"]() end
   },
   {
-    'akinsho/toggleterm.nvim',
-    config = true
+    'akinsho/toggleterm.nvim', config = true
   },
   {
     'goolord/alpha-nvim',
@@ -112,4 +115,10 @@ require('lazy').setup({
   },
   { 'TimUntersberger/neogit' },
   { 'vim-latex/vim-latex' },
+  { 'dstein64/vim-startuptime' },
+  {
+    'romgrk/barbar.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons', 'lewis6991/gitsigns.nvim' },
+    init = function() vim.g.barbar_auto_setup = false end,
+  },
 })

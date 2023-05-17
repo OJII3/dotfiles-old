@@ -3,6 +3,6 @@ if (not status) then return end
 
 lualine.setup({
   options = {
-    theme = 'nightfox'
+    theme = 'powerline_dark',
   }
 })

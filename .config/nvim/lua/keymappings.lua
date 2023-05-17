@@ -28,9 +28,13 @@ keymap.set('c', '<C-k>', '<Plug>(skkeleton-disable)', { noremap = false, silent 
 -- markdown-preview
 keymap.set('n', '<Space>m', '<Plug>MarkdownPreviewToggle', { noremap = false, silent = true })
 -- toggleterm
-keymap.set('n', '<C-s>t', '<cmd>ToggleTerm direction=tab<CR>', { noremap = true, silent = true })
+-- keymap.set('n', '<C-s>t', '<cmd>ToggleTerm direction=tab<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-s>v', '<cmd>ToggleTerm direction=vertical size=100<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-s>h', '<cmd>ToggleTerm direction=horizontal size=12<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-s>f', '<cmd>ToggleTerm direction=float<CR>', { noremap = true, silent = true })
+keymap.set('n', '<C-s>gg', '<cmd>wincmd v<CR><cmd>term<CR>git log --graph --all<CR>',
+  { noremap = true, silent = true })
+keymap.set('n', '<C-s>gd', '<cmd>wincmd v<CR><cmd>term<CR>git diff<CR>',
+  { noremap = true, silent = true })
 keymap.set('t', '<C-s>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
-keymap.set('n', '<C-s>g', '<cmd>lua Lazygit_toggle()<CR>', { noremap = true, silent = true })
+keymap.set('n', '<C-s>l', '<cmd>lua Lazygit_toggle()<CR>', { noremap = true, silent = true })
