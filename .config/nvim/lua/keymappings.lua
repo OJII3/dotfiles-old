@@ -2,9 +2,17 @@ local keymap = vim.keymap
 
 -- builtin
 keymap.set('n', '<Space>.', ':e $MYVIMRC<CR>')
+keymap.set('n', '<C-j>', '<cmd>bp<CR>', { noremap = true, silent = true })
+keymap.set('n', '<C-k>', '<cmd>bn<CR>', { noremap = true, silent = true })
 keymap.set('t', '<ESC>', '<C-\\><C-n>', { noremap = true, silent = true })
 keymap.set('t', '<C-[>', '<C-\\><C-n>', { noremap = true, silent = true })
 keymap.set('t', '<C-w>', '<C-\\><C-n><C-w>', { noremap = true, silent = true })
+keymap.set('n', '<C-s>gg', '<cmd>wincmd v<CR><cmd>term<CR>git log --graph --all<CR>',
+  { noremap = true, silent = true })
+keymap.set('n', '<C-s>gd', '<cmd>wincmd v<CR><cmd>term<CR>git diff<CR>',
+  { noremap = true, silent = true })
+
+-- plugins
 -- fern
 keymap.set('n', '<Space>e', "<cmd>Fern . -drawer -toggle<CR>", { noremap = true, silent = true })
 -- telescope
@@ -32,9 +40,5 @@ keymap.set('n', '<Space>m', '<Plug>MarkdownPreviewToggle', { noremap = false, si
 keymap.set('n', '<C-s>v', '<cmd>ToggleTerm direction=vertical size=100<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-s>h', '<cmd>ToggleTerm direction=horizontal size=12<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-s>f', '<cmd>ToggleTerm direction=float<CR>', { noremap = true, silent = true })
-keymap.set('n', '<C-s>gg', '<cmd>wincmd v<CR><cmd>term<CR>git log --graph --all<CR>',
-  { noremap = true, silent = true })
-keymap.set('n', '<C-s>gd', '<cmd>wincmd v<CR><cmd>term<CR>git diff<CR>',
-  { noremap = true, silent = true })
 keymap.set('t', '<C-s>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-s>l', '<cmd>lua Lazygit_toggle()<CR>', { noremap = true, silent = true })
