@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
-let g:netrw_dirhist_6='/home/ojii3/.vim'
-let g:netrw_dirhist_5='/root/catkin_ws/src/udp_server.ros/src'
-let g:netrw_dirhist_4='/root/catkin_ws/src/udp_server.ros'
-let g:netrw_dirhist_3='/root/catkin_ws/src/udp_server/src'
-let g:netrw_dirhist_2='/root/catkin_ws/src/udp_server'
-let g:netrw_dirhist_1='/home/ojii3/.vim'
