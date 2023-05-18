@@ -47,14 +47,17 @@ require('lazy').setup({
     'lambdalisue/glyph-palette.vim', lazy = true
   },
   { 'nvim-lualine/lualine.nvim' },
-  -- colorscheme
+  -- colorscheme ----------------
   {
     'folke/tokyonight.nvim', lazy = true
   },
   {
     'EdenEast/nightfox.nvim', lazy = true
   },
-  --
+  {
+    'ayu-theme/ayu-vim', lazy = true
+  },
+  ------------------------------
   {
     'neoclide/coc.nvim', branch = 'release',
   },
@@ -115,6 +118,7 @@ require('lazy').setup({
   },
   { 'TimUntersberger/neogit' },
   { 'vim-latex/vim-latex' },
+  -- { 'lervag/vimtex' },
   { 'dstein64/vim-startuptime' },
   {
     'romgrk/barbar.nvim',
