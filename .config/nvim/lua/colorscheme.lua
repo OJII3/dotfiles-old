@@ -1,1 +1,13 @@
-vim.cmd("colorscheme tokyonight-storm")
+-- vim.cmd([[
+-- set termguicolors
+-- let ayucolor="dark"
+-- colorscheme ayu
+-- ]])
+
+vim.cmd([[
+colorscheme tokyonight-moon
+]])
+
+-- vim.cmd([[
+-- colorscheme carbonfox
+-- ]])

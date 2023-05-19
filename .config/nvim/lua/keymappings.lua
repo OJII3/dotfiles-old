@@ -4,6 +4,7 @@ local keymap = vim.keymap
 keymap.set('n', '<Space>.', ':e $MYVIMRC<CR>')
 keymap.set('n', '<C-j>', '<cmd>bp<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-k>', '<cmd>bn<CR>', { noremap = true, silent = true })
+keymap.set('i', '<C-l>', '<Right>', { noremap = true, silent = true })
 keymap.set('t', '<ESC>', '<C-\\><C-n>', { noremap = true, silent = true })
 keymap.set('t', '<C-[>', '<C-\\><C-n>', { noremap = true, silent = true })
 keymap.set('t', '<C-w>', '<C-\\><C-n><C-w>', { noremap = true, silent = true })
@@ -36,9 +37,18 @@ keymap.set('c', '<C-k>', '<Plug>(skkeleton-disable)', { noremap = false, silent 
 -- markdown-preview
 keymap.set('n', '<Space>m', '<Plug>MarkdownPreviewToggle', { noremap = false, silent = true })
 -- toggleterm
--- keymap.set('n', '<C-s>t', '<cmd>ToggleTerm direction=tab<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-s>v', '<cmd>ToggleTerm direction=vertical size=100<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-s>h', '<cmd>ToggleTerm direction=horizontal size=12<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-s>f', '<cmd>ToggleTerm direction=float<CR>', { noremap = true, silent = true })
 keymap.set('t', '<C-s>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-s>l', '<cmd>lua Lazygit_toggle()<CR>', { noremap = true, silent = true })
+-- luasnip
+keymap.set('i', '<Tab>', '<Plug>luasnip-expand-or-jump',
+  { noremap = false, silent = true, expr = true, callback = function() return require('luasnip').jumpable(1) end })
+keymap.set('i', '<S-Tab>', '<cmd>lua require"luasnip".jump(-1)', { noremap = false, silent = true })
+keymap.set('s', '<Tab>', '<cmd>lua require"luasnip".jump(1)<CR>', { noremap = false, silent = true })
+keymap.set('s', '<S-Tab>', '<cmd>lua require"luasnip".jump(-1)<CR>', { noremap = false, silent = true })
+-- keymap.set('i', '<C-E>', 'luasnip#choice_active() ? <Plug>luasnip-next-choice : "<C-E>"',
+--   { expr = true, noremap = false, silent = true })
+-- keymap.set('s', '<C-E>', 'luasnip#choice_active() ? "<Plug>luasnip-next-choice" : "<C-E>"',
+--   { expr = true, noremap = false, silent = true })

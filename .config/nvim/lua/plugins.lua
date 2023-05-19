@@ -75,7 +75,11 @@ require('lazy').setup({
   -- { 'hrsh7th/cmp-nvim-lsp-signature-help' },
   -- { 'onsails/lspkind.nvim' },
   -- { 'williamboman/mason.nvim', build = ":MasonUpdate" },
-  -- { 'L3MON4D3/LuaSnip' },
+  {
+    'L3MON4D3/LuaSnip',
+    dependencies = { 'rafamadriz/friendly-snippets' },
+  },
+  { 'rafamadriz/friendly-snippets' },
   {
     'windwp/nvim-autopairs',
     init = function() require('nvim-autopairs').setup() end
@@ -94,6 +98,10 @@ require('lazy').setup({
   {
     'nvim-treesitter/nvim-treesitter',
     init = function() require('nvim-treesitter.install').update({ with_sync = true }) end
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
   },
   { 'github/Copilot.vim' },
   { 'vim-denops/denops.vim' },
@@ -118,11 +126,14 @@ require('lazy').setup({
   },
   { 'TimUntersberger/neogit' },
   { 'vim-latex/vim-latex' },
-  -- { 'lervag/vimtex' },
+  { 'lervag/vimtex' },
   { 'dstein64/vim-startuptime' },
   {
     'romgrk/barbar.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons', 'lewis6991/gitsigns.nvim' },
     init = function() vim.g.barbar_auto_setup = false end,
   },
+  {
+    'andweeb/presence.nvim',
+  }
 })
