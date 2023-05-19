@@ -4,10 +4,10 @@
 -- colorscheme ayu
 -- ]])
 
-vim.cmd([[
-colorscheme tokyonight-moon
-]])
-
 -- vim.cmd([[
--- colorscheme carbonfox
+-- colorscheme tokyonight-moon
 -- ]])
+
+vim.cmd([[
+colorscheme duskfox
+]])

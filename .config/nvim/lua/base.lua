@@ -34,8 +34,7 @@ opt.clipboard = 'unnamedplus'
 opt.termguicolors = true
 opt.signcolumn = 'yes'
 opt.hidden = true
-opt.swapfile = false
+opt.swapfile = true
 opt.wrap = true
 opt.pumblend = 7
-
 opt.list = true
