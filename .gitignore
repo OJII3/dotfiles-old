@@ -10,7 +10,13 @@
 !/.config/nvim/*/*
 !/.config/nvim/*/*/*
 
+# wezterm
+!/.config/wezterm/
+!/.config/wezterm/*
+
 # vscode
+!/.config/Code/
+!/.config/Code/User/
 !/.config/Code/User/settings.json
 !/.config/Code/User/keybindings.json
 

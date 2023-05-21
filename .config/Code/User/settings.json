@@ -1,0 +1,92 @@
+{
+    "editor.fontSize": 16,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "editor.mouseWheelZoom": true,
+    "omnisharp.useGlobalMono": "always",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.startupEditor": "none",
+    "files.autoSave": "afterDelay",
+    "editor.detectIndentation": false,
+    "window.menuBarVisibility": "compact",
+    "githubPullRequests.createOnPublishBranch": "never",
+    "cmake.configureOnOpen": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "csharp.suppressDotnetInstallWarning": true,
+    "editor.inlineSuggest.enabled": true,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "output.smartScroll.enabled": false,
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true
+    },
+    "github.copilot.advanced": {},
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.semanticHighlighting.enabled": true,
+    "window.autoDetectColorScheme": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "stylelint.snippet": [
+        "css",
+        "less",
+        "postcss",
+        "scss"
+    ],
+    "stylelint.validate": [
+        "css",
+        "less",
+        "postcss",
+        "scss"
+    ],
+    "css.validate": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "css.format.spaceAroundSelectorSeparator": true,
+    "css.lint.duplicateProperties": "error",
+    "css.enabledLanguages": [
+        "html"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "githubPullRequests.pullBranch": "never",
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "git.enableCommitSigning": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "workbench.preferredHighContrastColorTheme": "Visual Studio Dark",
+    "workbench.editor.decorations.colors": false,
+    "workbench.colorTheme": "Default Dark+ Experimental",
+    "workbench.preferredDarkColorTheme": "Solarized Dark",
+    "vim.easymotion": true,
+    "vim.enableNeovim": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+}
