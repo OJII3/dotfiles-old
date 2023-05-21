@@ -10,14 +10,6 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-function scheme_for_appearance(appearance)
-  if appearance:find 'Dark' then
-    return 'Builtin Solarized Dark'
-  else
-    return 'Builtin Solarized Light'
-  end
-end
-
 wezterm.on('update-right-status', function(window, pane)
   local overrides = window:get_config_overrides() or {}
   local appearance = query_appearance_gnome()
@@ -29,7 +21,7 @@ wezterm.on('update-right-status', function(window, pane)
 end)
 
 -- For example, changing the color scheme:
-config.color_scheme = 'AdventureTime'
+config.color_scheme = 'Cyberdyne'
 config.initial_rows = 120
 config.initial_cols = 200
 config.window_background_gradient = {
