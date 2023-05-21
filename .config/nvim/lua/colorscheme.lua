@@ -1,13 +1,19 @@
 -- vim.cmd([[
 -- set termguicolors
--- let ayucolor="dark"
+-- let ayucolor="light"
 -- colorscheme ayu
 -- ]])
 
+require('tokyonight').setup({ transparent = true })
+vim.cmd([[
+colorscheme tokyonight-moon
+]])
+
 -- vim.cmd([[
--- colorscheme tokyonight-moon
+-- colorscheme tokyonight-day
 -- ]])
 
-vim.cmd([[
-colorscheme duskfox
-]])
+-- require('nightfox').setup({ opstions = { transparent = true, } })
+-- vim.cmd([[
+-- colorscheme carbonfox
+-- ]])
