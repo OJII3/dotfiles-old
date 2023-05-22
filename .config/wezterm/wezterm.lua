@@ -20,10 +20,16 @@ wezterm.on('update-right-status', function(window, pane)
   end
 end)
 
--- For example, changing the color scheme:
 config.color_scheme = 'Cyberdyne'
 config.initial_rows = 120
 config.initial_cols = 200
+config.font_size = 13.0
+config.font = wezterm.font_with_fallback {
+  'JetBrains Mono',
+  'Nerd Font Symbols',
+  'HackGen CJK Regular',
+  'Noto Color Emoji',
+}
 config.window_background_gradient = {
   colors = { '#103000', '#0F295C', '#000000' },
   orientation = { Linear = { angle = -45 } }
@@ -44,7 +50,7 @@ config.background = {
     vertical_align = 'Middle',
     attachment = 'Fixed',
     hsb = { brightness = 0.5 },
-    opacity = 0.8,
+    opacity = 0.75,
   },
 }
 
