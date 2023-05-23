@@ -27,7 +27,7 @@ config.font_size = 13.0
 config.font = wezterm.font_with_fallback {
   'JetBrains Mono',
   'Nerd Font Symbols',
-  'HackGen CJK Regular',
+  'HackGen Console NFJ',
   'Noto Color Emoji',
 }
 config.window_background_gradient = {

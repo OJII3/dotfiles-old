@@ -1,6 +1,8 @@
 local keymap = vim.keymap
 
 -- builtin
+keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
+keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
 keymap.set('n', '<Space>.', ':e $MYVIMRC<CR>')
 keymap.set('n', '<C-j>', '<cmd>bp<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-k>', '<cmd>bn<CR>', { noremap = true, silent = true })
