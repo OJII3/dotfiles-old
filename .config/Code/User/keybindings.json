@@ -34,5 +34,10 @@
         "key": "ctrl+shift+v",
         "command": "workbench.action.terminal.paste",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
     }
 ]
