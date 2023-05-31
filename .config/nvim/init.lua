@@ -10,10 +10,10 @@ require('base')
 --   callback = function() vim.opt.expandtab = false end
 -- })
 
--- vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
---   pattern = { "*.ts", "*.tsx", "*.vue", "*.lua" },
---   command = 'set shiftwidth=2',
--- })
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
+  pattern = { "*.ts", "*.tsx", "*.vue", "*.lua", "*.md" },
+  command = 'set shiftwidth=2',
+})
 
 vim.api.nvim_create_autocmd({ 'TermOpen' }, {
   pattern = '*',
