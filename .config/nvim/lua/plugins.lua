@@ -105,7 +105,14 @@ require('lazy').setup({
   },
   { 'github/Copilot.vim' },
   { 'vim-denops/denops.vim' },
-  { 'vim-skk/skkeleton' },
+  {
+    'vim-skk/skkeleton',
+    dependencies = { 'vim-denops/denops.vim' }
+  },
+  {
+    'lambdalisue/kensaku.vim',
+    dependencies = { 'vim-denops/denops.vim' }
+  },
   {
     'ryicoh/deepl.vim',
     lazy = true
