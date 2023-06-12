@@ -12,7 +12,7 @@ vim.cmd([[
 colorscheme tokyonight-day
 ]])
 
--- require('nightfox').setup({ opstions = { transparent = true, } })
+-- require("nightfox").setup({ opstions = { transparent = true } })
 -- vim.cmd([[
 -- colorscheme carbonfox
 -- ]])
