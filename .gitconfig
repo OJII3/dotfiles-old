@@ -9,6 +9,6 @@
 [tag]
 	gpgsign = true
 [core]
-	editor = nvim
+	editor = nano
 [init]
 	defaultBranch = main
