@@ -66,6 +66,14 @@ require("lazy").setup({
 		"ayu-theme/ayu-vim",
 		lazy = true,
 	},
+	{
+		"cocopon/iceberg.vim",
+		lazy = true,
+	},
+	{
+		"mcchrish/zenbones.nvim",
+		lazy = true,
+	},
 	------------------------------
 	{
 		"neoclide/coc.nvim",
