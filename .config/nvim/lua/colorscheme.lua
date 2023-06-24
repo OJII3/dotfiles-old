@@ -8,15 +8,15 @@
 -- colorscheme tokyonight-moon
 -- ]])
 
-vim.cmd([[
-colorscheme tokyonight-day
-]])
+-- vim.cmd([[
+-- colorscheme tokyonight-day
+-- ]])
 
 -- require("nightfox").setup({ options = { transparent = true } })
 -- vim.cmd([[
 -- colorscheme carbonfox
 -- ]])
 
--- vim.cmd([[
--- colorscheme iceberg
--- ]])
+vim.cmd([[
+colorscheme iceberg
+]])
