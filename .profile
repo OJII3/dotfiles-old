@@ -26,7 +26,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
@@ -36,5 +36,3 @@ export PATH=$PATH:/usr/local/bin
 # go
 export PATH=$PATH:/usr/local/go/bin
 
-# clangd language server
-export PATH="/usr/local/opt/llvm/bin:$PATH"
