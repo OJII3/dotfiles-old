@@ -16,7 +16,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'SirVer/ultisnips' 
 Plug 'honza/vim-snippets'
-Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+" Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'lambdalisue/fern.vim'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'fatih/vim-go', { 'tag': '*' }
@@ -51,6 +52,6 @@ set clipboard+=unnamed
 set statusline=2
 set wildmenu
 
-nnoremap <Space>e :NERDTreeToggle<CR> 
+nnoremap <Space>e :Fern . -drawer -toggle<CR> 
 
 
