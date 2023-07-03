@@ -174,4 +174,7 @@ require("lazy").setup({
 	-- 		vim.g.barbar_auto_setup = false
 	-- 	end,
 	-- },
+	{
+		"monaqa/dial.nvim",
+	},
 })
