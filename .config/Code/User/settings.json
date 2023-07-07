@@ -82,7 +82,7 @@
     "editor.unicodeHighlight.nonBasicASCII": false,
     "workbench.preferredHighContrastColorTheme": "Visual Studio Dark",
     "workbench.editor.decorations.colors": false,
-    "workbench.colorTheme": "Default Dark+ Experimental",
+    "workbench.colorTheme": "Iceberg",
     "workbench.preferredDarkColorTheme": "Solarized Dark",
     "vim.easymotion": true,
     "vim.enableNeovim": true,

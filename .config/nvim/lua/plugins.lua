@@ -177,4 +177,10 @@ require("lazy").setup({
 	{
 		"monaqa/dial.nvim",
 	},
+	{
+		"mfussenegger/nvim-dap",
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+	},
 })
