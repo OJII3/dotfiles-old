@@ -183,7 +183,4 @@ require("lazy").setup({
 	{
 		"rcarriga/nvim-dap-ui",
 	},
-	{
-		"ap/vim-css-color",
-	},
 })
