@@ -3,6 +3,8 @@ if not status then
 	return
 end
 
+require("nvim-dap-virtual-text").setup()
+
 dap.configurations.python = {
 	{
 		type = "python",

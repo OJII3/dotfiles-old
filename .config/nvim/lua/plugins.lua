@@ -174,13 +174,17 @@ require("lazy").setup({
 	-- 		vim.g.barbar_auto_setup = false
 	-- 	end,
 	-- },
-	{
-		"monaqa/dial.nvim",
-	},
+	{ "monaqa/dial.nvim" },
 	{
 		"mfussenegger/nvim-dap",
+		lazy = true,
+	},
+	{
+		"theHamsta/nvim-dap-virtual-text",
+		dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
 	},
 	{
 		"rcarriga/nvim-dap-ui",
+		dependencies = { "mfussenegger/nvim-dap" },
 	},
 })
