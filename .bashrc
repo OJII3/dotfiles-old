@@ -143,5 +143,6 @@ eval "$(starship init bash)"
 
 export PATH="/usr/local/bin/nvim-linux64/bin:$PATH"
 
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+source /opt/ros/humble/setup.bash
