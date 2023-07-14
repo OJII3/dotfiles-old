@@ -30,11 +30,12 @@ keymap.set("n", "<Leader>fm", "<Plug>(coc-format)", { silent = true }) -- format
 keymap.set("n", "<Leader>ca", "<Plug>(coc-codeaction-selected)", { silent = true }) -- code action
 keymap.set("n", "<Leader>rf", "<Plug>(coc-references)", { silent = true }) -- references
 keymap.set("n", "<Leader>gd", "<Plug>(coc-definition)", { silent = true }) -- go to definition
+
 -- skkeleton
-keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
-keymap.set("i", "<C-k>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
-keymap.set("c", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
-keymap.set("c", "<C-k>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
+keymap.set("i", "<C-Shift-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
+keymap.set("i", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
+keymap.set("c", "<C-Shift-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
+keymap.set("c", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
 
 -- markdown-preview
 keymap.set("n", "<leader>lv", "<Plug>MarkdownPreviewToggle", { noremap = false, silent = true })

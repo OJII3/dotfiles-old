@@ -139,6 +139,10 @@ require("lazy").setup({
 		dependencies = { "vim-denops/denops.vim" },
 	},
 	{
+		"delphinus/skkeleton_indicator.nvim",
+		dependencies = { "vim-skk/skkeleton" },
+	},
+	{
 		"lambdalisue/kensaku.vim",
 		dependencies = { "vim-denops/denops.vim" },
 	},
