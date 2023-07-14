@@ -89,4 +89,5 @@
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
+    "latex-workshop.latex.autoBuild.interval": 1000
 }
