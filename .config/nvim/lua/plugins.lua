@@ -160,7 +160,6 @@ require("lazy").setup({
 		"goolord/alpha-nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
-	{ "TimUntersberger/neogit" },
 	{
 		"vim-latex/vim-latex",
 		dependencies = { "lervag/vimtex" },
