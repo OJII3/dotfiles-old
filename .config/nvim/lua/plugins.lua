@@ -18,15 +18,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{ "folke/which-key.nvim" },
-	{
-		"folke/neoconf.nvim",
-		cmd = "Neoconf",
-	},
+	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	{ "nvim-lua/plenary.nvim" },
-	{
-		"nvim-tree/nvim-web-devicons",
-		lazy = true,
-	},
+	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{
 		"lambdalisue/fern.vim",
 		dependencies = {
@@ -36,52 +30,21 @@ require("lazy").setup({
 			"lambdalisue/glyph-palette.vim",
 		},
 	},
-	{
-		"lambdalisue/nerdfont.vim",
-		lazy = true,
-	},
-	{
-		"lambdalisue/fern-git-status.vim",
-		lazy = true,
-	},
+	{ "lambdalisue/nerdfont.vim", lazy = true },
+	{ "lambdalisue/fern-git-status.vim", lazy = true },
 	{
 		"lambdalisue/fern-renderer-nerdfont.vim",
 		lazy = true,
 	},
-	{
-		"lambdalisue/glyph-palette.vim",
-		lazy = true,
-	},
+	{ "lambdalisue/glyph-palette.vim", lazy = true },
 	{ "nvim-lualine/lualine.nvim" },
 	-- colorscheme ----------------
-	{
-		"folke/tokyonight.nvim",
-		lazy = true,
-	},
-	{
-		"EdenEast/nightfox.nvim",
-		lazy = true,
-	},
-	{
-		"ayu-theme/ayu-vim",
-		lazy = true,
-	},
-	{
-		"cocopon/iceberg.vim",
-		lazy = true,
-	},
-	{
-		"mcchrish/zenbones.nvim",
-		lazy = true,
-	},
+	{ "folke/tokyonight.nvim", lazy = true },
+	{ "ayu-theme/ayu-vim", lazy = true },
+	{ "cocopon/iceberg.vim", lazy = true },
 	------------------------------
-	{
-		"neoclide/coc.nvim",
-		branch = "release",
-	},
-	{
-		"heavenshell/vim-jsdoc",
-	},
+	{ "neoclide/coc.nvim", branch = "release" },
+	{ "heavenshell/vim-jsdoc" },
 	-- lsp
 	-- { 'neovim/nvim-lspconfig' },
 	-- { 'jose-elias-alvarez/null-ls.nvim' },
@@ -104,8 +67,9 @@ require("lazy").setup({
 		"L3MON4D3/LuaSnip",
 		lazy = true,
 		dependencies = { "rafamadriz/friendly-snippets" },
+		build = "make install_jsregexp",
 	},
-	{ "rafamadriz/friendly-snippets", lazy = true },
+	{ "rafamadriz/friendly-snippets" },
 	{
 		"windwp/nvim-autopairs",
 		init = function()
@@ -134,18 +98,8 @@ require("lazy").setup({
 	},
 	{ "github/Copilot.vim" },
 	{ "vim-denops/denops.vim" },
-	{
-		"vim-skk/skkeleton",
-		dependencies = { "vim-denops/denops.vim" },
-	},
-	{
-		"delphinus/skkeleton_indicator.nvim",
-		dependencies = { "vim-skk/skkeleton" },
-	},
-	{
-		"lambdalisue/kensaku.vim",
-		dependencies = { "vim-denops/denops.vim" },
-	},
+	{ "vim-skk/skkeleton", dependencies = { "vim-denops/denops.vim" } },
+	{ "lambdalisue/kensaku.vim", dependencies = { "vim-denops/denops.vim" } },
 	-- { "ryicoh/deepl.vim", },
 	-- { 'haya14busa/vim-edgemotion' },
 	{ "tpope/vim-commentary" },
@@ -156,27 +110,10 @@ require("lazy").setup({
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
-	{
-		"akinsho/toggleterm.nvim",
-		config = true,
-	},
-	{
-		"goolord/alpha-nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
-	{
-		"vim-latex/vim-latex",
-		dependencies = { "lervag/vimtex" },
-	},
-	{ "lervag/vimtex", lazy = true },
+	{ "akinsho/toggleterm.nvim", config = true },
+	{ "goolord/alpha-nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+	{ "lervag/vimtex" },
 	{ "dstein64/vim-startuptime" },
-	-- {
-	-- 	"romgrk/barbar.nvim",
-	-- 	dependencies = { "nvim-tree/nvim-web-devicons", "lewis6991/gitsigns.nvim" },
-	-- 	init = function()
-	-- 		vim.g.barbar_auto_setup = false
-	-- 	end,
-	-- },
 	{ "monaqa/dial.nvim" },
 	-- {
 	-- 	"mfussenegger/nvim-dap",

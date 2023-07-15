@@ -36,5 +36,5 @@ export PATH=$PATH:/usr/local/bin
 # go
 export PATH=$PATH:/usr/local/go/bin
 
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# nvim
+export PATH=$PATH:/usr/local/bin/nvim-linux64/bin

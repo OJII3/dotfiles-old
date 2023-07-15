@@ -32,10 +32,11 @@ keymap.set("n", "<Leader>rf", "<Plug>(coc-references)", { silent = true }) -- re
 keymap.set("n", "<Leader>gd", "<Plug>(coc-definition)", { silent = true }) -- go to definition
 
 -- skkeleton
-keymap.set("i", "<C-Shift-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
+keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
 keymap.set("i", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
-keymap.set("c", "<C-Shift-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
-keymap.set("c", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
+keymap.set("t", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
+keymap.set("c", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true })
+keymap.set("c", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = true, silent = true })
 
 -- markdown-preview
 keymap.set("n", "<leader>lv", "<Plug>MarkdownPreviewToggle", { noremap = false, silent = true })
@@ -48,21 +49,23 @@ keymap.set("t", "<C-s>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true 
 keymap.set("n", "<C-s>l", "<cmd>lua Lazygit_toggle()<CR>", { noremap = true, silent = true })
 
 -- luasnip
--- keymap.set("i", "<Tab>", "<Plug>luasnip-expand-or-jump", {
--- 	noremap = false,
--- 	silent = true,
--- 	expr = true,
--- 	callback = function()
--- 		return require("luasnip").jumpable(1)
--- 	end,
--- })
--- keymap.set("i", "<S-Tab>", '<cmd>lua require"luasnip".jump(-1)', { noremap = false, silent = true })
--- keymap.set("s", "<Tab>", '<cmd>lua require"luasnip".jump(1)<CR>', { noremap = false, silent = true })
--- keymap.set("s", "<S-Tab>", '<cmd>lua require"luasnip".jump(-1)<CR>', { noremap = false, silent = true })
--- keymap.set('i', '<C-E>', 'luasnip#choice_active() ? <Plug>luasnip-next-choice : "<C-E>"',
---   { expr = true, noremap = false, silent = true })
--- keymap.set('s', '<C-E>', 'luasnip#choice_active() ? "<Plug>luasnip-next-choice" : "<C-E>"',
---   { expr = true, noremap = false, silent = true })
+local status, ls = pcall(require, "luasnip")
+if status then
+	keymap.set({ "i" }, "<C-K>", function()
+		ls.expand()
+	end, { silent = true })
+	keymap.set({ "i", "s" }, "<C-L>", function()
+		ls.jump(1)
+	end, { silent = true })
+	keymap.set({ "i", "s" }, "<C-J>", function()
+		ls.jump(-1)
+	end, { silent = true })
+	keymap.set({ "i", "s" }, "<C-E>", function()
+		if ls.choice_active() then
+			ls.change_choice(1)
+		end
+	end, { silent = true })
+end
 
 -- nvim-dap
 local status, dap = pcall(require, "dap")

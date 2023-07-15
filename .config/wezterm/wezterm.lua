@@ -20,7 +20,6 @@ wezterm.on("update-right-status", function(window, pane)
 	end
 end)
 
-config.use_ime = true
 config.color_scheme = "Cyberdyne"
 config.initial_rows = 120
 config.initial_cols = 200

@@ -32,6 +32,9 @@
 !/.vim/
 /.vim/*
 
+# tex
+!/.latexmkrc
+
 !.profile
 !.bashrc
 !.zshrc

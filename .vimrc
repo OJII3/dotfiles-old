@@ -22,8 +22,11 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': { -> fzf#install() }}
+Plug 'junegunn/fzf.vim'
 Plug 'github/copilot.vim'
+Plug 'lervag/vimtex'
+Plug 'jiangmiao/auto-pairs'
 
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
@@ -44,7 +47,7 @@ set background=dark
 " ================================================================
 
 set number
-set relativenumber
+" set relativenumber
 set cursorline
 set hlsearch
 set incsearch
@@ -53,6 +56,25 @@ set clipboard+=unnamed
 set statusline=2
 set wildmenu
 
+
+"fzf
+nnoremap <Space>f :Files<CR>
+nnoremap <Space>o :History<CR>
+
+"fern
+let g:fern#default_hidden=1
 nnoremap <Space>e :Fern . -drawer -toggle<CR> 
 
-
+"vimtex
+let g:vimtex_compiler_latexmk = {
+      \ 'background': 1,
+      \ 'build_dir': '',
+      \ 'continuous': 1,
+      \ 'options': [
+      \    '-pdfdvi', 
+      \    '-verbose',
+      \    '-file-line-error',
+      \    '-synctex=1',
+      \    '-interaction=nonstopmode',
+      \],
+      \}

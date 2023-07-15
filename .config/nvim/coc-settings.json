@@ -6,5 +6,6 @@
   "stylelintplus.autoFixOnSave": true,
   "css.validate": false,
   "scss.validate": false,
-  "less.validate": false
+  "less.validate": false,
+  "snippets.ultisnips.pythonPrompt": false
 }

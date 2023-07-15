@@ -1,8 +1,0 @@
-{
-  "include": ["default/katakana"],
-  "define": {
-    "keymap": {
-      ";": "start-preedit-no-delete"
-    }
-  }
-}
