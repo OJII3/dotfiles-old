@@ -32,11 +32,10 @@ keymap.set("n", "<Leader>rf", "<Plug>(coc-references)", { silent = true }) -- re
 keymap.set("n", "<Leader>gd", "<Plug>(coc-definition)", { silent = true }) -- go to definition
 
 -- skkeleton
-keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
-keymap.set("i", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
-keymap.set("t", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
-keymap.set("c", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true })
-keymap.set("c", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = true, silent = true })
+keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = false })
+keymap.set("i", "<C-k>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
+keymap.set("c", "<C-k>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
+keymap.set("c", "<C-k>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
 
 -- markdown-preview
 keymap.set("n", "<leader>lv", "<Plug>MarkdownPreviewToggle", { noremap = false, silent = true })
