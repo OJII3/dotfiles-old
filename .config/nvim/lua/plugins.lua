@@ -47,7 +47,6 @@ require("lazy").setup({
 	{ "heavenshell/vim-jsdoc" },
 	-- lsp
 	-- { 'neovim/nvim-lspconfig' },
-	-- { 'jose-elias-alvarez/null-ls.nvim' },
 	-- { 'williamboman/mason-lspconfig.nvim' },
 	-- {
 	-- 	"glepnir/lspsaga.nvim",

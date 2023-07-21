@@ -33,9 +33,9 @@ keymap.set("n", "<Leader>gd", "<Plug>(coc-definition)", { silent = true }) -- go
 
 -- skkeleton
 keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })
-keymap.set("i", "<C-k>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
--- keymap.set("c", "<C-k>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
--- keymap.set("c", "<C-k>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
+keymap.set("i", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
+keymap.set("c", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
+keymap.set("c", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
 
 -- markdown-preview
 keymap.set("n", "<leader>lv", "<Plug>MarkdownPreviewToggle", { noremap = false, silent = true })
@@ -53,12 +53,12 @@ if status then
 	keymap.set({ "i" }, "<C-K>", function()
 		ls.expand()
 	end, { silent = true })
-	keymap.set({ "i", "s" }, "<C-L>", function()
+	keymap.set({ "i", "s" }, "<C-Shift-l>", function()
 		ls.jump(1)
 	end, { silent = true })
-	-- keymap.set({ "i", "s" }, "<C-J>", function()
-	-- 	ls.jump(-1)
-	-- end, { silent = true })
+	keymap.set({ "i", "s" }, "<C-Sift-j>", function()
+		ls.jump(-1)
+	end, { silent = true })
 	keymap.set({ "i", "s" }, "<C-E>", function()
 		if ls.choice_active() then
 			ls.change_choice(1)
