@@ -35,6 +35,11 @@
 # tex
 !/.latexmkrc
 
+# jetbrains exported settings
+!/.config/JetBrains/
+!/.config/JetBrains/* 
+!/.config/JetBrains/*/settings.zip
+
 !.profile
 !.bashrc
 !.zshrc
