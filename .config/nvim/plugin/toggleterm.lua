@@ -4,8 +4,8 @@ if not status then
 end
 
 local Terminal = toggleterm.Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
+local tig = Terminal:new({ cmd = "tig", hidden = true, direction = "float" })
 
-function Lazygit_toggle()
-	lazygit:toggle()
+function tig_toggle()
+	tig:toggle()
 end
