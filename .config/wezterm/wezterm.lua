@@ -20,7 +20,7 @@ wezterm.on("update-right-status", function(window, pane)
 	end
 end)
 
-config.color_scheme = "Cyberdyne"
+config.color_scheme = "GitHub"
 config.initial_rows = 120
 config.initial_cols = 200
 config.font_size = 13.0
@@ -30,29 +30,20 @@ config.font = wezterm.font_with_fallback({
 	"HackGen Console NFJ",
 	"Noto Color Emoji",
 })
+config.inactive_pane_hsb = {
+  saturation = 0.8,
+}
 config.window_background_gradient = {
-	colors = { "#103000", "#0F295C", "#000000" },
-	orientation = { Linear = { angle = -45 } },
+  colors = { 'deeppink', 'gold' },
+  orientation = {
+    Radial = {
+      cs = 0.75,
+      cy = 0.75,
+      radius = 1.25,
+    }
+  }
 }
-config.background = {
-	{
-		source = {
-			-- Gradient = { preset = 'Warm' },
-			Color = "#000000",
-		},
-		opacity = 1,
-	},
-	{
-		source = {
-			File = "/usr/local/src/pictures/mikuv3_img2.png",
-		},
-		repeat_x = "NoRepeat",
-		vertical_align = "Middle",
-		attachment = "Fixed",
-		hsb = { brightness = 0.5 },
-		opacity = 0.75,
-	},
-}
+config.window_background_opacity = 0.4
 
 -- and finally, return the configuration to wezterm
 return config
