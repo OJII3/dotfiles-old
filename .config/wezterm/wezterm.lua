@@ -20,7 +20,7 @@ wezterm.on("update-right-status", function(window, pane)
 	end
 end)
 
-config.color_scheme = "GitHub"
+config.color_scheme = "iceberg"
 config.initial_rows = 120
 config.initial_cols = 200
 config.font_size = 13.0
@@ -33,17 +33,27 @@ config.font = wezterm.font_with_fallback({
 config.inactive_pane_hsb = {
   saturation = 0.8,
 }
-config.window_background_gradient = {
-  colors = { 'deeppink', 'gold' },
-  orientation = {
-    Radial = {
-      cs = 0.75,
-      cy = 0.75,
-      radius = 1.25,
-    }
+config.background = {
+  {
+    source = {
+      File = '/usr/share/backgrounds/archlinux/archwave.png'
+    },
+    horizontal_align = 'Center',
+    hsb = { brightness = 0.1 }
   }
 }
-config.window_background_opacity = 0.4
+-- config.window_background_gradient = {
+--   colors = { 'deeppink', 'gold' },
+--   orientation = {
+--     Radial = {
+--       cs = 0.75,
+--       cy = 0.75,
+--       radius = 1.25,
+--     }
+--   }
+-- }
+
+
 
 -- and finally, return the configuration to wezterm
 return config

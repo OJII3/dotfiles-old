@@ -1,0 +1,11 @@
+configuration {
+  modi: "combi,drun,run,window,system:~/.config/rofi/rofi-power-menu";
+  combi-modi: "drun,run,window";
+  sidebar-mode: true;
+  kb-cancel: "Escape,Control+bracketleft";
+  kb-mode-previous: "Alt+h";
+  kb-mode-next: "Alt+l";
+  whow-icons: true;
+}
+
+@theme "/usr/share/rofi/themes/rounded-green-dark.rasi"

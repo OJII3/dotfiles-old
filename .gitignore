@@ -40,6 +40,14 @@
 !/.config/JetBrains/* 
 !/.config/JetBrains/*/settings.zip
 
+# i3, rofi, polybar
+!/.config/i3/
+!/.config/i3/*
+!/.config/rofi/
+!/.config/rofi/*
+!/.config/polybar/
+!/.config/polybar/
+
 !.profile
 !.bashrc
 !.zshrc

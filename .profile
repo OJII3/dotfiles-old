@@ -38,3 +38,8 @@ export PATH=$PATH:/usr/local/go/bin
 
 # nvim
 export PATH=$PATH:/usr/local/bin/nvim-linux64/bin
+
+
+# Added by Toolbox App
+export PATH="$PATH:/$HOME/.local/share/JetBrains/Toolbox/scripts"
+
