@@ -150,3 +150,5 @@ source ~/src/rur/ros2_humble/install/local_setup.bash
 
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init - bash)"
+
+eval "$(starship init bash)"

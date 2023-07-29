@@ -1,7 +1,7 @@
 configuration {
   font: "JetBranins Mono Font:style=Bold 12";
   modi: "combi,drun,run";
-  combi-modi: "drun,run,window,sys:~/.config/rofi/rofi-power-menu";
+  combi-modi: "drun,run,window,system:~/.config/rofi/rofi-power-menu";
   sidebar-mode: true;
   kb-cancel: "Escape,Control+bracketleft";
   kb-mode-previous: "Alt+h";
