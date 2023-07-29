@@ -50,4 +50,3 @@
 --   document_formatting = false,
 --   document_range_formatting = false,
 -- })
-

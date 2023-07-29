@@ -2,8 +2,6 @@
   "coc.preferences.formatOnSave": true,
   "eslint.codeActionsOnSave.mode": "problems",
   "eslint.autoFixOnSave": true,
-  "stylelintplus.autoFixOnFormat": true,
-  "stylelintplus.autoFixOnSave": true,
   "css.validate": false,
   "scss.validate": false,
   "less.validate": false

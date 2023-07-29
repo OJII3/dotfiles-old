@@ -1,11 +1,18 @@
 configuration {
-  modi: "combi,drun,run,window,system:~/.config/rofi/rofi-power-menu";
-  combi-modi: "drun,run,window";
+  font: "JetBranins Mono Font:style=Bold 12";
+  modi: "combi,drun,run";
+  combi-modi: "drun,run,window,sys:~/.config/rofi/rofi-power-menu";
   sidebar-mode: true;
   kb-cancel: "Escape,Control+bracketleft";
   kb-mode-previous: "Alt+h";
   kb-mode-next: "Alt+l";
-  whow-icons: true;
+  show-icons: true;
+  fallback-application-icon: "~/.config/rofi/miku-sd.png";
 }
 
-@theme "/usr/share/rofi/themes/rounded-green-dark.rasi"
+//@theme "/usr/share/rofi/themes/rounded-green-dark.rasi"
+//@theme "/usr/share/rofi/themes/launchpad.rasi"
+//@theme "/usr/share/rofi/themes/sidebar-v2.rasi"
+//@theme "/usr/share/rofi/themes/launchpad.rasi"
+//@theme "/usr/share/rofi/themes/lb.rasi"
+@theme "/usr/share/rofi/themes/rounded-red-dark.rasi"
