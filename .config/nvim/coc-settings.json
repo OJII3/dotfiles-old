@@ -3,5 +3,15 @@
   "eslint.codeActionsOnSave.mode": "problems",
   "eslint.autoFixOnSave": true,
   "css.validate": false,
-  "scss.validate": true
+  "scss.validate": true,
+  "clangd.arguments": [
+    "-j=4",
+    "--background-index",
+    "--clang-tidy",
+    "--completion-style=bundled",
+    "--header-insertion=iwyu",
+    "--header-insertion-decorators",
+    "--suggest-missing-includes",
+    "--suggest-missing-includes-form"
+  ]
 }

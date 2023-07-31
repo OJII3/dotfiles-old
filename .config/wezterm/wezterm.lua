@@ -40,7 +40,7 @@ config.background = {
 			File = "/home/ojii3/Pictures/haxxor-bunny.png",
 		},
 		horizontal_align = "Center",
-		hsb = { brightness = 0.12 },
+		hsb = { brightness = 0.15 },
 	},
 }
 -- config.window_background_gradient = {

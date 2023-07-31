@@ -36,6 +36,7 @@
 !/.latexmkrc
 
 # jetbrains exported settings
+!/.ideavimrc
 !/.config/JetBrains/
 !/.config/JetBrains/* 
 !/.config/JetBrains/*/settings.zip
