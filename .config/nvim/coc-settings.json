@@ -3,6 +3,5 @@
   "eslint.codeActionsOnSave.mode": "problems",
   "eslint.autoFixOnSave": true,
   "css.validate": false,
-  "scss.validate": false,
-  "less.validate": false
+  "scss.validate": true
 }

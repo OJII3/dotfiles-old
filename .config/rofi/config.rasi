@@ -1,6 +1,6 @@
 configuration {
   font: "JetBranins Mono Font:style=Bold 12";
-  modi: "combi,drun,run";
+  modi: "combi,drun,run,system:~/.config/rofi/rofi-power-menu";
   combi-modi: "drun,run,window,system:~/.config/rofi/rofi-power-menu";
   sidebar-mode: true;
   kb-cancel: "Escape,Control+bracketleft";
@@ -15,4 +15,5 @@ configuration {
 //@theme "/usr/share/rofi/themes/sidebar-v2.rasi"
 //@theme "/usr/share/rofi/themes/launchpad.rasi"
 //@theme "/usr/share/rofi/themes/lb.rasi"
-@theme "/usr/share/rofi/themes/rounded-red-dark.rasi"
+//@theme "/usr/share/rofi/themes/rounded-red-dark.rasi"
+@theme "/usr/share/rofi/themes/arthur.rasi"

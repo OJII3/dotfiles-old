@@ -31,16 +31,17 @@ config.font = wezterm.font_with_fallback({
 	"Noto Color Emoji",
 })
 config.inactive_pane_hsb = {
-  saturation = 0.8,
+	saturation = 0.8,
 }
 config.background = {
-  {
-    source = {
-      File = '/usr/share/backgrounds/archlinux/archwave.png'
-    },
-    horizontal_align = 'Center',
-    hsb = { brightness = 0.1 }
-  }
+	{
+		source = {
+			-- File = '/usr/share/backgrounds/archlinux/archwave.png'
+			File = "/home/ojii3/Pictures/haxxor-bunny.png",
+		},
+		horizontal_align = "Center",
+		hsb = { brightness = 0.12 },
+	},
 }
 -- config.window_background_gradient = {
 --   colors = { 'deeppink', 'gold' },
@@ -52,8 +53,6 @@ config.background = {
 --     }
 --   }
 -- }
-
-
 
 -- and finally, return the configuration to wezterm
 return config

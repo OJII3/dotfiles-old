@@ -184,7 +184,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $Locker i3lock && sleep 1
+set $Locker light-locker-command -l
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -216,10 +216,13 @@ mode "$mode_display" {
 # Declare here the shortcut to bring the display selection menu
 bindsym $mod+x mode "$mode_display"
 
+bindsym $mod+Tab focus right
+bindsym $mod+Shift+Tab focus left
 
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --hack
 exec_always --no-statup-id autotiling
-bindsym $mod+c exec google-chrome-stable
+exec_always --no-startup-id xinput set-prop "SYNA32AF:00 06CB:CE17 Touchpad" "libinput Tapping Enabled" 0
+bindsym $mod+c exec google-chrome-stable --profile-directory=Default
 bindsym $mod+Print exec import -window $(xprop -root | awk '$1=="_NET_ACTIVE_WINDOW(WINDOW):"{print $5}') ~/Pictures/Screenshots/screenshot-$(date "+%Y%m%d-%H%M%S").png
 

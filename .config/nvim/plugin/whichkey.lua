@@ -3,7 +3,12 @@ if not status then
 	return
 end
 
-wk.setup()
+wk.setup({
+	triggers_blacklist = {
+		i = { "j", "k", "<Shift-,>" },
+		v = { "j", "k" },
+	},
+})
 
 -- :h ins-completion
 wk.register({
@@ -23,4 +28,9 @@ wk.register({
 }, {
 	mode = "i",
 	prefix = "<C-x>",
+})
+
+wk.register({}, {
+	mode = "i",
+	prefix = "<Shift-,>",
 })
