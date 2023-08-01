@@ -1,7 +1,6 @@
 [user]
 	name = OJII3
 	email = 84656786+OJII3@users.noreply.github.com
-	signingkey = 72B779D350BFE43D
 [gpg]
 	program = gpg
 [commit]
