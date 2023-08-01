@@ -48,7 +48,6 @@
 !.zshrc
 !.gitignore
 !.tmux.conf
-!.gitconfig
 !.gitmodules
 
 !install.sh

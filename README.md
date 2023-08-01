@@ -2,12 +2,16 @@
 
 ## Install
 
-```shell
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/OJII3/dotfiles/main/install.sh)"
+```sh
+cd & git clone https://github.com/OJII3/dotfiles.git
+cd dotfiles
+./install.sh
 ```
 
-## Tools
+## Main Environment
 
-- [Neovim](https://neovim.io/)
-- [Vim](https://www.vim.org/)
-- [Starship](https://starship.rs/)
+- OS: ArchLinux
+- DE/WM: i3
+- Shell: zsh
+- Terminal: Wezterm
+- Editor: Neovim
