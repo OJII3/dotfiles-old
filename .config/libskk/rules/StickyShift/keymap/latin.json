@@ -4,6 +4,7 @@
   ],
   "define": {
     "keymap": {
+      "C-j": "noop",
       "Henkan": "set-input-mode-hiragana"
     }
   }

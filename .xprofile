@@ -8,5 +8,4 @@ light-locker --lock-on-suspend &
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fctix
 export XMODIFIERS=@im=fcitx
-fcitx
-
+fcitx5
