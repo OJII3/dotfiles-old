@@ -2,60 +2,55 @@
 
 !/.config/
 
-!/.config/starship.toml
-
-# neovim
+# editor, ime
 !/.config/nvim/
-!/.config/nvim/*
-!/.config/nvim/*/*
-!/.config/nvim/*/*/*
-
-# wezterm
-!/.config/wezterm/
-!/.config/wezterm/*
-
-# vscode
-!/.config/Code/
-!/.config/Code/User/
-!/.config/Code/User/settings.json
-!/.config/Code/User/keybindings.json
-
-# skk
-!/.config/libskk/
-!/.config/libskk/*
-!/.config/libskk/*/*
-!/.config/libskk/*/*/*
-!/.config/libskk/*/*/*/*
-
-# vim
+!/.config/nvim/**
+/.config/nvim/lazy-lock.json
 !.vimrc
 !/.vim/
-/.vim/*
-
-# tex
-!/.latexmkrc
-
-# jetbrains exported settings
+/.vim/**
 !/.ideavimrc
 !/.config/JetBrains/
 !/.config/JetBrains/* 
 !/.config/JetBrains/*/settings.zip
-
+!/.config/Code/
+!/.config/Code/User/
+!/.config/Code/User/settings.json
+!/.config/Code/User/keybindings.json
 # i3, rofi, polybar
 !/.config/i3/
-!/.config/i3/*
+!/.config/i3/**
 !/.config/rofi/
-!/.config/rofi/*
+!/.config/rofi/**
+# !/.config/polybar/  # yay -S polybar-theme-git, with clean install
 # !/.config/polybar/
-# !/.config/polybar/
-
+# music player daemon
+!/.config/mpd/
+!/.config/mpd/mpd.conf
+# ranger (file brwoser)
+!/.config/ranger
+!/.config/ranger/**
+# misc
+!/.config/fcitx5/config
+!/.config/fcitx/config
+!/.config/starship.toml
+!/.config/wezterm/
+!/.config/wezterm/**
+!/.config/libskk/
+!/.config/libskk/**
+!/.github/
+!/.github/**
+!/.xprofile
+!/.Xmodmap
+!/.latexmkrc
 !.profile
 !.bashrc
 !.zshrc
-!README.md
 !.gitignore
 !.tmux.conf
 !.gitconfig
 !.gitmodules
+
 !install.sh
 !update.sh
+!README.md

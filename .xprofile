@@ -1,0 +1,12 @@
+#!/bin/sh
+
+xmodmap ~/.Xmodemap
+# feh --no-fehbg --bg-fill '/usr/share/backgrounds/archlinux/archwave.png'
+feh --no-fehbg --bg-fill '/usr/share/backgrounds/misc/haxxor-bunny.png'
+light-locker --lock-on-suspend &
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fctix
+export XMODIFIERS=@im=fcitx
+fcitx
+
