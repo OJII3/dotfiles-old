@@ -16,4 +16,5 @@ configuration {
 //@theme "/usr/share/rofi/themes/launchpad.rasi"
 //@theme "/usr/share/rofi/themes/lb.rasi"
 //@theme "/usr/share/rofi/themes/rounded-red-dark.rasi"
+//@theme "/usr/share/rofi/themes/arthur.rasi"
 @theme "/usr/share/rofi/themes/arthur.rasi"
