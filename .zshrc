@@ -358,7 +358,7 @@ then
 fi
 
 # python env(rye)
-source "$HOME/.rye/env" 
+# source "$HOME/.rye/env" 
 
 # starship
 eval "$(starship init zsh)"
