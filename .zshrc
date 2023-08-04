@@ -357,7 +357,7 @@ then
 	fi
 fi
 
-# python env(rye)
+# python env(rye) : Don't use this, because global python should be managed by pacman
 # source "$HOME/.rye/env" 
 
 # starship

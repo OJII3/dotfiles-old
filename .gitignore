@@ -46,6 +46,8 @@
 !.profile
 !.bashrc
 !.zshrc
+!.zshrc.pre
+!.zshrc.local
 !.gitconfig_shared
 !.gitignore
 !.tmux.conf

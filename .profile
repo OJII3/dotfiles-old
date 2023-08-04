@@ -32,8 +32,8 @@ export PATH=$PATH:/usr/local/bin
 # go
 export PATH=$PATH:/usr/local/go/bin
 
-# nvim
-export PATH=$PATH:/usr/local/bin/nvim-linux64/bin
+# nvim: for manual install
+# export PATH=$PATH:/usr/local/bin/nvim-linux64/bin
 
 
 # Added by Toolbox App

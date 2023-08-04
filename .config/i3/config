@@ -224,5 +224,5 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh --hack
 exec_always --no-statup-id autotiling
 exec_always --no-startup-id xinput set-prop "SYNA32AF:00 06CB:CE17 Touchpad" "libinput Tapping Enabled" 0
 bindsym $mod+c exec google-chrome-stable --profile-directory=Default
-bindsym $mod+Print exec import -window $(xprop -root | awk '$1=="_NET_ACTIVE_WINDOW(WINDOW):"{print $5}') ~/Pictures/Screenshots/screenshot-$(date "+%Y%m%d-%H%M%S").png
+bindsym $mod+Print exec import -window $(xprop -root | awk '$1=="_NET_ACTIVE_WINDOW(WINDOW):"{print $5}') ~/Pictures/screenshots/screenshot-$(date "+%Y%m%d-%H%M%S").png
 
