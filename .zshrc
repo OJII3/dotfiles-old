@@ -177,8 +177,8 @@ fi
 
 ## global aliases (for those who like them) ##
 
-#alias -g '...'='../..'
-#alias -g '....'='../../..'
+alias -g '...'='../..'
+alias -g '....'='../../..'
 #alias -g BG='& exit'
 #alias -g C='|wc -l'
 #alias -g G='|grep'
