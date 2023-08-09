@@ -3,12 +3,13 @@ local keymap = vim.keymap
 -- builtin
 keymap.set("n", "j", "gj", { noremap = true, silent = true })
 keymap.set("n", "k", "gk", { noremap = true, silent = true })
-keymap.set("n", "<Space>.", ":e $MYVIMRC<CR>")
+keymap.set("v", "j", "gj", { noremap = true, silent = true })
+keymap.set("v", "k", "gk", { noremap = true, silent = true })
 keymap.set("t", "<ESC>", "<C-\\><C-n>", { noremap = true, silent = true })
 keymap.set("t", "<C-[>", "<C-\\><C-n>", { noremap = true, silent = true })
 keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>", { noremap = true, silent = true })
-keymap.set("n", "<C-b>j", "<cmd>bnext<CR>", { noremap = true, silent = true })
-keymap.set("n", "<C-b>k", "<cmd>bprev<CR>", { noremap = true, silent = true })
+-- keymap.set("n", "<C-b>j", "<cmd>bnext<CR>", { noremap = true, silent = true })
+-- keymap.set("n", "<C-b>k", "<cmd>bprev<CR>", { noremap = true, silent = true })
 
 -- plugins
 -- fern

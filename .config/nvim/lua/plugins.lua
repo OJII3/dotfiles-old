@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 -- vim.g.mapleader = ' ' -- make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup({
-	{ "folke/which-key.nvim" },
+	-- { "folke/which-key.nvim" },
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	{ "nvim-lua/plenary.nvim" },
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
