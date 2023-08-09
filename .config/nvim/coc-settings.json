@@ -4,5 +4,9 @@
   "eslint.autoFixOnSave": true,
   "css.validate": false,
   "scss.validate": true,
-  "clangd.arguments": ["--suggest-missing-includes", "--enable-config"]
+  "clangd.arguments": [
+    "--suggest-missing-includes",
+    "--enable-config",
+    "--header-insertion=iwyu"
+  ]
 }
