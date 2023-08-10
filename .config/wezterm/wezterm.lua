@@ -20,7 +20,7 @@ wezterm.on("update-right-status", function(window, pane)
 	end
 end)
 
-config.color_scheme = "iceberg"
+config.color_scheme = "tokyonight"
 config.initial_rows = 120
 config.initial_cols = 200
 config.font_size = 13.0
@@ -40,7 +40,7 @@ config.background = {
 			File = "/home/ojii3/Pictures/haxxor-bunny.png",
 		},
 		horizontal_align = "Center",
-		hsb = { brightness = 0.15 },
+		hsb = { brightness = 0.10 },
 	},
 }
 -- config.window_background_gradient = {
