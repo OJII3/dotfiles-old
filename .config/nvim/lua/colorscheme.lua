@@ -3,7 +3,7 @@
 -- colorscheme ayu
 -- ]])
 
-require("tokyonight").setup({ transparent = true })
+-- require("tokyonight").setup({ transparent = true })
 vim.cmd([[
 colorscheme tokyonight-moon
 ]])
