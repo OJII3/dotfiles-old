@@ -109,6 +109,7 @@ require("lazy").setup({
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
+  { "romgrk/barbar.nvim" },
 	{ "akinsho/toggleterm.nvim", config = true },
 	{ "goolord/alpha-nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	{ "lervag/vimtex" },
