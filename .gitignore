@@ -5,10 +5,10 @@
 # editor, ime
 !/.config/nvim/
 !/.config/nvim/**
-/.config/nvim/lazy-lock.json
 !.vimrc
 !/.vim/
 /.vim/**
+!/.nanorc
 !/.ideavimrc
 !/.config/JetBrains/
 !/.config/JetBrains/* 

@@ -23,7 +23,7 @@ end)
 config.color_scheme = "Abernathy"
 config.initial_rows = 120
 config.initial_cols = 200
-config.font_size = 13.0
+config.font_size = 12.0
 config.font = wezterm.font_with_fallback({
 	"JetBrains Mono",
 	"Nerd Font Symbols",
