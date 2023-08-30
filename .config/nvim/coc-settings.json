@@ -1,12 +1,19 @@
 {
   "coc.preferences.formatOnSave": true,
-  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.codeActionsOnSave.mode": "all",
   "eslint.autoFixOnSave": true,
   "css.validate": false,
   "scss.validate": true,
   "clangd.arguments": [
     "--suggest-missing-includes",
     "--enable-config",
-    "--header-insertion=iwyu"
-  ]
+    "--header-insertion=iwyu",
+    "--clang-tidy"
+  ],
+  "languageserver": {
+    "efm": {
+      "command": "efm-langserver",
+      "filetypes": ["vim", "eruby", "markdown", "yaml"]
+    }
+  }
 }

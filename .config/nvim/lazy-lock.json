@@ -7,6 +7,7 @@
   "coc.nvim": { "branch": "release", "commit": "9332d2ab1154dedc9dbcd3e1c873886abaf061a6" },
   "denops.vim": { "branch": "main", "commit": "9f1b8cf0d516ee0a0e26f50bdbd935c29a8f4588" },
   "dial.nvim": { "branch": "master", "commit": "c6657df5453a6cbe4e8356e1675e9652cadc332f" },
+  "efm-langserver": { "branch": "master", "commit": "437c94a22d496fe0add798ad8a10ac76fb9e8df5" },
   "fern-git-status.vim": { "branch": "master", "commit": "151336335d3b6975153dad77e60049ca7111da8e" },
   "fern-renderer-nerdfont.vim": { "branch": "master", "commit": "1e90a78ab5510fbcedc85abeb9a251d978726935" },
   "fern.vim": { "branch": "main", "commit": "cdec1327ec99f0155d0a53aee1beae4c58071558" },
