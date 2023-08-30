@@ -26,14 +26,16 @@ keymap.set("n", "<Space>r", "<cmd>Telescope live_grep<CR>", { noremap = true, si
 keymap.set("n", "s", "<Plug>Lightspeed_s", { noremap = true, silent = true })
 
 -- coc
-keymap.set("i", "<C-Space>", "coc#refresh()", { expr = true, silent = true })                   -- trigger completion
-keymap.set("n", "<Leader>rn", "<Plug>(coc-rename)", { silent = true })                          -- rename
-keymap.set("n", "<Leader>fm", "<Plug>(coc-format)", { silent = true })                          -- format
-keymap.set("n", "<Leader>ca", "<Plug>(coc-codeaction-selected)", { silent = true })             -- code action
-keymap.set("n", "<Leader>rf", "<Plug>(coc-references)", { silent = true })                      -- references
-keymap.set("n", "<Leader>gd", "<Plug>(coc-definition)", { silent = true })                      -- go to definition
-keymap.set("n", "<Space>j", "<cmd>call CocAction('diagnosticNext')<CR>", { silent = true })     -- go to next diagnostic
-keymap.set("n", "<Space>k", "<cmd>call CocAction('diagnosticPrevious')<CR>", { silent = true }) -- go to previous diagnostic
+keymap.set("i", "<C-Space>", "coc#refresh()", { expr = true, silent = true })    -- trigger completion
+keymap.set("n", "<Leader>rn", "<Plug>(coc-rename)", { silent = true })           -- rename
+keymap.set("n", "<Leader>fm", "<Plug>(coc-format)", { silent = true })           -- format
+keymap.set("n", "<Leader>c", "<Plug>(coc-codeaction-cursor)", { silent = true }) -- code action
+keymap.set("n", "<Leader>a", "<Plug>(coc-codeaction)", { silent = true })        -- code action
+keymap.set("n", "gr", "<Plug>(coc-references)", { silent = true })               -- references
+keymap.set("n", "gd", "<Plug>(coc-definition)", { silent = true })               -- go to definition
+keymap.set("n", "gy", "<Plug>(coc-type-definition)", { silent = true })          -- go to type definition
+keymap.set("n", "<C-k>", "<Plug>(coc-diagnostic-previous)", { silent = true })   -- go to previous diagnostic
+keymap.set("n", "<C-j>", "<Plug>(coc-diagnostic-next)", { silent = true })       -- go to next diagnostic
 
 -- skkeleton
 keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })

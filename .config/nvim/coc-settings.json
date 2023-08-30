@@ -9,11 +9,5 @@
     "--enable-config",
     "--header-insertion=iwyu",
     "--clang-tidy"
-  ],
-  "languageserver": {
-    "efm": {
-      "command": "efm-langserver",
-      "filetypes": ["vim", "eruby", "markdown", "yaml"]
-    }
-  }
+  ]
 }
