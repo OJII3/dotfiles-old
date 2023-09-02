@@ -34,8 +34,8 @@ keymap.set("n", "<Leader>a", "<Plug>(coc-codeaction)", { silent = true })       
 keymap.set("n", "gr", "<Plug>(coc-references)", { silent = true })               -- references
 keymap.set("n", "gd", "<Plug>(coc-definition)", { silent = true })               -- go to definition
 keymap.set("n", "gy", "<Plug>(coc-type-definition)", { silent = true })          -- go to type definition
-keymap.set("n", "<C-k>", "<Plug>(coc-diagnostic-previous)", { silent = true })   -- go to previous diagnostic
-keymap.set("n", "<C-j>", "<Plug>(coc-diagnostic-next)", { silent = true })       -- go to next diagnostic
+keymap.set("n", "g[", "<Plug>(coc-diagnostic-prev)", { silent = true })          -- go to previous diagnostic
+keymap.set("n", "g]", "<Plug>(coc-diagnostic-next)", { silent = true })          -- go to next diagnostic
 
 -- skkeleton
 keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })

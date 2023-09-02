@@ -30,6 +30,7 @@
 # ranger (file brwoser)
 !/.config/ranger
 !/.config/ranger/**
+.config/ranger/plugins
 # misc
 !/.config/fcitx5/config
 !/.config/fcitx/config

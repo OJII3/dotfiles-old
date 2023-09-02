@@ -14,7 +14,7 @@
         "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
     },
     {
-        "key": "ctrl+n ctrl+f",
+        "key": "ctrl+f",
         "command": "explorer.newFolder",
         "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
     },
@@ -43,5 +43,5 @@
     {
         "key": "ctrl+j",
         "command": "noop"
-    }
+    },
 ]
