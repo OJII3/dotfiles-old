@@ -340,11 +340,13 @@ alias -g '....'='../../..'
 
 ## END OF DEFAULT #################################################################
 
+eval "$(keychain --eval --quiet --noask id_ed25519)"
 
 ## aliases
 
 alias vi=nvim
-
+alias ra=ranger
+alias reflectorjp='sudo reflector --country 'Japan' --age 24 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 ## nodenv path
 if [ -e "$HOME/.nodenv" ]
@@ -365,4 +367,10 @@ eval "$(starship init zsh)"
 
 export GPG_TTY=$(tty)
 
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+# pnpm
+export PNPM_HOME="/home/ojii3/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

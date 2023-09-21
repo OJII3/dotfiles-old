@@ -14,17 +14,39 @@
         "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
     },
     {
-        "key": "ctrl+f",
+        "key": "g [",
+        "command": "editor.action.marker.prev",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "g ]",
+        "command": "editor.action.marker.next",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "g g",
+        "command": "cursorTop",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'",
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.goToDeclaration",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'",
+    },
+    {
+        "key": "g r",
+        "command": "editor.action.goToReferences",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'",
+    },
+    {
+        "key": "ctrl+k",
         "command": "explorer.newFolder",
         "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
     },
     {
         "key": "ctrl+shift+v",
         "command": "markdown.showPreviewToSide",
-    },
-    {
-        "key": "ctrl+.",
-        "command": "editor.action.quickFix",
+        "when": "editorLangId == 'markdown'"
     },
     {
         "key": "alt+shift+f",
@@ -43,5 +65,10 @@
     {
         "key": "ctrl+j",
         "command": "noop"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated && !inInteractiveInput && !interactiveEditorFocused"
     },
 ]

@@ -50,7 +50,8 @@ keymap.set("n", "<leader>lv", "<Plug>MarkdownPreviewToggle", { noremap = false, 
 keymap.set("n", "<C-s>v", "<cmd>ToggleTerm direction=vertical size=100<CR>", { noremap = true, silent = true })
 keymap.set("n", "<C-s>h", "<cmd>ToggleTerm direction=horizontal size=12<CR>", { noremap = true, silent = true })
 keymap.set("n", "<C-s>f", "<cmd>ToggleTerm direction=float<CR>", { noremap = true, silent = true })
-keymap.set("n", "<C-s>t", "<cmd>ToggleTerm direction=float<CR>tig<CR>", { noremap = true, silent = true })
+-- keymap.set("n", "<C-s>t", "<cmd>ToggleTerm direction=float<CR>tig<CR>", { noremap = true, silent = true })
+keymap.set("n", "<C-s>t", "<cmd>lua tig_toggle()<CR>", { noremap = true, silent = true })
 keymap.set("t", "<C-s>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 
 -- luasnip
