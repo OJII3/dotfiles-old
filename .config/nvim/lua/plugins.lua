@@ -33,8 +33,7 @@ require("lazy").setup({
   { "lambdalisue/nerdfont.vim",        lazy = true },
   { "lambdalisue/fern-git-status.vim", lazy = true },
   {
-    "lambdalisue/fern-renderer-nerdfont.vim",
-    lazy = true,
+    "lambdalisue/fern-renderer-nerdfont.vim", lazy = true,
   },
   { "lambdalisue/glyph-palette.vim", lazy = true },
   { "nvim-lualine/lualine.nvim" },
@@ -44,8 +43,11 @@ require("lazy").setup({
   { "cocopon/iceberg.vim",           lazy = true },
   ------------------------------
   { "neoclide/coc.nvim",             branch = "release" },
-  { "heavenshell/vim-jsdoc" },
-  -- lsp
+  -- {
+  --   'nmac427/guess-indent.nvim',
+  --   config = function() require('guess-indent').setup {} end,
+  -- },
+  -- builtin lsp
   -- { 'neovim/nvim-lspconfig' },
   -- { 'williamboman/mason-lspconfig.nvim' },
   -- {
@@ -92,13 +94,17 @@ require("lazy").setup({
     end,
   },
   {
+    "nvim-treesitter/nvim-tree-docs",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+  },
+  {
     "nvim-treesitter/nvim-treesitter-textobjects",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
   { "github/Copilot.vim" },
   { "vim-denops/denops.vim" },
   { "vim-skk/skkeleton",           dependencies = { "vim-denops/denops.vim" } },
-  { "lambdalisue/kensaku.vim",     dependencies = { "vim-denops/denops.vim" } },
+  { "lambdalisue/kensaku.vim",     dependencies = { "vim-denops/denops.vim" }, lazy = true },
   -- { "ryicoh/deepl.vim", },
   -- { 'haya14busa/vim-edgemotion' },
   { "tpope/vim-commentary" },
@@ -122,9 +128,15 @@ require("lazy").setup({
   {
     "theHamsta/nvim-dap-virtual-text",
     dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
+    lazy = true,
   },
   {
     "rcarriga/nvim-dap-ui",
     dependencies = { "mfussenegger/nvim-dap" },
+    lazy = true,
   },
+  {
+    "akinsho/git-conflict.nvim",
+    config = true,
+  }
 })

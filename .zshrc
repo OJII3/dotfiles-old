@@ -346,6 +346,7 @@ eval "$(keychain --eval --quiet --noask id_ed25519)"
 
 alias vi=nvim
 alias ra=ranger
+alias gits='git status'
 alias reflectorjp='sudo reflector --country 'Japan' --age 24 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 ## nodenv path

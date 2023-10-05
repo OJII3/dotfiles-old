@@ -9,8 +9,11 @@ keymap.set("t", "<ESC>", "<C-\\><C-n>", { noremap = true, silent = true })
 keymap.set("t", "<C-[>", "<C-\\><C-n>", { noremap = true, silent = true })
 keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>", { noremap = true, silent = true })
 keymap.set("n", "<C-b>h", "<cmd>BufferPrevious<CR>", { noremap = true, silent = true })
+keymap.set("n", "<C-b><C-h>", "<cmd>BufferPrevious<CR>", { noremap = true, silent = true })
 keymap.set("n", "<C-b>l", "<cmd>BufferNext<CR>", { noremap = true, silent = true })
+keymap.set("n", "<C-b><C-l>", "<cmd>BufferNext<CR>", { noremap = true, silent = true })
 keymap.set("n", "<C-b>d", "<cmd>BufferDelete<CR>", { noremap = true, silent = true })
+keymap.set("n", "<C-b><C-d>", "<cmd>BufferClose<CR>", { noremap = true, silent = true })
 
 -- plugins
 -- fern

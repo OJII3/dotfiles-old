@@ -64,11 +64,27 @@
     },
     {
         "key": "ctrl+j",
+        "when": "vim.active",
         "command": "noop"
+    },
+    {
+        "key": "ctrl+j",
+        "when": "!vim.active",
+        "command": "workbench.action.togglePanel"
     },
     {
         "key": "ctrl+enter",
         "command": "-github.copilot.generate",
         "when": "editorTextFocus && github.copilot.activated && !inInteractiveInput && !interactiveEditorFocused"
     },
+    {
+        "key": "ctrl+down",
+        "command": "editor.action.marker.next",
+        "when": "editorTextFocus && !vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "editor.action.marker.prev",
+        "when": "editorTextFocus && !vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    }
 ]

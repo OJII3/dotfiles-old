@@ -1,13 +1,73 @@
 {
   "coc.preferences.formatOnSave": true,
+  "eslint.enable": true,
+  "prettier.enable": true,
+  "tsserver.enable": true,
+  "tsserver.useLocalTsdk": true,
   "eslint.codeActionsOnSave.mode": "all",
   "eslint.autoFixOnSave": true,
+  "stylelint.enable": true,
+  "css.format.enable": false,
   "css.validate": false,
   "scss.validate": true,
+  "astro.language-server.ls-path": "astro-ls",
   "clangd.arguments": [
     "--suggest-missing-includes",
     "--enable-config",
     "--header-insertion=iwyu",
     "--clang-tidy"
-  ]
+  ],
+  "jedi.enable": true,
+  "pyright.enable": true,
+  "diagnostic-languageserver.filetypes": {
+    "javascript": ["eslint"],
+    "javascriptreact": ["eslint"],
+    "typescript": ["eslint"],
+    "typescriptreact": ["eslint"],
+    "css": ["stylelint"],
+    "scss": ["stylelint"],
+    "less": ["stylelint"],
+    "markdown": ["markdownlint"],
+    "python": ["flake8"]
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "python": ["isort", "black"]
+  },
+  "diagnostic-languageserver.linters": {
+    "flake8": {
+      "command": "flake8",
+      "args": ["--format=%(row)d,%(col)d,%(code).1s,%(code)s: %(text)s", "-"],
+      "offsetLine": 0,
+      "offsetColumn": 0,
+      "sourceName": "flake8",
+      "formatLines": 1,
+      "formatPattern": [
+        "^(\\d+),(\\d+),([A-Z]),(.*)(\\r|\\n)*$",
+        {
+          "line": 1,
+          "column": 2,
+          "severity": 3,
+          "message": 4
+        }
+      ],
+      "securities": {
+        "E": "error",
+        "W": "warning",
+        "F": "info",
+        "I": "hint",
+        "C": "hint"
+      }
+    }
+  },
+  "diagnostic-languageserver.formatters": {
+    "isort": {
+      "command": "isort",
+      "args": ["-q", "-"]
+    },
+    "black": {
+      "enable": true,
+      "command": "black",
+      "args": ["--quiet", "-"]
+    }
+  }
 }

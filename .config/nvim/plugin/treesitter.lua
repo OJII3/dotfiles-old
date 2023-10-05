@@ -46,6 +46,9 @@ ts.setup({
   indent = {
     enable = true,
   },
+  tree_docs = {
+    enable = true,
+  },
   autotag = {
     enable = true,
   },
