@@ -90,4 +90,5 @@
     "latex-workshop.latex.autoBuild.interval": 1000,
     "redhat.telemetry.enabled": false,
     "settingsSync.ignoredExtensions": [],
+    "github.copilot.editor.enableCodeActions": false,
 }
