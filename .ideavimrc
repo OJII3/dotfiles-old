@@ -43,6 +43,9 @@ map \b <Action>(ToggleLineBreakpoint)
 map <Space>e :NERDTreeToggle<CR>
 
 nmap :w <Action>(SaveAll)<Action>(ReformatCode)
-nmap g[ <Action>(GoToPreviousError)
-nmap g] <Action>(GoToNextError)
+nmap <leader>g <Action>(ShowIntentionActions)
+nmap <leader>h <Action>(ShowQuickDocInfo)
+nmap <leader>o <Action>(OpenType)
+nmap <leader>r <Action>(RenameElement)
+
 set clipboard^=ideaput
