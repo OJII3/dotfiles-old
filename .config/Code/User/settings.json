@@ -31,6 +31,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnType": true,
     },
     "[jsonc]": {
@@ -91,4 +92,7 @@
     "redhat.telemetry.enabled": false,
     "settingsSync.ignoredExtensions": [],
     "github.copilot.editor.enableCodeActions": false,
+    "python.analysis.inlayHints.callArgumentNames": "partial",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
 }
