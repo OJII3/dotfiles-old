@@ -7,3 +7,5 @@
 - Deno
 - SKK Dictionary
 - ripgrep
+- fzf
+- tig

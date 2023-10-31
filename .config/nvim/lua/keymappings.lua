@@ -1,13 +1,13 @@
 local keymap = vim.keymap
 
 -- builtin
+keymap.set("i", "jj", "<ESC>", { noremap = true, silent = true })
 keymap.set("n", "j", "gj", { noremap = true, silent = true })
 keymap.set("n", "k", "gk", { noremap = true, silent = true })
 keymap.set("v", "j", "gj", { noremap = true, silent = true })
 keymap.set("v", "k", "gk", { noremap = true, silent = true })
 keymap.set("t", "<ESC>", "<C-\\><C-n>", { noremap = true, silent = true })
 keymap.set("t", "<C-[>", "<C-\\><C-n>", { noremap = true, silent = true })
-keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>", { noremap = true, silent = true })
 keymap.set("n", "<C-b>h", "<cmd>BufferPrevious<CR>", { noremap = true, silent = true })
 keymap.set("n", "<C-b><C-h>", "<cmd>BufferPrevious<CR>", { noremap = true, silent = true })
 keymap.set("n", "<C-b>l", "<cmd>BufferNext<CR>", { noremap = true, silent = true })
@@ -16,8 +16,9 @@ keymap.set("n", "<C-b>d", "<cmd>BufferDelete<CR>", { noremap = true, silent = tr
 keymap.set("n", "<C-b><C-d>", "<cmd>BufferClose<CR>", { noremap = true, silent = true })
 
 -- plugins
--- fern
-keymap.set("n", "<Space>e", "<cmd>Fern . -drawer -toggle<CR>", { noremap = true, silent = true })
+-- Neo-tree
+keymap.set("n", "<Space>e", "<cmd>Neotree<CR>", { noremap = true, silent = true })
+-- ohters in neo-tree.lua
 
 -- telescope
 keymap.set("n", "<Space>g", "<cmd>Telescope git_files<CR>", { noremap = true, silent = true })
@@ -37,8 +38,8 @@ keymap.set("n", "<Leader>a", "<Plug>(coc-codeaction)", { silent = true })       
 keymap.set("n", "gr", "<Plug>(coc-references)", { silent = true })               -- references
 keymap.set("n", "gd", "<Plug>(coc-definition)", { silent = true })               -- go to definition
 keymap.set("n", "gy", "<Plug>(coc-type-definition)", { silent = true })          -- go to type definition
-keymap.set("n", "g[", "<Plug>(coc-diagnostic-prev)", { silent = true })          -- go to previous diagnostic
-keymap.set("n", "g]", "<Plug>(coc-diagnostic-next)", { silent = true })          -- go to next diagnostic
+keymap.set("n", "[g", "<Plug>(coc-diagnostic-prev)", { silent = true })          -- go to previous diagnostic
+keymap.set("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true })          -- go to next diagnostic
 
 -- skkeleton
 keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })
@@ -50,12 +51,11 @@ keymap.set("c", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { 
 keymap.set("n", "<leader>lv", "<Plug>MarkdownPreviewToggle", { noremap = false, silent = true })
 
 -- toggleterm
-keymap.set("n", "<C-s>v", "<cmd>ToggleTerm direction=vertical size=100<CR>", { noremap = true, silent = true })
-keymap.set("n", "<C-s>h", "<cmd>ToggleTerm direction=horizontal size=12<CR>", { noremap = true, silent = true })
-keymap.set("n", "<C-s>f", "<cmd>ToggleTerm direction=float<CR>", { noremap = true, silent = true })
--- keymap.set("n", "<C-s>t", "<cmd>ToggleTerm direction=float<CR>tig<CR>", { noremap = true, silent = true })
-keymap.set("n", "<C-s>t", "<cmd>lua tig_toggle()<CR>", { noremap = true, silent = true })
-keymap.set("t", "<C-s>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
+keymap.set("n", "<Space>tv", "<cmd>ToggleTerm direction=vertical size=100<CR>", { noremap = true, silent = true })
+keymap.set("n", "<Space>th", "<cmd>ToggleTerm direction=horizontal size=12<CR>", { noremap = true, silent = true })
+keymap.set("n", "<Space>tf", "<cmd>ToggleTerm direction=float<CR>", { noremap = true, silent = true })
+keymap.set("n", "<Space>tt", "<cmd>lua tig_toggle()<CR>", { noremap = true, silent = true })
+keymap.set("t", "<C-n>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 
 -- luasnip
 local status, ls = pcall(require, "luasnip")

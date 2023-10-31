@@ -31,21 +31,26 @@ Plug 'preservim/nerdtree'
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
-map \r <Action>(ReformatCode)
 
 "" Map <leader>d to start debug
 "map <leader>d <Action>(Debug)
 
 "" Map \b to toggle the breakpoint on the current line
-map \b <Action>(ToggleLineBreakpoint)
+nmap \b <Action>(ToggleLineBreakpoint)
 
 
-map <Space>e :NERDTreeToggle<CR>
+imap jj <Esc>
+nmap <Space>e :NERDTreeToggle<CR>
+
+nmap gd <Action>(GotoDeclaration)
+nmap gr <Action>(GotoReference)
+nmap [g <Action>(GotoPreviousError)
+nmap ]g <Action>(GotoNextError)
+nmap <leader>rn <Action>(RenameElement)
 
 nmap :w <Action>(SaveAll)<Action>(ReformatCode)
 nmap <leader>g <Action>(ShowIntentionActions)
 nmap <leader>h <Action>(ShowQuickDocInfo)
 nmap <leader>o <Action>(OpenType)
-nmap <leader>r <Action>(RenameElement)
 
 set clipboard^=ideaput

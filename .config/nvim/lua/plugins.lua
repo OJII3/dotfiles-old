@@ -22,27 +22,31 @@ require("lazy").setup({
   { "nvim-lua/plenary.nvim" },
   { "nvim-tree/nvim-web-devicons", lazy = true },
   {
-    "lambdalisue/fern.vim",
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
     dependencies = {
-      "lambdalisue/nerdfont.vim",
-      "lambdalisue/fern-renderer-nerdfont.vim",
-      "lambdalisue/fern-git-status.vim",
-      "lambdalisue/glyph-palette.vim",
-    },
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      "3rd/image.nvim",              -- Optional image support in preview window: See `# Preview Mode` for more information
+    }
   },
-  { "lambdalisue/nerdfont.vim",        lazy = true },
-  { "lambdalisue/fern-git-status.vim", lazy = true },
   {
-    "lambdalisue/fern-renderer-nerdfont.vim", lazy = true,
+    's1n7ax/nvim-window-picker',
+    name = 'window-picker',
+    event = 'VeryLazy',
+    version = '2.*',
+    config = function()
+      require 'window-picker'.setup()
+    end,
   },
-  { "lambdalisue/glyph-palette.vim", lazy = true },
   { "nvim-lualine/lualine.nvim" },
   -- colorscheme ----------------
-  { "folke/tokyonight.nvim",         lazy = true },
-  { "ayu-theme/ayu-vim",             lazy = true },
-  { "cocopon/iceberg.vim",           lazy = true },
+  { "folke/tokyonight.nvim",    lazy = true },
+  { "ayu-theme/ayu-vim",        lazy = true },
+  { "cocopon/iceberg.vim",      lazy = true },
   ------------------------------
-  { "neoclide/coc.nvim",             branch = "release" },
+  { "neoclide/coc.nvim",        branch = "release" },
   -- {
   --   'nmac427/guess-indent.nvim',
   --   config = function() require('guess-indent').setup {} end,
@@ -72,6 +76,10 @@ require("lazy").setup({
   },
   { "rafamadriz/friendly-snippets" },
   {
+    'nmac427/guess-indent.nvim',
+    init = function() require('guess-indent').setup {} end,
+  },
+  {
     "windwp/nvim-autopairs",
     init = function()
       require("nvim-autopairs").setup()
@@ -84,7 +92,7 @@ require("lazy").setup({
     end,
   },
   -- { "lewis6991/gitsigns.nvim", lazy = true },
-  { "nvim-telescope/telescope.nvim" },
+  { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
   { "windwp/nvim-ts-autotag" },
   { "ggandor/lightspeed.nvim" },
   {
@@ -104,7 +112,7 @@ require("lazy").setup({
   { "github/Copilot.vim" },
   { "vim-denops/denops.vim" },
   { "vim-skk/skkeleton",           dependencies = { "vim-denops/denops.vim" } },
-  { "lambdalisue/kensaku.vim",     dependencies = { "vim-denops/denops.vim" }, lazy = true },
+  { "lambdalisue/kensaku.vim",     dependencies = { "vim-denops/denops.vim" } },
   -- { "ryicoh/deepl.vim", },
   -- { 'haya14busa/vim-edgemotion' },
   { "tpope/vim-commentary" },
@@ -114,15 +122,21 @@ require("lazy").setup({
     config = function()
       vim.fn["mkdp#util#install"]()
     end,
+    ft = { "markdown" },
   },
   { "romgrk/barbar.nvim" },
   { "akinsho/toggleterm.nvim", config = true },
   { "goolord/alpha-nvim",      dependencies = { "nvim-tree/nvim-web-devicons" } },
-  { "lervag/vimtex" },
+  {
+    "lervag/vimtex",
+    lazy = true,
+    ft = { "tex" },
+  },
   { "dstein64/vim-startuptime" },
   { "monaqa/dial.nvim" },
   {
     "mfussenegger/nvim-dap",
+    dependencies = { "rcarriga/nvim-dap-ui" },
     lazy = true,
   },
   {
@@ -132,7 +146,6 @@ require("lazy").setup({
   },
   {
     "rcarriga/nvim-dap-ui",
-    dependencies = { "mfussenegger/nvim-dap" },
     lazy = true,
   },
   {
