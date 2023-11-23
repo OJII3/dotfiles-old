@@ -149,7 +149,14 @@ require("lazy").setup({
     lazy = true,
   },
   {
+    "mxsdev/nvim-dap-vscode-js",
+    lazy = true,
+  },
+  {
     "akinsho/git-conflict.nvim",
     config = true,
+  },
+  {
+    "yuttie/comfortable-motion.vim",
   }
 })

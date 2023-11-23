@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnSave": true,
+  "coc.preferences.formatOnSaveTimeout": 1000,
   "eslint.enable": true,
   "prettier.enable": true,
   "tsserver.enable": true,
@@ -15,8 +16,7 @@
     "--suggest-missing-includes",
     "--enable-config",
     "--header-insertion=iwyu",
-    "--clang-tidy",
-    "--inlay-hints"
+    "--clang-tidy"
   ],
   "python.formatting.provider": "black",
   "python.sortImports.path": "isort",

@@ -27,7 +27,7 @@ keymap.set("n", "<Space>o", "<cmd>Telescope oldfiles<cr>", { noremap = true, sil
 keymap.set("n", "<Space>r", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
 
 -- lightspeed
-keymap.set("n", "s", "<Plug>Lightspeed_s", { noremap = true, silent = true })
+keymap.set("n", "<C-s>", "<Plug>Lightspeed_s", { noremap = true, silent = true })
 
 -- coc
 keymap.set("i", "<C-Space>", "coc#refresh()", { expr = true, silent = true })    -- trigger completion
