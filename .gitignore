@@ -24,6 +24,11 @@
 !/.config/rofi/**
 # !/.config/polybar/  # yay -S polybar-theme-git, with clean install
 # !/.config/polybar/
+# hyprland
+!/.config/hypr/
+!/.config/hypr/**
+!/.config/waybar/
+!/.config/waybar/**
 # music player daemon
 !/.config/mpd/
 !/.config/mpd/mpd.conf
