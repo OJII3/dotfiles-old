@@ -33,25 +33,35 @@ config.font = wezterm.font_with_fallback({
 config.inactive_pane_hsb = {
 	saturation = 0.8,
 }
+
+config.window_background_opacity = 0.6
 config.background = {
 	{
 		source = {
-			-- File = '/usr/share/backgrounds/archlinux/archwave.png'
-			File = "/home/ojii3/Pictures/haxxor-bunny.png",
-		},
-		horizontal_align = "Center",
-		hsb = { brightness = 0.06 },
-	},
+			Color = "#ff0000",
+		}
+	}
 }
+-- config.background = {
+-- 	{
+-- 		source = {
+-- 			-- file = '/usr/share/backgrounds/archlinux/archwave.png'
+-- 			file = "/home/ojii3/pictures/haxxor-bunny.png",
+-- 		},
+-- 		horizontal_align = "center",
+-- 		hsb = { brightness = 0.06 },
+-- 	},
+-- }
+
 -- config.window_background_gradient = {
---   colors = { 'deeppink', 'gold' },
---   orientation = {
---     Radial = {
---       cs = 0.75,
---       cy = 0.75,
---       radius = 1.25,
---     }
---   }
+-- 	colors = { 'deeppink', 'gold' },
+-- 	orientation = {
+-- 		Radial = {
+-- 			cs = 0.75,
+-- 			cy = 0.75,
+-- 			radius = 1.25,
+-- 		},
+-- 	}
 -- }
 
 -- and finally, return the configuration to wezterm

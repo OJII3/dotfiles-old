@@ -129,11 +129,13 @@ fi
 ## compsys related snippets ##
 
 ## changed completer settings
-#zstyle ':completion:*' completer _complete _correct _approximate
-#zstyle ':completion:*' expand prefix suffix
+zstyle ':completion:*' completer _complete _correct # _approximate
+zstyle ':completion:*' expand prefix suffix
 
 ## another different completer setting: expand shell aliases
-#zstyle ':completion:*' completer _expand_alias _complete _approximate
+# zstyle ':completion:*' completer _expand_alias _complete _approximate
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 ## to have more convenient account completion, specify your logins:
 #my_accounts=(
@@ -177,6 +179,7 @@ fi
 
 ## global aliases (for those who like them) ##
 
+alias ..='cd ..'
 alias -g '...'='../..'
 alias -g '....'='../../..'
 #alias -g BG='& exit'
@@ -340,6 +343,9 @@ alias -g '....'='../../..'
 
 ## END OF DEFAULT #################################################################
 
+source ~/.zshrc.local
+export HISTFILE=~/.zsh_history
+export HISTSIZE=1000000
 eval "$(keychain --eval --quiet --noask id_ed25519)"
 
 ## aliases
@@ -363,9 +369,6 @@ fi
 # python env(rye) : Don't use this, because global python should be managed by pacman
 # source "$HOME/.rye/env" 
 
-# starship
-eval "$(starship init zsh)"
-
 export GPG_TTY=$(tty)
 
 # pnpm
@@ -377,5 +380,3 @@ esac
 # pnpm end
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-[ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
