@@ -380,3 +380,11 @@ esac
 # pnpm end
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+source ~/.zshrc.node
+
+# bun completions
+[ -s "/home/ojii3/.bun/_bun" ] && source "/home/ojii3/.bun/_bun"

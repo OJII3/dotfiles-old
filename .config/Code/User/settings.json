@@ -43,6 +43,7 @@
     "[scss]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "json.validate.enable": true,
     "csharp.suppressDotnetInstallWarning": true,
     "editor.inlineSuggest.enabled": true,
     "workbench.view.alwaysShowHeaderActions": true,
@@ -82,12 +83,6 @@
     "git.enableCommitSigning": true,
     "editor.unicodeHighlight.nonBasicASCII": false,
     "workbench.editor.decorations.colors": false,
-    "vim.easymotion": true,
-    "vim.autoindent": true,
-    "vim.overrideCopy": true,
-    "vim.vimrc.enable": true,
-    "vim.useCtrlKeys": true,
-    "vim.highlightedyank.enable": true,
     "latex-workshop.latex.autoBuild.interval": 1000,
     "redhat.telemetry.enabled": false,
     "settingsSync.ignoredExtensions": [],
@@ -95,4 +90,8 @@
     "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.variableTypes": true,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "workbench.colorTheme": "Tokyo Night",
 }

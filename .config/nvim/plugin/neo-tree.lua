@@ -18,7 +18,7 @@ neotree.setup({
     mappings = {
       ["<Space>e"] = "close_window",
       ["P"] = { "toggle_preview", config = { use_float = false, use_image_nvim = true } },
-      ["l"] = "open_with_window_picker",
+      ["l"] = "open",
       ["h"] = "close_node"
     }
   },

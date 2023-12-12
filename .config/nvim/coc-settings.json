@@ -8,6 +8,8 @@
   "eslint.codeActionsOnSave.mode": "all",
   "eslint.autoFixOnSave": true,
   "stylelintplus.enable": true,
+  "stylelintplus.autoFixOnSave": true,
+  "stylelintplus.autoFixOnFormat": true,
   "css.format.enable": false,
   "css.validate": false,
   "scss.validate": true,
@@ -24,7 +26,7 @@
   "python.linting.enabled": true,
   "python.linting.lintOnSave": true,
   "python.linting.flake8Enabled": true,
-  "python.linting.flake8Stdin": true,
+  "python.linting.flake8Stdin": false,
   "python.linting.flake8CategorySeverity.E": "Error",
   "python.linting.flake8CategorySeverity.F": "Error",
   "python.linting.flake8CategorySeverity.W": "Warning",
@@ -36,6 +38,8 @@
   "pyright.completion.importSupport": true,
   "pyright.inlayHints.variableTypes": true,
   "pyright.inlayHints.functionReturnTypes": true,
+  "diagnostic-languageserver.enable": true,
+  "diagnostic.enableSign": true,
   "diagnostic-languageserver.filetypes": {
     "javascript": ["eslint"],
     "javascriptreact": ["eslint"],
@@ -47,7 +51,7 @@
     "python": ["flake8", "pyright", "isort", "black"]
   },
   "diagnostic-languageserver.formatFiletypes": {
-    "python": ["black", "isort", "flake8", "pyright"]
+    "python": ["flake8", "black", "isort", "pyright"]
   },
   "diagnostic-languageserver.linters": {},
   "diagnostic-languageserver.formatters": {}

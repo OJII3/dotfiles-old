@@ -123,8 +123,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="/$HOME/.local/share/pnpm"
@@ -152,3 +150,6 @@ export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init - bash)"
 
 eval "$(starship init bash)"
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
