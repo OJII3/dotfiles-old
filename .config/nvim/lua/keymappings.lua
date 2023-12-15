@@ -82,7 +82,7 @@ if status then
 	keymap.set({ "i", "s" }, "<C-Shift-l>", function()
 		ls.jump(1)
 	end, { silent = true })
-	keymap.set({ "i", "s" }, "<C-Sift-j>", function()
+	keymap.set({ "i", "s" }, "<C-Shift-j>", function()
 		ls.jump(-1)
 	end, { silent = true })
 	keymap.set({ "i", "s" }, "<C-E>", function()

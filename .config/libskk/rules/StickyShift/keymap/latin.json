@@ -5,7 +5,8 @@
   "define": {
     "keymap": {
       "C-j": "noop",
-      "Henkan": "set-input-mode-hiragana"
+      "Henkan": "set-input-mode-hiragana",
+      "Alt-`": "set-input-mode-ascii",
     }
   }
 }

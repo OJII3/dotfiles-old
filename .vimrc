@@ -27,6 +27,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'github/copilot.vim'
 Plug 'lervag/vimtex'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'EdenEast/nightfox.nvim'
 
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
@@ -41,6 +44,8 @@ call plug#end()
 " colorscheme  ==================================================================================
 
 syntax on
+colorscheme carbonfox
+
 
 set background=dark
 
@@ -52,10 +57,12 @@ set cursorline
 set hlsearch
 set incsearch
 set smartindent
-set clipboard+=unnamed
+set clipboard=unnamedplus
 set statusline=2
 set wildmenu
 
+
+inoremap jj <Esc>
 
 "fzf
 nnoremap <Space>f :Files<CR>
@@ -78,3 +85,14 @@ let g:vimtex_compiler_latexmk = {
       \    '-interaction=nonstopmode',
       \],
       \}
+
+"coc
+noremap <silent> gd <Plug>(coc-definition)<CR>
+noremap <silent> gy <Plug>(coc-type-definition)<CR>
+noremap <silent> gi <Plug>(coc-implementation)<CR>
+noremap <silent> <leader>rn <Plug>(coc-rename)<CR>
+noremap <silent> <leader>a <Plug>(coc-codeaction)<CR>
+noremap <silent> <leader>c <Plug>(coc-codeacton-cursor)<CR>
+noremap <silent> [g <Plug>(coc-diagnostic-prev)<CR>
+noremap <silent> ]g <Plug>(coc-diagnostic-next)<CR>
+noremap <silent> <leader>fm <Plug>(coc-format)<CR>
