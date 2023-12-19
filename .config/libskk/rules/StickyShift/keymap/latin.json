@@ -1,12 +1,10 @@
 {
-  "include": [
-    "default/latin"
-  ],
+  "include": ["default/latin"],
   "define": {
     "keymap": {
       "C-j": "noop",
       "Henkan": "set-input-mode-hiragana",
-      "Alt-`": "set-input-mode-ascii",
+      "C-`": "set-input-mode-hiragana"
     }
   }
 }

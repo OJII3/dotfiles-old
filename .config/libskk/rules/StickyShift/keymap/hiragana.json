@@ -4,7 +4,7 @@
     "keymap": {
       "Muhenkan": "set-input-mode-latin",
       ";": "start-preedit-no-delete",
-      "Alt-`": "start-preedit-no-delete"
+      "C-`": "set-input-mode-latin"
     }
   }
 }

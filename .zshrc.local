@@ -9,3 +9,5 @@ source ~/Src/ros2_rur_ws/install/local_setup.zsh
 autoload -U compinit && compinit
 
 eval "$(starship init zsh)"
+
+alias ip="ip -c"

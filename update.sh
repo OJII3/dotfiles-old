@@ -1,11 +1,5 @@
 # !/bin/bash
 
-# check if you are at $HOME
-if [ "$PWD" != "$HOME" ]; then
-  echo "You are not at $HOME"
-  exit 1
-fi
-
 git add .
 git status
 
