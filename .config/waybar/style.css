@@ -1,6 +1,11 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    JetBrains Mono,
+    Noto Sans JP,
+    Noto Sans Emoji,
+    Arial,
+    sans-serif;
   font-size: 13px;
 }
 
@@ -93,8 +98,8 @@ button:hover {
 #scratchpad,
 #mpd {
   padding: 0 10px;
-  color: #ffffff;
-  border-radius: 8px 8px 0 0;
+  border-radius: 16px;
+  margin: 4px 0 0;
 }
 
 #window,
@@ -112,19 +117,65 @@ button:hover {
   margin-right: 0;
 }
 
+.modules-right > widget:nth-child(1) > * {
+  background-color: #f9f871;
+  color: #000000;
+}
+
+.modules-right > widget:nth-child(2) > * {
+  background-color: #d0ff85;
+  color: #000000;
+}
+
+.modules-right > widget:nth-child(3) > * {
+  background-color: #a6ffa1;
+  color: #000000;
+}
+
+.modules-right > widget:nth-child(4) > * {
+  background-color: #49ffdf;
+  color: #000000;
+}
+
+.modules-right > widget:nth-child(5) > * {
+  background-color: #49ffdf;
+  color: #000000;
+}
+
+.modules-right > widget:nth-child(6) > * {
+  background-color: #00fffb;
+  color: #000000;
+}
+
+.modules-right > widget:nth-child(7) > * {
+  background-color: #00cac8;
+  color: #000000;
+}
+
+.modules-right > widget:nth-child(8) > * {
+  background-color: #009896;
+  color: #ffffff;
+}
+
+.modules-right > widget:nth-child(9) > * {
+  background-color: #006868;
+  color: #ffffff;
+}
+
+.modules-right > widget:nth-child(10) > * {
+  background-color: #003b3d;
+  color: #ffffff;
+}
+
 #clock {
-  background-color: #64727d;
 }
 
 #battery {
-  background-color: #ffffff;
-  color: #000000;
 }
 
 #battery.charging,
 #battery.plugged {
   color: #ffffff;
-  background-color: #26a65b;
 }
 
 @keyframes blink {
@@ -149,37 +200,30 @@ label:focus {
 }
 
 #cpu {
-  background-color: #2ecc71;
   color: #000000;
 }
 
 #memory {
-  background-color: #9b59b6;
 }
 
 #disk {
-  background-color: #964b00;
 }
 
 #backlight {
-  background-color: #90b1b1;
+  /* background-color: #90b1b1; */
 }
 
 #network {
-  background-color: #2980b9;
 }
 
 #network.disconnected {
-  background-color: #f53c3c;
 }
 
 #pulseaudio {
-  background-color: #f1c40f;
   color: #000000;
 }
 
 #pulseaudio.muted {
-  background-color: #90b1b1;
   color: #2a5c45;
 }
 
@@ -189,33 +233,33 @@ label:focus {
 }
 
 #wireplumber.muted {
-  background-color: #f53c3c;
+  /* background-color: #f53c3c; */
 }
 
 #custom-media {
-  background-color: #66cc99;
+  /* background-color: #66cc99; */
   color: #2a5c45;
   min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-  background-color: #66cc99;
+  /* background-color: #66cc99; */
 }
 
 #custom-media.custom-vlc {
-  background-color: #ffa000;
+  /* background-color: #ffa000; */
 }
 
 #temperature {
-  background-color: #f0932b;
+  /* background-color: #f0932b; */
 }
 
 #temperature.critical {
-  background-color: #eb4d4b;
+  /* background-color: #eb4d4b; */
 }
 
 #tray {
-  background-color: #2980b9;
+  /* background-color: #2980b9; */
 }
 
 #tray > .passive {
@@ -228,29 +272,23 @@ label:focus {
 }
 
 #idle_inhibitor {
-  background-color: #2d3436;
 }
 
 #idle_inhibitor.activated {
-  background-color: #ecf0f1;
   color: #2d3436;
 }
 
 #mpd {
-  background-color: #66cc99;
   color: #2a5c45;
 }
 
 #mpd.disconnected {
-  background-color: #f53c3c;
 }
 
 #mpd.stopped {
-  background-color: #90b1b1;
 }
 
 #mpd.paused {
-  background-color: #51a37a;
 }
 
 #language {

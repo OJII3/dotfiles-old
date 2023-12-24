@@ -36,12 +36,15 @@
 !/.config/ranger
 !/.config/ranger/**
 .config/ranger/plugins
+# terminal
+!/.config/wezterm/
+!/.config/wezterm/**
+!/.config/kitty/
+!/.config/kitty/**
 # misc
 !/.config/fcitx5/config
 !/.config/fcitx/config
 !/.config/starship.toml
-!/.config/wezterm/
-!/.config/wezterm/**
 !/.config/libskk/
 !/.config/libskk/**
 !/.github/

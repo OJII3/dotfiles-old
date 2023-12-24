@@ -1,11 +1,10 @@
 {
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "height": 28,
     "spacing": 8,
     "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media", "hyprland/window"],
-    // "modules-center": ["hyprland/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "disk", "backlight", "keyboard-state", "battery", "battery#bat2", "clock", "tray"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -28,7 +27,7 @@
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon} ",
         "unknown-tag": "N/A",
         "interval": 2,
         "consume-icons": {
@@ -64,6 +63,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        "format": "{:%m/%d %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -73,6 +73,10 @@
     },
     "memory": {
         "format": "RAM {}%"
+    },
+    "disk": {
+      "unit": "GB",
+      "format": "SSD {specific_free:0.1f} GB"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -91,7 +95,7 @@
         "states": {
             // "good": 95,
             "warning": 30,
-            "critical": 15
+            "critical": 20
         },
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",

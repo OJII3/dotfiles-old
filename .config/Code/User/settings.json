@@ -9,7 +9,7 @@
     "files.autoSave": "afterDelay",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll": true
+        "source.fixAll": "explicit"
     },
     "editor.detectIndentation": true,
     "window.menuBarVisibility": "hidden",

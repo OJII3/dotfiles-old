@@ -15,6 +15,7 @@ local isort = require("efmls-configs.formatters.isort")
 local autopep8 = require("efmls-configs.formatters.autopep8")
 local flake8 = require("efmls-configs.linters.flake8")
 local latexindent = require("efmls-configs.formatters.latexindent")
+local cmake_lint = require("efmls-configs.linters.cmake_lint")
 
 local biome_customed = vim.tbl_extend("force", biome, {
 	rootMarkers = { "biome.json" },
@@ -37,6 +38,7 @@ nvim_lsp.setup({
 		"c",
 		"cpp",
 		"latex",
+		"cmake",
 	},
 	settings = {
 		rootMarkers = { ".git/" },
@@ -52,6 +54,7 @@ nvim_lsp.setup({
 			c = { clang_format, clang_tidy },
 			cpp = { clang_format, clang_tidy },
 			latex = { latexindent },
+			cmake = { cmake_lint },
 		}),
 	},
 })
