@@ -1,13 +1,50 @@
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
-source /opt/ros/humble/setup.zsh
-# source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.zsh
-source ~/Src/ros2_rur_ws/install/setup.zsh
-source ~/Src/ros2_rur_ws/install/local_setup.zsh
-
 autoload -U compinit && compinit
+
+# common aliases
+alias vi=nvim
+alias ra=ranger
+alias ya=yazi 
+alias g-st='git status'
+alias g-sw='git switch'
+alias g-c='git commit -m'
+alias g-g='git log --graph --oneline --decorate'
+alias reflectorjp='sudo reflector --country 'Japan' --age 24 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias ip="ip -c"
 
 eval "$(starship init zsh)"
 
-alias ip="ip -c"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# node ################################################################
+
+# pnpm
+export PNPM_HOME="/home/ojii3/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+## nodenv
+if [ -e "$HOME/.nodenv" ]
+then
+	export NODENV_ROOT="$HOME/.nodenv"
+	export PATH="$NODENV_ROOT/bin:$PATH"
+	if command -v nodenv 1>/dev/null 2>&1
+	then
+		eval "$(nodenv init -)"
+	fi
+fi
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+source ~/.zshrc.volta
+# bun completions
+[ -s "/home/ojii3/.bun/_bun" ] && source "/home/ojii3/.bun/_bun"
+
+# python ##############################################################
+
+# python env(rye) : Don't use this, because global python should be managed by pacman
+# source "$HOME/.rye/env" 
+

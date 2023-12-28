@@ -344,47 +344,12 @@ alias -g '....'='../../..'
 ## END OF DEFAULT #################################################################
 
 source ~/.zshrc.local
+# load .zshrc.$HOST if it exists
+[ -f ~/.zshrc.$HOST ] && source ~/.zshrc.$HOST
+
 export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000
 eval "$(keychain --eval --quiet --noask id_ed25519)"
 
-## aliases
-
-alias vi=nvim
-alias ra=ranger
-alias s='git status'
-alias reflectorjp='sudo reflector --country 'Japan' --age 24 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
-
-## nodenv path
-if [ -e "$HOME/.nodenv" ]
-then
-	export NODENV_ROOT="$HOME/.nodenv"
-	export PATH="$NODENV_ROOT/bin:$PATH"
-	if command -v nodenv 1>/dev/null 2>&1
-	then
-		eval "$(nodenv init -)"
-	fi
-fi
-
-# python env(rye) : Don't use this, because global python should be managed by pacman
-# source "$HOME/.rye/env" 
-
 export GPG_TTY=$(tty)
 
-# pnpm
-export PNPM_HOME="/home/ojii3/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-source ~/.zshrc.node
-
-# bun completions
-[ -s "/home/ojii3/.bun/_bun" ] && source "/home/ojii3/.bun/_bun"

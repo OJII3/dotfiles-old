@@ -16,6 +16,7 @@ local autopep8 = require("efmls-configs.formatters.autopep8")
 local flake8 = require("efmls-configs.linters.flake8")
 local latexindent = require("efmls-configs.formatters.latexindent")
 local cmake_lint = require("efmls-configs.linters.cmake_lint")
+local shellcheck = require("efmls-configs.linters.shellcheck")
 
 local biome_customed = vim.tbl_extend("force", biome, {
 	rootMarkers = { "biome.json" },
@@ -39,6 +40,7 @@ nvim_lsp.setup({
 		"cpp",
 		"latex",
 		"cmake",
+    "sh"
 	},
 	settings = {
 		rootMarkers = { ".git/" },

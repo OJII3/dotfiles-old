@@ -1,0 +1,5 @@
+# ros
+source /opt/ros/humble/setup.zsh
+# source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.zsh
+source ~/Src/ros2_rur_ws/install/setup.zsh
+source ~/Src/ros2_rur_ws/install/local_setup.zsh

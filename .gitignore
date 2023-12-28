@@ -41,6 +41,13 @@
 !/.config/wezterm/**
 !/.config/kitty/
 !/.config/kitty/**
+# zsh 
+!.zshrc
+!.zshrc.pre
+!.zshrc.local
+!.zshrc.node
+!.zshrc.archdesktop
+!.zshrc.archlaptop
 # misc
 !/.config/fcitx5/config
 !/.config/fcitx/config
@@ -55,9 +62,6 @@
 !/.tigrc
 !.profile
 !.bashrc
-!.zshrc
-!.zshrc.pre
-!.zshrc.local
 !.gitconfig_shared
 !.gitignore
 !.tmux.conf
