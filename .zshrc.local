@@ -8,16 +8,21 @@ alias vi=nvim
 alias ra=ranger
 alias ya=yazi 
 alias g-a='git add .'
-alias g-st='git status'
+alias g-s='git status'
 alias g-sw='git switch'
 alias g-c='git commit -m'
 alias g-g='git log --graph --oneline --decorate'
+alias g-p='git push'
 alias reflectorjp='sudo reflector --country 'Japan' --age 24 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias ip="ip -c"
+alias ls="ls --color=auto"
+alias la="ls -a"
+alias ll="ls -l"
 
 eval "$(starship init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 
 # node ################################################################
 

@@ -348,7 +348,10 @@ source ~/.zshrc.local
 [ -f ~/.zshrc.$HOST ] && source ~/.zshrc.$HOST
 
 export HISTFILE=~/.zsh_history
-export HISTSIZE=1000000
+export HISTSIZE=1000
+export SAVEHIST=100000
+setopt hist_ignore_dups
+setopt EXTENDED_HISTORY
 eval "$(keychain --eval --quiet --noask id_ed25519)"
 
 export GPG_TTY=$(tty)

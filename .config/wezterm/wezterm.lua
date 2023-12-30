@@ -10,19 +10,9 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-wezterm.on("update-right-status", function(window, pane)
-	local overrides = window:get_config_overrides() or {}
-	local appearance = query_appearance_gnome()
-	local scheme = scheme_for_appearance(appearance)
-	if overrides.color_scheme ~= scheme then
-		overrides.color_scheme = scheme
-		window:set_config_overrides(overrides)
-	end
-end)
-
-config.color_scheme = "Abernathy"
+config.color_scheme = "Tokyo Night"
 config.initial_rows = 120
-config.initial_cols = 200
+config.initial_cols = 280
 config.font_size = 11.0
 config.font = wezterm.font_with_fallback({
 	"JetBrains Mono",
@@ -33,36 +23,21 @@ config.font = wezterm.font_with_fallback({
 config.inactive_pane_hsb = {
 	saturation = 0.8,
 }
+config.enable_scroll_bar = true
+config.colors = {
+	scrollbar_thumb = "#ff3333",
+}
 
-config.window_background_opacity = 0.6
 config.background = {
 	{
 		source = {
-			Color = "#ff0000",
-		}
-	}
+			File = "/home/ojii3/dotfiles/.config/wezterm/silver_wolf_and_kafka.jpg",
+		},
+		horizontal_align = "Center",
+		repeat_x = "NoRepeat",
+		opacity = 1,
+		hsb = { brightness = 0.06 },
+	},
 }
--- config.background = {
--- 	{
--- 		source = {
--- 			-- file = '/usr/share/backgrounds/archlinux/archwave.png'
--- 			file = "/home/ojii3/pictures/haxxor-bunny.png",
--- 		},
--- 		horizontal_align = "center",
--- 		hsb = { brightness = 0.06 },
--- 	},
--- }
 
--- config.window_background_gradient = {
--- 	colors = { 'deeppink', 'gold' },
--- 	orientation = {
--- 		Radial = {
--- 			cs = 0.75,
--- 			cy = 0.75,
--- 			radius = 1.25,
--- 		},
--- 	}
--- }
-
--- and finally, return the configuration to wezterm
 return config
