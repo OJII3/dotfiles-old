@@ -29,6 +29,8 @@
 !/.config/hypr/**
 !/.config/waybar/
 !/.config/waybar/**
+# kde
+!/.config/kglobalshortcutsrc
 # music player daemon
 !/.config/mpd/
 !/.config/mpd/mpd.conf
@@ -49,8 +51,9 @@
 !.zshrc.archdesktop
 !.zshrc.archlaptop
 # misc
+!/.config/fcitx5/
 !/.config/fcitx5/config
-!/.config/fcitx/config
+!/.config/fcitx5/profile
 !/.config/starship.toml
 !/.config/libskk/
 !/.config/libskk/**
