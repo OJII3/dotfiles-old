@@ -13,6 +13,7 @@ for f in .??*; do
 	[[ "$f" == "install.sh" ]] && continue
 	[[ "$f" == "update.sh" ]] && continue
 
+  [[ -f $HOME/$f ]] && mv $HOME/$f $HOME/$f.bak
 	ln -snf $DOT_DIR/$f $HOME/$f
 	echo "Installed $f"
 done

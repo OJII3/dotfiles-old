@@ -1,5 +1,6 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
+switch-to-activity-0ae5d984-ad1e-4bab-9d89-51ad5a28c6e1=none,none,Switch to activity "Default"
 switch-to-activity-f153e58a-46a8-4b36-9e07-5d23fe9fa2d2=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
@@ -23,8 +24,9 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=Custom Shortcuts Service
-{3a002ee6-129e-4145-8710-34dbe7c13c3f}=Meta+Return,none,Terminal
-{afbb7d6e-0392-4242-833b-51bbe6f43c68}=Meta+C,none,Chrome
+{16ddcd4b-da94-4b08-b13f-1d773893da4c}=Meta+O,none,Firefox
+{6729bc20-7e73-44a8-8b41-045be87a3938}=Meta+C,none,Chrome
+{b9050450-d7ae-4105-9678-772399dada60}=Meta+Return,none,Terminal
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 
 [kmix]
@@ -38,7 +40,7 @@ mute=Volume Mute,Volume Mute,Mute
 
 [ksmserver]
 Halt Without Confirmation=none,,Halt Without Confirmation
-Lock Session=Meta+L\tScreensaver,Meta+L\tScreensaver,Lock Session
+Lock Session=Meta+Shift+Q\tScreensaver,Meta+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Log Out
 Log Out Without Confirmation=none,,Log Out Without Confirmation
 Reboot Without Confirmation=none,,Reboot Without Confirmation
@@ -203,11 +205,11 @@ view_zoom_out=Meta+-,Meta+-,Zoom Out
 
 [mediacontrol]
 _k_friendly_name=Media Controller
-mediavolumedown=none,,Media volume down
-mediavolumeup=none,,Media volume up
+mediavolumedown=none,none,Media volume down
+mediavolumeup=none,none,Media volume up
 nextmedia=Media Next,Media Next,Media playback next
 pausemedia=Media Pause,Media Pause,Pause media playback
-playmedia=none,,Play media playback
+playmedia=none,none,Play media playback
 playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
@@ -215,6 +217,16 @@ stopmedia=Media Stop,Media Stop,Stop media playback
 [org.kde.dolphin.desktop]
 _k_friendly_name=Dolphin
 _launch=Meta+E,Meta+E,Dolphin
+
+[org.kde.kcalc.desktop]
+_k_friendly_name=KCalc
+_launch=Launch (1),Launch (1),KCalc
+
+[org.kde.konsole.desktop]
+NewTab=none,none,Open a New Tab
+NewWindow=none,none,Open a New Window
+_k_friendly_name=Konsole
+_launch=Ctrl+Alt+T,Ctrl+Alt+T,Konsole
 
 [org.kde.krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
@@ -260,10 +272,16 @@ activate task manager entry 6=Meta+6,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
-activate widget 27=none,none,Activate Minimize All Windows Widget
+activate widget 120=none,none,Activate Application Launcher Widget
+activate widget 25=none,none,Activate Application Launcher Widget
+activate widget 27=none,none,Activate Application Launcher Widget
 activate widget 28=Alt+F1,none,Activate Application Dashboard Widget
+activate widget 3=none,none,Activate Application Launcher Widget
 activate widget 33=none,none,Activate Icons-only Task Manager Widget
 activate widget 36=none,none,Activate Application Launcher Widget
+activate widget 49=none,none,Activate Application Launcher Widget
+activate widget 94=none,none,Activate Plasma Drawer Widget
+activate widget 97=none,none,Activate Application Launcher Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels

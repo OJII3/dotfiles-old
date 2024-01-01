@@ -31,7 +31,7 @@ config.colors = {
 config.background = {
 	{
 		source = {
-			File = "/home/ojii3/dotfiles/.config/wezterm/silver_wolf_and_kafka.jpg",
+			File = "/home/ojii3/dotfiles/.config/wezterm/kafka_and_silver_wolf.jpg",
 		},
 		horizontal_align = "Center",
 		repeat_x = "NoRepeat",
