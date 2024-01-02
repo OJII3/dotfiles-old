@@ -17,6 +17,7 @@ local flake8 = require("efmls-configs.linters.flake8")
 local latexindent = require("efmls-configs.formatters.latexindent")
 local cmake_lint = require("efmls-configs.linters.cmake_lint")
 local shellcheck = require("efmls-configs.linters.shellcheck")
+local rustfmt = require("efmls-configs.formatters.rustfmt")
 
 local biome_customed = vim.tbl_extend("force", biome, {
 	rootMarkers = { "biome.json" },
@@ -40,7 +41,8 @@ nvim_lsp.setup({
 		"cpp",
 		"latex",
 		"cmake",
-    "sh"
+		"sh",
+		"rust",
 	},
 	settings = {
 		rootMarkers = { ".git/" },
@@ -57,6 +59,8 @@ nvim_lsp.setup({
 			cpp = { clang_format, clang_tidy },
 			latex = { latexindent },
 			cmake = { cmake_lint },
+			sh = { shellcheck },
+			rust = { rustfmt },
 		}),
 	},
 })
