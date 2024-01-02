@@ -31,6 +31,11 @@
 !/.config/waybar/**
 # kde
 !/.config/kglobalshortcutsrc
+!/.config/kdedefaults/
+!/.config/kdedefaults/*
+!/.config/kdeglobals
+!/.config/kxkbrc
+!/.config/lattedockrc
 # music player daemon
 !/.config/mpd/
 !/.config/mpd/mpd.conf
