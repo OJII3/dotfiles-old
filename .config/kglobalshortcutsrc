@@ -14,7 +14,7 @@ _k_friendly_name=Accessibility
 [kcm_touchpad]
 Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
 Enable Touchpad=Touchpad On,Touchpad On,Enable Touchpad
-Toggle Touchpad=Touchpad Toggle,Touchpad Toggle,Toggle Touchpad
+Toggle Touchpad=Touchpad Toggle\tMeta+Space,Touchpad Toggle,Toggle Touchpad
 _k_friendly_name=Touchpad
 
 [kded5]
@@ -280,6 +280,8 @@ activate widget 3=none,none,Activate Application Launcher Widget
 activate widget 33=none,none,Activate Icons-only Task Manager Widget
 activate widget 36=none,none,Activate Application Launcher Widget
 activate widget 49=none,none,Activate Application Launcher Widget
+activate widget 51=,none,Activate Application Launcher Widget
+activate widget 75=,none,Activate Application Launcher Widget
 activate widget 94=none,none,Activate Plasma Drawer Widget
 activate widget 97=none,none,Activate Application Launcher Widget
 clear-history=none,,Clear Clipboard History
