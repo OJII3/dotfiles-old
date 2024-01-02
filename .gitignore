@@ -47,9 +47,7 @@
 !.zshrc
 !.zshrc.pre
 !.zshrc.local
-!.zshrc.volta
-!.zshrc.archdesktop
-!.zshrc.archlaptop
+!.zshrc.*
 # misc
 !/.config/fcitx5/
 !/.config/fcitx5/config
