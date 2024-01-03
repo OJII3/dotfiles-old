@@ -138,6 +138,8 @@ ForegroundVisited=120,120,120
 [General]
 BrowserApplication=google-chrome.desktop
 ColorSchemeHash=79296561e8832ef612d7c1138272b1e03e6ba66d
+TerminalApplication=wezterm start --cwd .
+TerminalService=org.wezfurlong.wezterm.desktop
 UseSystemBell=true
 
 [KDE]
@@ -145,7 +147,7 @@ LookAndFeelPackage=com.github.vinceliuice.WhiteSur-dark
 SingleClick=false
 
 [KFileDialog Settings]
-Allow Expansion=false
+Allow Expansion=true
 Automatically select filename extension=true
 Breadcrumb Navigation=true
 Decoration position=2
