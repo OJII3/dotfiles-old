@@ -22,8 +22,10 @@
 !/.config/i3/**
 !/.config/rofi/
 !/.config/rofi/**
-# !/.config/polybar/  # yay -S polybar-theme-git, with clean install
-# !/.config/polybar/
+!/.config/picom/
+!/.config/picom/**
+!/.config/polybar/
+!/.config/polybar/**
 # hyprland
 !/.config/hypr/
 !/.config/hypr/**

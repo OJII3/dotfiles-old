@@ -1,9 +1,9 @@
 local nvim_lsp = require("lspconfig").efm
 local languages = require("efmls-configs.defaults").languages()
 
-local eslint_linter = require("efmls-configs.linters.eslint")
-local eslint_formatter = require("efmls-configs.formatters.eslint")
-local prettier = require("efmls-configs.formatters.prettier")
+local eslint_linter = require("efmls-configs.linters.eslint_d")
+local eslint_formatter = require("efmls-configs.formatters.eslint_d")
+local prettier = require("efmls-configs.formatters.prettier_d")
 local biome = require("efmls-configs.formatters.biome")
 local stylelint_linter = require("efmls-configs.linters.stylelint")
 local stylelint_formatter = require("efmls-configs.formatters.stylelint")
@@ -18,6 +18,7 @@ local latexindent = require("efmls-configs.formatters.latexindent")
 local cmake_lint = require("efmls-configs.linters.cmake_lint")
 local shellcheck = require("efmls-configs.linters.shellcheck")
 local rustfmt = require("efmls-configs.formatters.rustfmt")
+local formulu = require("efmls-configs.formatters.fourmolu")
 
 local biome_customed = vim.tbl_extend("force", biome, {
 	rootMarkers = { "biome.json" },
@@ -43,15 +44,16 @@ nvim_lsp.setup({
 		"cmake",
 		"sh",
 		"rust",
+    "haskell",
 	},
 	settings = {
 		rootMarkers = { ".git/" },
 		languages = vim.tbl_extend("force", languages, {
 			lua = { stylua },
-			javascript = { eslint_linter, biome_customed, prettier },
-			typescript = { eslint_linter, biome_customed, prettier },
-			javascriptreact = { eslint_linter, biome_customed, prettier },
-			typescriptreact = { eslint_linter, biome_customed, prettier },
+			javascript = { eslint_linter, biome_customed, prettier, eslint_formatter },
+			typescript = { eslint_linter, biome_customed, prettier, eslint_formatter },
+			javascriptreact = { eslint_linter, biome_customed, prettier, eslint_formatter },
+			typescriptreact = { eslint_linter, biome_customed, prettier, eslint_formatter },
 			css = { prettier, stylelint_formatter, stylelint_linter },
 			json = { prettier },
 			python = { black, isort, autopep8, flake8 },
@@ -61,6 +63,7 @@ nvim_lsp.setup({
 			cmake = { cmake_lint },
 			sh = { shellcheck },
 			rust = { rustfmt },
+      haskell = { formulu },
 		}),
 	},
 })

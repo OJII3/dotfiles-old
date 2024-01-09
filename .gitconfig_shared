@@ -8,6 +8,6 @@
 [tag]
 	gpgsign = true
 [core]
-	editor = nano
+	editor = vim
 [init]
 	defaultBranch = main
