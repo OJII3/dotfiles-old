@@ -5,7 +5,7 @@
  *******************************************************************************/
 
 * {
-    font: "Montserrat 9";
+    font: "Noto Sans CJK JP 10";
 
     bg0:  #242424d0;
     bg1:  #363636;
@@ -35,13 +35,14 @@ mainbox {
 inputbar {
   background-color: @bg2;
 
-  margin:   0px calc( 50% - 120px );
-  padding:  2px 4px;
+  margin:   0px calc( 40% - 120px );
+  padding:  8px 8px;
   spacing:  4px;
 
   border:         1px;
-  border-radius:  2px;
+  border-radius:  8px;
   border-color:   @bg3;
+
 
   children: [icon-search,entry];
 }
@@ -54,11 +55,13 @@ icon-search {
   expand:   false;
   filename: "search";
   vertical-align: 0.5;
+  size: 1.5em;
 }
 
 entry {
   placeholder:        "Search";
   placeholder-color:  @bg2;
+  vertical-align: 0.5;
 }
 
 listview {

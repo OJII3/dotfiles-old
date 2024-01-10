@@ -7,6 +7,7 @@ DISPLAY=":0" picom -b &
 
 if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
   export QT_QPA_PLATFORMTHEME=qt5ct
+  export GTK_USE_PORTAL=1
 fi
 
 export GTK_IM_MODULE=fcitx &

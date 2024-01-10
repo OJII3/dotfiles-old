@@ -67,7 +67,8 @@ bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id "rofi -show combi power-menu -icon-theme 'Crule-dark'"
+bindcode 133 --release exec --no-startup-id "rofi -show combi power-menu -icon-theme 'Crule-dark'"
+bindsym $mod+d --release exec --no-startup-id "rofi -show combi power-menu -icon-theme 'Crule-dark'"
 bindsym $mod+Shift+d exec --no-startup-id "rofi -show power-menu -icon-theme 'Crule-dark'"
 bindsym $mod+Shift+b exec --no-startup-id "rofi-bluetooth -icon-theme 'Crule-dark'"
 # A more modern dmenu replacement is rofi:

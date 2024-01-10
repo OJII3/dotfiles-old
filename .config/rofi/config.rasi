@@ -3,7 +3,7 @@ configuration {
   modi: "combi,drun,power-menu:~/.config/rofi/rofi-power-menu";
   combi-modi: "drun,window,power-menu:~/.config/rofi/rofi-power-menu";
   sidebar-mode: true;
-  kb-cancel: "Escape,Control+bracketleft";
+  kb-cancel: "Escape,Control+bracketleft,Super_L";
   kb-mode-previous: "Alt+h";
   kb-mode-next: "Alt+l";
   show-icons: true;
