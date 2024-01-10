@@ -25,7 +25,7 @@ config.inactive_pane_hsb = {
 }
 config.enable_scroll_bar = true
 config.colors = {
-	scrollbar_thumb = "#ff3333",
+	-- scrollbar_thumb = "#333333",
 }
 
 config.background = {

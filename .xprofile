@@ -1,11 +1,14 @@
 #!/bin/sh
 
-# feh --no-fehbg --bg-fill '/usr/share/backgrounds/archlinux/archwave.png'
-# ~/.fehbg &
-# light-locker --lock-on-suspend &
-source  ~/.config/wallpaper/launch.sh
+light-locker --lock-on-suspend &
+source  ~/.config/wallpaper/launch.sh &
 
 DISPLAY=":0" picom -b &
+
+if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
+  export QT_QPA_PLATFORMTHEME=qt5ct
+fi
+
 export GTK_IM_MODULE=fcitx &
 export QT_IM_MODULE=fctix &
 export XMODIFIERS=@im=fcitx &

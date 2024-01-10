@@ -1,7 +1,7 @@
 configuration {
-  font: "JetBranins Mono Font:style=Bold 12";
-  modi: "combi,drun,run,system:~/.config/rofi/rofi-power-menu";
-  combi-modi: "drun,run,window,power-menu:~/.config/rofi/rofi-power-menu";
+  font: "JetBranins Mono Font:style=Bold 13";
+  modi: "combi,drun,power-menu:~/.config/rofi/rofi-power-menu";
+  combi-modi: "drun,window,power-menu:~/.config/rofi/rofi-power-menu";
   sidebar-mode: true;
   kb-cancel: "Escape,Control+bracketleft";
   kb-mode-previous: "Alt+h";
@@ -20,4 +20,7 @@ configuration {
 //@theme "/usr/share/rofi/themes/arthur.rasi"
 //@theme "/usr/share/rofi/themes/Monokai.rasi"
 //@theme "/usr/share/rofi/themes/docu.rasi"
-@theme "/usr/share/rofi/themes/fancy.rasi"
+//@theme "/usr/share/rofi/themes/fancy.rasi"
+//@theme "/usr/share/rofi/themes/sidebar-v2.rasi"
+//@theme "/usr/share/rofi/themes/arthur.rasi"
+@theme "/home/ojii3/.config/rofi/launchpad.rasi"

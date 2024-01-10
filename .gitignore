@@ -17,20 +17,36 @@
 !/.config/Code/User/
 !/.config/Code/User/settings.json
 !/.config/Code/User/keybindings.json
-# i3, rofi, polybar
+# custom scripts
+!/.config/wallpaper/
+!/.config/wallpaper/**
+# gtk
+!/.config/gtk-3.0/
+!/.config/gtk-3.0/settings.ini
+!/.config/gtk-4.0/
+!/.config/gtk-4.0/settings.ini
+!/.config/gtk-4.0/gtk.css
+!/.gtkrc-2.0
+# i3
 !/.config/i3/
 !/.config/i3/**
+# xmonad
+!/.xmonad/
+!/.xmonad/**.hs
+# hyprland
+!/.config/hypr/
+!/.config/hypr/**
+!/.config/waybar/
+!/.config/waybar/**
+# launcher, status bar
 !/.config/rofi/
 !/.config/rofi/**
 !/.config/picom/
 !/.config/picom/**
 !/.config/polybar/
 !/.config/polybar/**
-# hyprland
-!/.config/hypr/
-!/.config/hypr/**
-!/.config/waybar/
-!/.config/waybar/**
+!/.config/tint2/
+!/.config/tint2/**
 # kde
 !/.config/kglobalshortcutsrc
 !/.config/kdedefaults/
@@ -65,6 +81,7 @@
 !/.github/
 !/.github/**
 !/.xprofile
+!/.Xkbmap
 !/.Xmodmap
 !/.latexmkrc
 !/.tigrc
