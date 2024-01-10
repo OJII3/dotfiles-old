@@ -28,6 +28,7 @@ default_floating_border pixel 0
 # https://wiki.archlinux.org/index.php/XDG_AutostartApplets
 exec --no-startup-id dex --autostart --environment i3
 
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -52,6 +53,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && $ref
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+exec_always --no-startup-id exec cutefish-settings-daemon
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 # tiling_drag modifier titlebar
@@ -227,5 +229,5 @@ bindsym $mod+space exec --no-startup-id source ~/.config/i3/toggle_touchpad.sh
 bindsym $mod+c exec google-chrome-stable --profile-directory=Default
 bindsym $mod+o exec firefox
 bindsym Shift+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
-bindsym Print exec --no-staartup-id maim ~/Pictures/Screenshots/$(date +%s).png
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date --iso-8601=seconds).png"
 

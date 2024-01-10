@@ -47,6 +47,8 @@
 !/.config/polybar/**
 !/.config/tint2/
 !/.config/tint2/**
+!/.config/dunst/
+!/.config/dunst/**
 # kde
 !/.config/kglobalshortcutsrc
 !/.config/kdedefaults/
