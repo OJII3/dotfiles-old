@@ -117,7 +117,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+Shift+F floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -222,7 +222,8 @@ bindsym $mod+Shift+Tab focus left
 # exec_always --no-startup-id exec tint2
 exec_always --no-startup-id exec cutefish-statusbar
 exec_always --no-statup-id autotiling
-exec_always --no-startup-id xinput set-prop "SYNA32AF:00 06CB:CE17 Touchpad" "libinput Tapping Enabled" 0
+# exec_always --no-startup-id xinput set-prop "SYNA32AF:00 06CB:CE17 Touchpad" "libinput Tapping Enabled" 0
+bindsym $mod+space exec --no-startup-id source ~/.config/i3/toggle_touchpad.sh
 bindsym $mod+c exec google-chrome-stable --profile-directory=Default
 bindsym $mod+o exec firefox
 bindsym Shift+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
