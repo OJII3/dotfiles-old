@@ -24,9 +24,9 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=Custom Shortcuts Service
-{16ddcd4b-da94-4b08-b13f-1d773893da4c}=Meta+O,none,Firefox
-{6729bc20-7e73-44a8-8b41-045be87a3938}=Meta+C,none,Chrome
-{b9050450-d7ae-4105-9678-772399dada60}=Meta+Return,none,Terminal
+{3a002ee6-129e-4145-8710-34dbe7c13c3f}=Meta+Return,none,Terminal
+{afbb7d6e-0392-4242-833b-51bbe6f43c68}=Meta+C,none,Chrome
+{cb49c993-67ef-46f8-a6ff-2d448d2bb5d0}=Meta+O,none,Firefox
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 
 [kmix]
