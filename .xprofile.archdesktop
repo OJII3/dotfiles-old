@@ -9,5 +9,5 @@ cutefish-powerman &
 cutefish-cpufreq &
 
 # cutefish-dock &
-cutefish-statusbar &
+sleep 0.5 && cutefish-statusbar &
 
