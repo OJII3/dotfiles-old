@@ -1,7 +1,12 @@
+#!/bin/bash
+
+# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+# If the file already exists, it will be moved to $HOME/$f.bak
+
 DOT_DIR="$HOME/dotfiles"
 
 if [[ $(pwd) != $DOT_DIR ]] then
-	echo -e "\nMove into dotfiles dir before installation!!\n"
+	echo -e "\nMove into $HOME/dotfiles dir before installation!!\n"
 	exit 1
 fi
 
@@ -14,6 +19,7 @@ for f in .??*; do
 	[[ "$f" == "update.sh" ]] && continue
 
   [[ -f $HOME/$f ]] && mv $HOME/$f $HOME/$f.bak
+  echo "Moved existing $f to $HOME/$f.bak"
 	ln -snf $DOT_DIR/$f $HOME/$f
-	echo "Installed $f"
+	echo "Created symlink: $DOT_DIR/$f -> $HOME/$f"
 done

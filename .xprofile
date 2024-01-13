@@ -10,8 +10,11 @@ if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
   export GTK_USE_PORTAL=1
 fi
 
-conky &
 export GTK_IM_MODULE=fcitx &
 export QT_IM_MODULE=fctix &
 export XMODIFIERS=@im=fcitx &
 fcitx5 &
+
+if [ -f "$HOME/.xprofile.$HOST" ]; then
+  source "$HOME/.xprofile.$HOST"
+fi

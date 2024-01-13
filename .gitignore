@@ -85,6 +85,7 @@
 !/.github/
 !/.github/**
 !/.xprofile
+!/.xprofile.*
 !/.Xkbmap
 !/.Xmodmap
 !/.latexmkrc
