@@ -1,1 +1,10 @@
 conky &
+
+cutefish-settings-daemon &
+cutefish-polkit-agent &
+cutefish-gmenuproxy &
+cutefish-sddm-helper &
+
+cutefish-dock &
+cutefish-statusbar &
+
