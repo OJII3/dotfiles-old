@@ -27,6 +27,8 @@
 !/.config/gtk-4.0/settings.ini
 !/.config/gtk-4.0/gtk.css
 !/.gtkrc-2.0
+!/.config/conky/
+!/.config/conky/**
 # i3
 !/.config/i3/
 !/.config/i3/**
