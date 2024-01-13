@@ -4,7 +4,10 @@ cutefish-settings-daemon &
 cutefish-polkit-agent &
 cutefish-gmenuproxy &
 cutefish-sddm-helper &
+cutefish-notificationd &
+cutefish-powerman &
+cutefish-cpufreq &
 
-cutefish-dock &
+# cutefish-dock &
 cutefish-statusbar &
 
