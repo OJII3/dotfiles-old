@@ -1,1 +1,1 @@
-exec_always --no-startup-id polybar
+exec_always --no-startup-id polybar & conky
