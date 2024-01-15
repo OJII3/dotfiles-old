@@ -12,4 +12,3 @@ export XMODIFIERS=@im=fcitx
 export GLFW_IM_MODULE=ibus    # for kitty (ibus itself is not needed)
 fcitx5 &
 
-DISPLAY=":0" picom -b &
