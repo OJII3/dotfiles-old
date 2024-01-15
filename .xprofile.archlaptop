@@ -1,7 +1,0 @@
-conky &
-
-cutefish-settings-daemon &
-cutefish-notificationd &
-cutefish-powerman &
-
-sleep 0.5 && cutefish-statusbar &

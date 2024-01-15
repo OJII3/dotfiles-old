@@ -134,6 +134,7 @@ require("lazy").setup({
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 	},
 	{ "github/Copilot.vim" },
+	{ "gptlang/CopilotChat.nvim" },
 	{ "vim-denops/denops.vim" },
 	{ "vim-skk/skkeleton", dependencies = { "vim-denops/denops.vim" } },
 	{ "lambdalisue/kensaku.vim", dependencies = { "vim-denops/denops.vim" } },
@@ -194,6 +195,13 @@ require("lazy").setup({
 		lazy = not vim.g.started_by_firenvim,
 		build = function()
 			vim.fn["firenvim#install"](0)
+		end,
+	},
+	{
+		"adelarsq/image_preview.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("image_preview").setup()
 		end,
 	},
 })

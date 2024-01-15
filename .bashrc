@@ -146,8 +146,8 @@ export PATH="/usr/local/bin/nvim-linux64/bin:$PATH"
 source /opt/ros/humble/setup.bash
 source ~/src/rur/ros2_humble/install/local_setup.bash
 
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init - bash)"
+# export PATH="$HOME/.nodenv/bin:$PATH"
+# eval "$(nodenv init - bash)"
 
 eval "$(starship init bash)"
 

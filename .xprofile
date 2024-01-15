@@ -1,20 +1,16 @@
 #!/bin/sh
 
 light-locker --lock-on-suspend &
-source  ~/.config/wallpaper/launch.sh &
+.  ~/.config/wallpaper/launch.sh &
 
-DISPLAY=":0" picom -b &
+export QT_QPA_PLATFORMTHEME=qt5ct
+export GTK_USE_PORTAL=1
 
-if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
-  export QT_QPA_PLATFORMTHEME=qt5ct
-  export GTK_USE_PORTAL=1
-fi
-
-export GTK_IM_MODULE=fcitx &
-export QT_IM_MODULE=fctix &
-export XMODIFIERS=@im=fcitx &
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+# export XMODIFIERS=@im=fcitx
 fcitx5 &
 
-if [ -f "$HOME/.xprofile.$HOST" ]; then
-  source "$HOME/.xprofile.$HOST"
-fi
+DISPLAY=":0" picom -b &
+conky &
+
