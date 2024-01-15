@@ -6,11 +6,10 @@ light-locker --lock-on-suspend &
 export QT_QPA_PLATFORMTHEME=qt5ct
 export GTK_USE_PORTAL=1
 
-# export GTK_IM_MODULE=fcitx
-# export QT_IM_MODULE=fcitx
-# export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx   # blender will not work
+export XMODIFIERS=@im=fcitx
+export GLFW_IM_MODULE=ibus    # for kitty (ibus itself is not needed)
 fcitx5 &
 
 DISPLAY=":0" picom -b &
-conky &
-
