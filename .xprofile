@@ -1,6 +1,5 @@
 #!/bin/sh
 
-light-locker --lock-on-suspend &
 .  ~/.config/wallpaper/launch.sh &
 
 export QT_QPA_PLATFORMTHEME=qt5ct
