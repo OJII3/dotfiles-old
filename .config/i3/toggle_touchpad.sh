@@ -23,7 +23,7 @@
 # http://askubuntu.com/questions/751413/how-to-disable-enable-toggle-touchpad-in-a-dell-laptop
 
 
-if xinput list-props 10 | grep "Device Enabled (187):.*1" >/dev/null
+if xinput list-props 10 | grep "Device Enabled (184):.*1" >/dev/null
 then
     xinput disable 10
     notify-send -u low -i mouse "Trackpad disabled"
