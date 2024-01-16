@@ -19,7 +19,7 @@ focus_follows_mouse no
 focus_wrapping workspace 
 default_border pixel 2
 default_floating_border pixel 0
-smart_borders on
+# smart_borders on
 # exec_always i3-msg[class=.*] border pixel 1
 # class                 border  backgr. text    indicator child_border
 client.focused          #4cc899 #28c577 #ffffff #2ecef4   #28c577
@@ -34,7 +34,7 @@ no_focus [class="cutefish-notificationd"]
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+# font pango:DejaVu Sans Mono 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_AutostartApplets

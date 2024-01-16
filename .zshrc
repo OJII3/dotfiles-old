@@ -352,7 +352,6 @@ export HISTSIZE=1000
 export SAVEHIST=100000
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
-eval "$(keychain --eval --quiet --noask id_ed25519)"
 
 export GPG_TTY=$(tty)
 
