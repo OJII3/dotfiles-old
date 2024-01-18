@@ -65,9 +65,9 @@ entry {
 }
 
 listview {
-  margin:   48px calc( 50% - 560px );
+  margin:   48px calc( 40% - 560px );
   spacing:  48px;
-  columns:  6;
+  columns:  7;
   fixed-columns: true;
 }
 

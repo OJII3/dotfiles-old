@@ -30,10 +30,10 @@
     height = 400
 
     # Position the notification in the top right corner
-    origin = top-right
+    origin = bottom-right
 
     # Offset from the origin
-    offset = 10x50
+    offset = 20x50
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -52,7 +52,7 @@
     progress_bar_height = 10
 
     # Set the frame width of the progress bar
-    progress_bar_frame_width = 1
+    progress_bar_frame_width = 0.5
 
     # Set the minimum width for the progress bar
     progress_bar_min_width = 150
@@ -201,7 +201,7 @@
     enable_recursive_icon_lookup = true
 
     # Set icon theme (only used for recursive icon lookup)
-    icon_theme = Crule
+    icon_theme = WhiteSur
     # You can also set multiple icon themes, with the leftmost one being used first.
     # icon_theme = "Adwaita, breeze"
 
@@ -217,7 +217,7 @@
     max_icon_size = 128
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
-    icon_path = /usr/share/icons/Crule/status/:/usr/share/icons/Crule/devices@2x/
+    icon_path = /usr/share/icons/WhiteSur/status/:/usr/share/icons/WhiteSur/devices@2x/
 
     ### History ###
 
@@ -250,7 +250,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 16
+    corner_radius = 8
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -315,7 +315,7 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#ffffff"
     foreground = "#333333"
-    frame_color = "#ffffffcc"
+    frame_color = "#ccccffcc"
     timeout = 8
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
@@ -323,7 +323,7 @@
 [urgency_normal]
     background = "#ffffff"
     foreground = "#333363"
-    frame_color = "#ffffffcc"
+    frame_color = "#66ff66cc"
     timeout = 8
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon

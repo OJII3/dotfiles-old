@@ -1,26 +1,15 @@
 configuration {
+  modes: [window,run,drun,filebrowser,"power-menu:~/.config/rofi/rofi-power-menu"];
   font: "JetBranins Mono Font:style=Bold 13";
-  modi: "combi,drun,power-menu:~/.config/rofi/rofi-power-menu";
-  combi-modi: "drun,window,power-menu:~/.config/rofi/rofi-power-menu";
+  combi-modes: [drun,power-menu];
+  drun-display-format: "{name}";
   sidebar-mode: true;
   kb-cancel: "Escape,Control+bracketleft,Super_L";
   kb-mode-previous: "Alt+h";
   kb-mode-next: "Alt+l";
   show-icons: true;
-  fallback-application-icon: "~/.config/rofi/miku-sd.png";
+  icon-theme: "WhiteSur";
+  application-fallback-icon: "/usr/share/icons/WhiteSur/apps/scalable/default-application.svg";
 }
 
-//@theme "/usr/share/rofi/themes/rounded-green-dark.rasi"
-//@theme "/usr/share/rofi/themes/launchpad.rasi"
-//@theme "/usr/share/rofi/themes/sidebar-v2.rasi"
-//@theme "/usr/share/rofi/themes/launchpad.rasi"
-//@theme "/usr/share/rofi/themes/lb.rasi"
-//@theme "/usr/share/rofi/themes/rounded-red-dark.rasi"
-//@theme "/usr/share/rofi/themes/arthur.rasi"
-//@theme "/usr/share/rofi/themes/arthur.rasi"
-//@theme "/usr/share/rofi/themes/Monokai.rasi"
-//@theme "/usr/share/rofi/themes/docu.rasi"
-//@theme "/usr/share/rofi/themes/fancy.rasi"
-//@theme "/usr/share/rofi/themes/sidebar-v2.rasi"
-//@theme "/usr/share/rofi/themes/arthur.rasi"
 @theme "/home/ojii3/.config/rofi/launchpad.rasi"

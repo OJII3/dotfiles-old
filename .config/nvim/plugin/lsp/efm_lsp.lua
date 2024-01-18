@@ -20,7 +20,7 @@ local shellcheck = require("efmls-configs.linters.shellcheck")
 local rustfmt = require("efmls-configs.formatters.rustfmt")
 local formulu = require("efmls-configs.formatters.fourmolu")
 
-local biome_customed = vim.tbl_extend("force", biome, {
+local biome_customized = vim.tbl_extend("force", biome, {
 	rootMarkers = { "biome.json" },
 })
 
@@ -44,16 +44,16 @@ nvim_lsp.setup({
 		"cmake",
 		"sh",
 		"rust",
-    "haskell",
+		"haskell",
 	},
 	settings = {
 		rootMarkers = { ".git/" },
 		languages = vim.tbl_extend("force", languages, {
 			lua = { stylua },
-			javascript = { eslint_linter, biome_customed, prettier, eslint_formatter },
-			typescript = { eslint_linter, biome_customed, prettier, eslint_formatter },
-			javascriptreact = { eslint_linter, biome_customed, prettier, eslint_formatter },
-			typescriptreact = { eslint_linter, biome_customed, prettier, eslint_formatter },
+			javascript = { eslint_linter, biome_customized, prettier, eslint_formatter },
+			typescript = { eslint_linter, biome_customized, prettier, eslint_formatter },
+			javascriptreact = { eslint_linter, biome_customized, prettier, eslint_formatter },
+			typescriptreact = { eslint_linter, biome_customized, prettier, eslint_formatter },
 			css = { prettier, stylelint_formatter, stylelint_linter },
 			json = { prettier },
 			python = { black, isort, autopep8, flake8 },
@@ -63,7 +63,7 @@ nvim_lsp.setup({
 			cmake = { cmake_lint },
 			sh = { shellcheck },
 			rust = { rustfmt },
-      haskell = { formulu },
+			haskell = { formulu },
 		}),
 	},
 })

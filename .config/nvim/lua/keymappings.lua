@@ -8,6 +8,7 @@ keymap.set("v", "j", "gj", { noremap = true, silent = true })
 keymap.set("v", "k", "gk", { noremap = true, silent = true })
 keymap.set("t", "<ESC>", "<C-\\><C-n>", { noremap = true, silent = true })
 keymap.set("t", "<C-[>", "<C-\\><C-n>", { noremap = true, silent = true })
+
 keymap.set("n", "<C-b>h", "<cmd>BufferPrevious<CR>", { noremap = true, silent = true })
 keymap.set("n", "<C-b><C-h>", "<cmd>BufferPrevious<CR>", { noremap = true, silent = true })
 keymap.set("n", "<C-b>l", "<cmd>BufferNext<CR>", { noremap = true, silent = true })
@@ -28,6 +29,7 @@ keymap.set("n", "<Space>r", "<cmd>Telescope live_grep<CR>", { noremap = true, si
 
 -- lightspeed
 keymap.set("n", "<C-s>", "<Plug>Lightspeed_s", { noremap = true, silent = true })
+keymap.del("n", "s")
 
 -- coc
 -- keymap.set("i", "<C-Space>", "coc#refresh()", { expr = true, silent = true })    -- trigger completion
@@ -72,6 +74,9 @@ keymap.set("n", "<Space>tf", "<cmd>ToggleTerm direction=float<CR>", { noremap = 
 keymap.set("n", "<Space>tt", "<cmd>lua tig_toggle()<CR>", { noremap = true, silent = true })
 keymap.set("n", "<Space>tl", "<cmd>lua lazygit_toggle()<CR>", { noremap = true, silent = true })
 keymap.set("t", "<C-n>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
+
+-- copolot chat
+keymap.set("n", "<Space>cc", "<C-W><C-V>:CopilotChat ", { noremap = true, silent = true })
 
 -- luasnip
 local status, ls = pcall(require, "luasnip")
