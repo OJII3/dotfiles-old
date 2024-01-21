@@ -1,6 +1,7 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-0ae5d984-ad1e-4bab-9d89-51ad5a28c6e1=none,none,Switch to activity "Default"
+switch-to-activity-3fd2d191-eee4-4907-a745-1913e55b3539=none,none,Switch to activity "Default"
 switch-to-activity-f153e58a-46a8-4b36-9e07-5d23fe9fa2d2=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
@@ -28,6 +29,17 @@ _k_friendly_name=Custom Shortcuts Service
 {afbb7d6e-0392-4242-833b-51bbe6f43c68}=Meta+C,none,Chrome
 {cb49c993-67ef-46f8-a6ff-2d448d2bb5d0}=Meta+O,none,Firefox
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
+
+[klipper]
+_k_friendly_name=Klipper
+clear-history=none,none,Clear Clipboard History
+clipboard_action=none,Meta+Ctrl+X,Automatic Action Popup Menu
+cycleNextAction=none,none,Next History Item
+cyclePrevAction=none,none,Previous History Item
+edit_clipboard=none,none,Edit Contents…
+repeat_action=none,Meta+Ctrl+R,Manually Invoke Action on Current Clipboard
+show-barcode=none,none,Show Barcode…
+show-on-mouse-pos=none,Meta+V,Show Items at Mouse Position
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -328,23 +340,23 @@ activate widget 51=none,none,Activate Application Launcher Widget
 activate widget 75=none,none,Activate Application Launcher Widget
 activate widget 94=none,none,Activate Plasma Drawer Widget
 activate widget 97=none,none,Activate Application Launcher Widget
-clear-history=none,,Clear Clipboard History
+clear-history=none,none,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
-cycleNextAction=none,,Next History Item
-cyclePrevAction=none,,Previous History Item
-edit_clipboard=none,,Edit Contents…
+cycleNextAction=none,none,Next History Item
+cyclePrevAction=none,none,Previous History Item
+edit_clipboard=none,none,Edit Contents…
 manage activities=none,Meta+Q,Show Activity Switcher
 next activity=none,Meta+Tab,Walk through activities
 previous activity=Meta+Shift+Tab,Meta+Shift+Tab,Walk through activities (Reverse)
 repeat_action=Meta+Ctrl+R,Meta+Ctrl+R,Manually Invoke Action on Current Clipboard
 show dashboard=Ctrl+F12,Ctrl+F12,Show Desktop
-show-barcode=none,,Show Barcode…
+show-barcode=none,none,Show Barcode…
 show-on-mouse-pos=Meta+V,Meta+V,Show Items at Mouse Position
 stop current activity=Meta+S,Meta+S,Stop Current Activity
-switch to next activity=none,,Switch to Next Activity
-switch to previous activity=none,,Switch to Previous Activity
-toggle do not disturb=none,,Toggle do not disturb
+switch to next activity=none,none,Switch to Next Activity
+switch to previous activity=none,none,Switch to Previous Activity
+toggle do not disturb=none,none,Toggle do not disturb
 
 [systemsettings.desktop]
 _k_friendly_name=System Settings

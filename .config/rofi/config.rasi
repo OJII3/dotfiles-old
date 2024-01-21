@@ -8,7 +8,7 @@ configuration {
   kb-mode-previous: "Alt+h";
   kb-mode-next: "Alt+l";
   show-icons: true;
-  icon-theme: "WhiteSur";
+  icon-theme: "Colloid-teal";
   application-fallback-icon: "/usr/share/icons/WhiteSur/apps/scalable/default-application.svg";
 }
 

@@ -204,4 +204,11 @@ require("lazy").setup({
 			require("image_preview").setup()
 		end,
 	},
+	{
+		"gera2ld/ai.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		event = "VeryLazy",
+	},
 })

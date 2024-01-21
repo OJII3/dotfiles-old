@@ -84,7 +84,7 @@ bindsym $mod+q kill
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 bindcode 133 --release exec --no-startup-id "rofi -show drun"
-bindsym $mod+d exec --no-startup-id "rofi -show combi"
+bindsym $mod+d exec --no-startup-id "rofi -show drun"
 bindsym $mod+Shift+d exec --no-startup-id "rofi -show power-menu"
 bindsym $mod+Shift+b exec --no-startup-id "rofi-bluetooth"
 # A more modern dmenu replacement is rofi:
@@ -228,7 +228,9 @@ exec_always --no-statup-id autotiling
 exec_always --no-startup-id xinput set-prop "SYNA32AF:00 06CB:CE17 Touchpad" "libinput Tapping Enabled" 1
 bindsym $mod+space exec --no-startup-id source ~/.config/i3/toggle_touchpad.sh
 bindsym $mod+c exec google-chrome-stable --profile-directory=Default
+bindsym $mod+u exec google-chrome-stable --profile-directory=Profile\ 1
 bindsym $mod+o exec firefox
+bindsym $mod+i exec vivaldi
 bindsym Shift+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
 bindsym $mod+Print exec --no-startup-id maim -s "/home/$USER/Pictures/Screenshots/$(date --iso-8601=seconds).png"
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date --iso-8601=seconds).png"
