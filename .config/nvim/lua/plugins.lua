@@ -178,6 +178,10 @@ require("lazy").setup({
 		lazy = true,
 	},
 	{
+		"tpope/vim-fugitive",
+		lazy = true,
+	},
+	{
 		"akinsho/git-conflict.nvim",
 		config = true,
 	},
@@ -203,12 +207,5 @@ require("lazy").setup({
 		config = function()
 			require("image_preview").setup()
 		end,
-	},
-	{
-		"gera2ld/ai.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		event = "VeryLazy",
 	},
 })
