@@ -178,10 +178,6 @@ require("lazy").setup({
 		lazy = true,
 	},
 	{
-		"tpope/vim-fugitive",
-		lazy = true,
-	},
-	{
 		"akinsho/git-conflict.nvim",
 		config = true,
 	},
@@ -199,13 +195,6 @@ require("lazy").setup({
 		lazy = not vim.g.started_by_firenvim,
 		build = function()
 			vim.fn["firenvim#install"](0)
-		end,
-	},
-	{
-		"adelarsq/image_preview.nvim",
-		event = "VeryLazy",
-		config = function()
-			require("image_preview").setup()
 		end,
 	},
 })
