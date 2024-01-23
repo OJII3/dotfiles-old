@@ -47,7 +47,7 @@ EnumerateSkipFirst=False
 # Active By Default
 ActiveByDefault=True
 # Share Input State
-ShareInputState=All
+ShareInputState=No
 # Show preedit in application
 PreeditEnabledByDefault=True
 # Show Input Method Information when switch input method
@@ -63,7 +63,7 @@ DefaultPageSize=5
 # Override Xkb Option
 OverrideXkbOption=False
 # Custom Xkb Option
-CustomXkbOption=ctrl:nocaps
+CustomXkbOption=
 # Force Enabled Addons
 EnabledAddons=
 # Force Disabled Addons
