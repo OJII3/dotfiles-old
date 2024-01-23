@@ -215,7 +215,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+Shift+q exec --no-startup-id i3lock
+bindsym $mod+Shift+q exec --no-startup-id i3lock -B 10 -c 33393996 --radius 120 --ring-width 16 --pass-media-keys
 
 # bindsym $mod+z mode "$mode_system"
 

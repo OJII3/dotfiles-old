@@ -40,4 +40,6 @@ config.background = {
 	},
 }
 
+config.tab_bar_style = {}
+
 return config
