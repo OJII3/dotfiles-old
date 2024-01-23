@@ -17,6 +17,8 @@
 !/.config/Code/User/
 !/.config/Code/User/settings.json
 !/.config/Code/User/keybindings.json
+!/.config/helix/
+!/.config/helix/**
 # custom scripts
 !/.config/wallpaper/
 !/.config/wallpaper/**

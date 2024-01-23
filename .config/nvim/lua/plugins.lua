@@ -157,6 +157,11 @@ require("lazy").setup({
 		lazy = true,
 		ft = { "tex" },
 	},
+	{
+		"kaarmu/typst.vim",
+		lazy = true,
+		ft = { "typst" },
+	},
 	{ "dstein64/vim-startuptime" },
 	{ "monaqa/dial.nvim" },
 	{
