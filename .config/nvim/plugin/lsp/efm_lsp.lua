@@ -24,10 +24,16 @@ local flake8 = require("efmls-configs.linters.flake8")
 -- Haskell
 local formulu = require("efmls-configs.formatters.fourmolu")
 
--- customized
+-- customized or manually installed linters/formatters
 local biome_customized = vim.tbl_extend("force", biome, {
 	rootMarkers = { "biome.json" },
 })
+
+local cmake_format = { -- yay -S cmake-format
+	formatCommand = "cmake-format ${--line-width:100} -",
+	formatStdin = true,
+	rootMarkers = { "CMakeLists.txt" },
+}
 
 nvim_lsp.setup({
 	init_options = {
@@ -65,7 +71,7 @@ nvim_lsp.setup({
 			c = { clang_format, clang_tidy },
 			cpp = { clang_format, clang_tidy },
 			latex = { latexindent },
-			cmake = { cmake_lint },
+			cmake = { cmake_lint, cmake_format },
 			sh = { shellcheck },
 			rust = { rustfmt },
 			haskell = { formulu },

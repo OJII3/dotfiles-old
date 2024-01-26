@@ -76,7 +76,8 @@ keymap.set("n", "<Space>tl", "<cmd>lua lazygit_toggle()<CR>", { noremap = true, 
 keymap.set("t", "<C-n>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 
 -- copolot chat
-keymap.set("n", "<Space>cc", "<C-W><C-V>:CopilotChat ", { noremap = true, silent = true })
+-- keymap.set("n", "<leader>cce", "<cmd>CopilotChatExplain<cr>", { noremap = true, silent = true })
+-- keymap.set("n", "<leader>cct", "<cmd>CopilotChatTests<cr>", { noremap = true, silent = true })
 
 -- luasnip
 local status, ls = pcall(require, "luasnip")

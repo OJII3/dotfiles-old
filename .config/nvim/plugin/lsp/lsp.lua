@@ -7,7 +7,41 @@ mason.setup({})
 
 local mason_lsp = require("mason-lspconfig")
 local nvim_lsp = require("lspconfig")
-mason_lsp.setup({})
+mason_lsp.setup({
+	ensure_installed = {
+		"bashls",
+		"cssls",
+		"denols",
+		"dockerls",
+		"docker_compose_language_service",
+		"efm",
+		"eslint",
+		"html",
+		"jsonls",
+		"pyright",
+		"stylelint_lsp",
+		"tailwindcss",
+		"tsserver",
+		"vimls",
+		"yamlls",
+		"biome",
+		"clangd",
+		"cmake",
+		"jsonls",
+		"texlab",
+		"lua_ls",
+		"cssls",
+		"mdx_analyzer",
+		"pyright",
+		"omnisharp_mono",
+		"graphql",
+		"typst_lsp",
+		"lemminx",
+		"taplo",
+		"astro",
+	},
+})
+
 mason_lsp.setup_handlers({
 	function(server_name)
 		local opts = {
@@ -31,7 +65,6 @@ mason_lsp.setup_handlers({
 					},
 				},
 			}
-			nvim_lsp[server_name].setup(opts)
 		elseif server_name == "biome" or server_name == "efm/biome" then
 			opts.root_dir = nvim_lsp.util.root_pattern("biome.toml")
 		elseif server_name == "eslint" then
@@ -39,10 +72,10 @@ mason_lsp.setup_handlers({
 		elseif server_name == "stylelint_lsp" then
 			opts.filetypes = { "css", "scss", "less", "sass" } -- exclude javascript and typescript
 		elseif server_name == "efm" then
-			opts = {}
+			opts = nil
 		else
-			nvim_lsp[server_name].setup(opts)
 		end
+		nvim_lsp[server_name].setup(opts)
 	end,
 })
 
