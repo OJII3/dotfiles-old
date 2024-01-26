@@ -134,7 +134,19 @@ require("lazy").setup({
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 	},
 	{ "github/Copilot.vim" },
-	{ "gptlang/CopilotChat.nvim" },
+	-- { "gptlang/CopilotChat.nvim" },
+	{
+		"sadkodev/ChatPilot.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("chatpilot").setup()
+		end,
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	},
 	{ "vim-denops/denops.vim" },
 	{ "vim-skk/skkeleton", dependencies = { "vim-denops/denops.vim" } },
 	{ "lambdalisue/kensaku.vim", dependencies = { "vim-denops/denops.vim" } },

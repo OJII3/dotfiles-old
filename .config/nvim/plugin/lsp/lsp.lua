@@ -13,7 +13,8 @@ mason_lsp.setup_handlers({
 		local opts = {
 			capabilities = require("cmp_nvim_lsp").default_capabilities(),
 		}
-		if server_name == "denols" then -- WARN: Neccessary for avoiding error
+		if server_name == "denols" then
+			-- INFO: Neccessary for avoiding conflict with other js severs
 			opts = {
 				root_dir = nvim_lsp.util.root_pattern("deno.json"),
 				init_options = {
@@ -30,15 +31,15 @@ mason_lsp.setup_handlers({
 					},
 				},
 			}
+			nvim_lsp[server_name].setup(opts)
 		elseif server_name == "biome" or server_name == "efm/biome" then
-			opts = {
-				root_dir = nvim_lsp.util.root_pattern("biome.toml"),
-			}
+			opts.root_dir = nvim_lsp.util.root_pattern("biome.toml")
 		elseif server_name == "eslint" then
-			opts = {
-				root_dir = nvim_lsp.util.root_pattern(".eslintrc.js", ".eslintrc.json", ".eslintrc"),
-			}
+			opts.root_dir = nvim_lsp.util.root_pattern(".eslintrc.js", ".eslintrc.json", ".eslintrc")
+		elseif server_name == "stylelint_lsp" then
+			opts.filetypes = { "css", "scss", "less", "sass" } -- exclude javascript and typescript
 		elseif server_name == "efm" then
+			opts = {}
 		else
 			nvim_lsp[server_name].setup(opts)
 		end

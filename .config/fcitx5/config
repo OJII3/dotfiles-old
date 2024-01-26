@@ -45,7 +45,7 @@ EnumerateSkipFirst=False
 
 [Behavior]
 # Active By Default
-ActiveByDefault=True
+ActiveByDefault=False
 # Share Input State
 ShareInputState=No
 # Show preedit in application

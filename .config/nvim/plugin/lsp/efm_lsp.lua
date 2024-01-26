@@ -24,6 +24,7 @@ local flake8 = require("efmls-configs.linters.flake8")
 -- Haskell
 local formulu = require("efmls-configs.formatters.fourmolu")
 
+-- customized
 local biome_customized = vim.tbl_extend("force", biome, {
 	rootMarkers = { "biome.json" },
 })
