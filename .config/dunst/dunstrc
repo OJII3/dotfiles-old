@@ -85,14 +85,14 @@
     padding = 8
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 12
 
     # Padding between text and icon.
-    text_icon_padding = 0
+    text_icon_padding = 12
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 1
 
     # Defines color of the frame around the notification window.
     frame_color = "#aaaaaa00"
@@ -315,7 +315,7 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#ffffffcc"
     foreground = "#333333"
-    frame_color = "#9999ff33"
+    frame_color = "#99ff9933"
     timeout = 8
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
@@ -323,7 +323,7 @@
 [urgency_normal]
     background = "#ffffffcc"
     foreground = "#333363"
-    frame_color = "#66ff6633"
+    frame_color = "#33ff3333"
     timeout = 8
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon

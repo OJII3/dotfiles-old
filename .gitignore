@@ -87,6 +87,8 @@
 !/.config/libskk/**
 !/.github/
 !/.github/**
+!/.clang-tidy
+!/.clang-format
 !/.xprofile
 !/.xprofile.*
 !/.Xkbmap
