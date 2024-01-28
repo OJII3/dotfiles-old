@@ -29,7 +29,7 @@ keymap.set("n", "<Space>r", "<cmd>Telescope live_grep<CR>", { noremap = true, si
 
 -- lightspeed
 keymap.set("n", "<C-s>", "<Plug>Lightspeed_s", { noremap = true, silent = true })
-keymap.del("n", "s")
+-- keymap.del("n", "s")
 
 -- coc
 -- keymap.set("i", "<C-Space>", "coc#refresh()", { expr = true, silent = true })    -- trigger completion
