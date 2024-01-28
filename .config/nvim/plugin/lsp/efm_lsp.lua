@@ -1,4 +1,4 @@
-local nvim_lsp = require("lspconfig").efm
+local nvim_lsp_efm = require("lspconfig").efm
 local languages = require("efmls-configs.defaults").languages()
 
 local stylua = require("efmls-configs.formatters.stylua")
@@ -8,8 +8,8 @@ local latexindent = require("efmls-configs.formatters.latexindent")
 local cmake_lint = require("efmls-configs.linters.cmake_lint")
 local shellcheck = require("efmls-configs.linters.shellcheck")
 local rustfmt = require("efmls-configs.formatters.rustfmt")
+local yamllint = require("efmls-configs.linters.yamllint")
 -- CSS
--- local stylelint_linter = require("efmls-configs.linters.stylelint")
 local stylelint_formatter = require("efmls-configs.formatters.stylelint")
 -- TypeScript, JavaScript
 local eslint_linter = require("efmls-configs.linters.eslint_d")
@@ -28,14 +28,13 @@ local formulu = require("efmls-configs.formatters.fourmolu")
 local biome_customized = vim.tbl_extend("force", biome, {
 	rootMarkers = { "biome.json" },
 })
-
-local cmake_format = { -- yay -S cmake-format
+local cmake_format = {
 	formatCommand = "cmake-format ${--line-width:100} -",
 	formatStdin = true,
 	rootMarkers = { "CMakeLists.txt" },
 }
 
-nvim_lsp.setup({
+nvim_lsp_efm.setup({
 	init_options = {
 		documentFormatting = true,
 		codeAction = true,
@@ -56,6 +55,7 @@ nvim_lsp.setup({
 		"sh",
 		"rust",
 		"haskell",
+		"yaml",
 	},
 	settings = {
 		rootMarkers = { ".git/" },
@@ -75,6 +75,7 @@ nvim_lsp.setup({
 			sh = { shellcheck },
 			rust = { rustfmt },
 			haskell = { formulu },
+			yaml = { yamllint },
 		}),
 	},
 })
