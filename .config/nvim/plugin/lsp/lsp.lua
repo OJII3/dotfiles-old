@@ -65,8 +65,11 @@ mason_lsp.setup_handlers({
 					},
 				},
 			}
-		elseif server_name == "biome" or server_name == "efm/biome" then
-			opts.root_dir = nvim_lsp.util.root_pattern("biome.toml")
+		elseif server_name == "biome" then
+			opts = {
+				root_dir = nvim_lsp.util.root_pattern("biome.toml"),
+				single_file_support = false,
+			}
 		elseif server_name == "eslint" then
 			opts.root_dir = nvim_lsp.util.root_pattern(".eslintrc.js", ".eslintrc.json", ".eslintrc")
 		elseif server_name == "stylelint_lsp" then
