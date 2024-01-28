@@ -5,20 +5,21 @@ autoload -U compinit && compinit
 
 # common aliases
 alias vi=nvim
-alias ra=ranger
 alias ya=yazi 
+alias he="helix"
 alias g-a='git add .'
 alias g-s='git status'
 alias g-sw='git switch'
 alias g-c='git commit -m'
 alias g-g='git log --graph --oneline --decorate'
 alias g-p='git push'
+alias g-g='git log --graph --oneline --decorate --branches'
+alias lgit='lazygit'
 alias reflectorjp='sudo reflector --country 'Japan' --age 24 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
-alias ip="ip -c"
 alias ls="ls --color=auto"
 alias la="ls -a"
 alias ll="ls -l"
-alias he="helix"
+alias ip="ip -c"
 
 export EDITOR=nvim
 
