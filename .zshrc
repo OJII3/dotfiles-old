@@ -180,8 +180,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 ## global aliases (for those who like them) ##
 
 alias ..='cd ..'
-alias -g '...'='../..'
-alias -g '....'='../../..'
 #alias -g BG='& exit'
 #alias -g C='|wc -l'
 #alias -g G='|grep'

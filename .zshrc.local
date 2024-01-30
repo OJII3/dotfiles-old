@@ -2,6 +2,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 autoload -U compinit && compinit
+bindkey -d && bindkey -e # emacs mode (bash like)
 
 # common aliases
 alias vi=nvim

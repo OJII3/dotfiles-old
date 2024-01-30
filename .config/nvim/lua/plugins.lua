@@ -36,9 +36,6 @@ require("lazy").setup({
 		name = "window-picker",
 		event = "VeryLazy",
 		version = "2.*",
-		config = function()
-			require("window-picker").setup()
-		end,
 	},
 	{ "nvim-lualine/lualine.nvim" },
 	-- colorscheme ----------------
@@ -70,7 +67,7 @@ require("lazy").setup({
 				"williamboman/mason-lspconfig.nvim",
 				cmd = { "LspInstall", "LspUninstall" },
 			},
-      { "lvimuser/lsp-inlayhints.nvim" },
+			{ "lvimuser/lsp-inlayhints.nvim" },
 		},
 	},
 	-- {
@@ -136,7 +133,13 @@ require("lazy").setup({
 	{ "github/Copilot.vim" },
 	{ "vim-denops/denops.vim" },
 	{ "vim-skk/skkeleton", dependencies = { "vim-denops/denops.vim" } },
-	{ "lambdalisue/kensaku.vim", dependencies = { "vim-denops/denops.vim" } },
+	{
+		"lambdalisue/kensaku-search.vim",
+		dependencies = {
+			{ "vim-denops/denops.vim" },
+			{ "lambdalisue/kensaku.vim" },
+		},
+	},
 	-- { "ryicoh/deepl.vim", },
 	-- { 'haya14busa/vim-edgemotion' },
 	{ "tpope/vim-commentary" },

@@ -9,6 +9,7 @@ local cmake_lint = require("efmls-configs.linters.cmake_lint")
 local shellcheck = require("efmls-configs.linters.shellcheck")
 local rustfmt = require("efmls-configs.formatters.rustfmt")
 local yamllint = require("efmls-configs.linters.yamllint")
+local cspell = require("efmls-configs.linters.cspell")
 -- CSS
 local stylelint_formatter = require("efmls-configs.formatters.stylelint")
 -- TypeScript, JavaScript

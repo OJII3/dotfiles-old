@@ -20,6 +20,7 @@
   "iceberg.vim": { "branch": "master", "commit": "e01ac08c2202e7544531f4d806f6893539da6471" },
   "image.nvim": { "branch": "master", "commit": "245422e5c4774f0640d41c0eadec77396f2be4a9" },
   "indent-blankline.nvim": { "branch": "master", "commit": "12e92044d313c54c438bd786d11684c88f6f78cd" },
+  "kensaku-search.vim": { "branch": "main", "commit": "8fefbd7db9af99414896c5837feec13a02606550" },
   "kensaku.vim": { "branch": "main", "commit": "7ddad2f355a3678597ebbac666e2ee6dda6b9cf3" },
   "lazy.nvim": { "branch": "main", "commit": "aedcd79811d491b60d0a6577a9c1701063c2a609" },
   "lightspeed.nvim": { "branch": "main", "commit": "fcc72d8a4d5f4ebba62d8a3a0660f88f1b5c3b05" },
