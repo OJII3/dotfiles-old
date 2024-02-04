@@ -1,1 +1,3 @@
-exec_always --no-startup-id cutefish-settings-daemon & sleep 0.2 && cutefish-statusbar & cutefish-notificationd & cutefish-powerman & cutefish-polkit-agent & conky & DISPLAY=":0" picom -b &
+exec_always --no-startup-id polybar
+exec_always --no-startup-id conky
+exec_always --no-startup-id picom -b --backend glx
