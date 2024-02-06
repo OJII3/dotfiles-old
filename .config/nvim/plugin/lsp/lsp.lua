@@ -44,6 +44,10 @@ mason_lsp.setup({
 
 mason_lsp.setup_handlers({
 	function(server_name)
+		if server_name == "efm" then
+			return
+		end
+
 		local opts = {
 			capabilities = vim.tbl_deep_extend(
 				"force",
@@ -75,9 +79,6 @@ mason_lsp.setup_handlers({
 			opts.root_dir = nvim_lsp.util.root_pattern(".eslintrc.js", ".eslintrc.json", ".eslintrc")
 		elseif server_name == "stylelint_lsp" then
 			opts.filetypes = { "css", "scss", "less", "sass" } -- exclude javascript and typescript
-		elseif server_name == "efm" then
-			opts = nil
-		else
 		end
 		nvim_lsp[server_name].setup(opts)
 	end,
