@@ -7,7 +7,7 @@
 !/.config/nvim/**
 !.vimrc
 !/.vim/
-/.vim/**
+!/.vim/coc-settings.json
 !/.nanorc
 !/.ideavimrc
 !/.config/JetBrains/

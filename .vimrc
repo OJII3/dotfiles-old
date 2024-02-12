@@ -31,6 +31,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'tpope/vim-fugitive'
+Plug 'psliwka/vim-smoothie'
 
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
@@ -46,8 +47,8 @@ call plug#end()
 
 syntax on
 colorscheme carbonfox
-
-
+" make background transparent
+autocmd VimEnter * highlight Normal ctermbg=NONE guibg=NONE 
 set background=dark
 
 " ================================================================
@@ -87,7 +88,7 @@ let g:vimtex_compiler_latexmk = {
       \],
       \}
 
-" copilot
+" copilot (also for git commit)
 let g:copilot_filetypes = #{ gitcommit: v:true, markdown: v:true, text: v:true }
 function s:append_diff() abort
   " Get the Git repository root directory
@@ -100,8 +101,8 @@ function s:append_diff() abort
   " Append the diff to the commit message
   call append(line('$'), split(comment_diff, '\n'))
 endfunction
-
 autocmd BufReadPost COMMIT_EDITMSG call s:append_diff()
+
 "coc
 noremap <silent> gd <Plug>(coc-definition)<CR>
 noremap <silent> gy <Plug>(coc-type-definition)<CR>
