@@ -38,7 +38,7 @@ no_focus [class="cutefish-notificationd"]
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_AutostartApplets
-exec --no-startup-id dex --autostart --environment i3
+# exec --no-startup-id dex --autostart --environment i3
 
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
@@ -230,9 +230,8 @@ bindsym $mod+space exec --no-startup-id source ~/.config/i3/toggle_touchpad.sh
 bindsym $mod+c exec google-chrome-stable --profile-directory=Default
 bindsym $mod+u exec google-chrome-stable --profile-directory=Profile\ 1
 bindsym $mod+o exec firefox
-bindsym $mod+i exec vivaldi
-bindsym Shift+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
-bindsym $mod+Print exec --no-startup-id maim -s "/home/$USER/Pictures/Screenshots/$(date --iso-8601=seconds).png"
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date --iso-8601=seconds).png"
+bindsym Shift+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png && notify-send "Screenshot" "Copied to clipboard"
+bindsym $mod+Shift+s exec --no-startup-id maim -s "/home/$USER/Pictures/Screenshots/$(date --iso-8601=seconds).png" && notify-send "Screenshot" "Copied to clipboard"
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date --iso-8601=seconds).png" && notify-send "Screenshot" "Copied to clipboard"
 
 include ~/.config/i3/`hostnamectl hostname`.i3

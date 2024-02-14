@@ -44,8 +44,16 @@ mason_lsp.setup({
 
 mason_lsp.setup_handlers({
 	function(server_name)
+		if server_name == "efm" then
+			return
+		end
+
 		local opts = {
-			capabilities = require("cmp_nvim_lsp").default_capabilities(),
+			capabilities = vim.tbl_deep_extend(
+				"force",
+				vim.lsp.protocol.make_client_capabilities(),
+				require("cmp_nvim_lsp").default_capabilities()
+			),
 		}
 		if server_name == "denols" then
 			-- INFO: Neccessary for avoiding conflict with other js severs
@@ -66,17 +74,11 @@ mason_lsp.setup_handlers({
 				},
 			}
 		elseif server_name == "biome" then
-			opts = {
-				root_dir = nvim_lsp.util.root_pattern("biome.toml"),
-				single_file_support = false,
-			}
+			opts.single_file_support = false
 		elseif server_name == "eslint" then
 			opts.root_dir = nvim_lsp.util.root_pattern(".eslintrc.js", ".eslintrc.json", ".eslintrc")
 		elseif server_name == "stylelint_lsp" then
 			opts.filetypes = { "css", "scss", "less", "sass" } -- exclude javascript and typescript
-		elseif server_name == "efm" then
-			opts = nil
-		else
 		end
 		nvim_lsp[server_name].setup(opts)
 	end,

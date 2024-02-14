@@ -10,13 +10,12 @@ local shellcheck = require("efmls-configs.linters.shellcheck")
 local rustfmt = require("efmls-configs.formatters.rustfmt")
 local yamllint = require("efmls-configs.linters.yamllint")
 local cspell = require("efmls-configs.linters.cspell")
--- CSS
 local stylelint_formatter = require("efmls-configs.formatters.stylelint")
 -- TypeScript, JavaScript
 local eslint_linter = require("efmls-configs.linters.eslint_d")
 local eslint_formatter = require("efmls-configs.formatters.eslint_d")
 local prettier = require("efmls-configs.formatters.prettier_d")
-local biome = require("efmls-configs.formatters.biome")
+-- local biome = require("efmls-configs.formatters.biome")
 -- Python
 local black = require("efmls-configs.formatters.black")
 local isort = require("efmls-configs.formatters.isort")
@@ -24,15 +23,24 @@ local autopep8 = require("efmls-configs.formatters.autopep8")
 local flake8 = require("efmls-configs.linters.flake8")
 -- Haskell
 local formulu = require("efmls-configs.formatters.fourmolu")
+local typstfmt = require("efmls-configs.formatters.typstfmt")
+local textlint = require("efmls-configs.linters.textlint")
 
 -- customized or manually installed linters/formatters
-local biome_customized = vim.tbl_extend("force", biome, {
-	rootMarkers = { "biome.json" },
-})
+local biome = {
+	formatCommand = string.format("%s %s", "node_modules/.bin/biome", "check --apply --stdin-file-path '${INPUT}'"),
+	formatStdin = true,
+	roootMarkers = { "biome.json" },
+}
 local cmake_format = {
 	formatCommand = "cmake-format ${--line-width:100} -",
 	formatStdin = true,
 	rootMarkers = { "CMakeLists.txt" },
+}
+local dotnet_format = {
+	formatCommand = "dotnet format --include %s",
+	formatStdin = true,
+	rootMarkers = { ".editorconfig" },
 }
 
 nvim_lsp_efm.setup({
@@ -41,41 +49,47 @@ nvim_lsp_efm.setup({
 		codeAction = true,
 	},
 	filetypes = {
-		"lua",
+		"c",
+		"cmake",
+		"cpp",
+		-- "cs",
+		"css",
+		"haskell",
 		"javascript",
 		"javascriptreact",
+		"json",
+		"latex",
+		"lua",
+		"markdown",
+		"python",
+		"rust",
+		"sh",
 		"typescript",
 		"typescriptreact",
-		"css",
-		"json",
-		"python",
-		"c",
-		"cpp",
-		"latex",
-		"cmake",
-		"sh",
-		"rust",
-		"haskell",
+		"typst",
 		"yaml",
 	},
 	settings = {
 		rootMarkers = { ".git/" },
 		languages = vim.tbl_extend("force", languages, {
-			lua = { stylua },
-			javascript = { eslint_linter, biome_customized, prettier, eslint_formatter },
-			typescript = { eslint_linter, biome_customized, prettier, eslint_formatter },
-			javascriptreact = { eslint_linter, biome_customized, prettier, eslint_formatter },
-			typescriptreact = { eslint_linter, biome_customized, prettier, eslint_formatter },
-			css = { prettier, stylelint_formatter },
-			json = { prettier },
-			python = { black, isort, autopep8, flake8 },
 			c = { clang_format, clang_tidy },
-			cpp = { clang_format, clang_tidy },
-			latex = { latexindent },
 			cmake = { cmake_lint, cmake_format },
-			sh = { shellcheck },
-			rust = { rustfmt },
+			cpp = { clang_format, clang_tidy },
+			cs = { dotnet_format },
+			css = { prettier, stylelint_formatter },
 			haskell = { formulu },
+			javascript = { eslint_linter, biome, prettier, eslint_formatter },
+			javascriptreact = { eslint_linter, biome, prettier, eslint_formatter },
+			json = { prettier },
+			latex = { latexindent },
+			lua = { stylua },
+			markdown = { cspell, textlint },
+			python = { black, isort, autopep8, flake8 },
+			rust = { rustfmt },
+			sh = { shellcheck },
+			typescript = { eslint_linter, prettier, eslint_formatter, biome },
+			typescriptreact = { eslint_linter, prettier, eslint_formatter, biome },
+			typst = { typstfmt, cspell, textlint },
 			yaml = { yamllint },
 		}),
 	},

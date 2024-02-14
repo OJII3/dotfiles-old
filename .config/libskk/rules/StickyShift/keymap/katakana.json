@@ -3,8 +3,7 @@
   "define": {
     "keymap": {
       "Muhenkan": "set-input-mode-latin",
-      ";": "start-preedit-no-delete",
-      "Alt_L-`": "set-input-mode-latin"
+      ";": "start-preedit-no-delete"
     }
   }
 }

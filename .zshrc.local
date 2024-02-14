@@ -4,6 +4,10 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.pl
 autoload -U compinit && compinit
 bindkey -d && bindkey -e # emacs mode (bash like)
 
+# ssh agent
+# eval $(ssh-agent)
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # common aliases
 alias vi=nvim
 alias ya=yazi 

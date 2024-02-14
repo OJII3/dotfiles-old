@@ -26,15 +26,17 @@ neotree.setup({
 	},
 	filesystem = {
 		filtered_items = {
-			visible = true,
+			visible = false,
 			hide_dotfiles = false,
 			hide_gitignored = false,
-			hide_hidden = true,
 			hide_by_name = {
 				"node_modules",
 				".git",
 				".cache",
 				".DS_Store",
+			},
+			hide_by_pattern = {
+				"*.meta",
 			},
 			follow_current_file = {
 				enabled = true,
