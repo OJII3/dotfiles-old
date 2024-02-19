@@ -99,6 +99,9 @@ require("lazy").setup({
 		dependencies = { "rafamadriz/friendly-snippets" },
 		build = "make install_jsregexp",
 	},
+	{
+		"karb94/neoscroll.nvim",
+	},
 	{ "rafamadriz/friendly-snippets" },
 	{
 		"windwp/nvim-autopairs",
@@ -189,12 +192,6 @@ require("lazy").setup({
 		config = true,
 	},
 	{
-		"karb94/neoscroll.nvim",
-		config = function()
-			require("neoscroll").setup()
-		end,
-	},
-	{
 		"lukas-reineke/indent-blankline.nvim",
 	},
 	{
@@ -203,6 +200,14 @@ require("lazy").setup({
 		build = function()
 			vim.fn["firenvim#install"](0)
 		end,
+	},
+	{
+		"rbong/vim-flog",
+		lazy = true,
+		cmd = { "Flog", "Flogsplit", "Floggit" },
+		dependencies = {
+			"tpope/vim-fugitive",
+		},
 	},
 	{
 		"jellydn/CopilotChat.nvim",

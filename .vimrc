@@ -32,6 +32,7 @@ Plug 'tpope/vim-commentary'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'psliwka/vim-smoothie'
+Plug 'liuchengxu/vim-which-key'
 
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
