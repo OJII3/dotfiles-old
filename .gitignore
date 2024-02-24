@@ -73,6 +73,8 @@
 !/.config/wezterm/**
 !/.config/kitty/
 !/.config/kitty/**
+!/.config/rio/
+!/.config/rio/**
 # zsh 
 !.zshrc
 !.zshrc.pre
