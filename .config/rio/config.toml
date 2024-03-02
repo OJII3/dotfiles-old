@@ -12,7 +12,8 @@
 # Default cursor is Block
 # Other available options are: '_' and '|'
 #
-cursor = '▇'
+# cursor = '▇'
+curor = '|'
 
 # Blinking Cursor
 #
@@ -103,7 +104,7 @@ use-fork = false
 [window]
 width = 1920
 height = 1080
-# mode = "Windowed"
+mode = "Windowed"
 foreground-opacity = 1.0
 background-opacity = 0.8
 # blur = true
@@ -129,7 +130,7 @@ background-opacity = 0.8
 [renderer]
 performance = "High"
 backend = "Automatic"
-# disable-renderer-when-unfocused = false
+disable-renderer-when-unfocused = false
 
 # Keyboard
 #
@@ -139,8 +140,8 @@ backend = "Automatic"
 #   - For example: Terminal.app does not deal with ctlseqs with ALT keys
 #
 # Example:
-# [keyboard]
-# use-kitty-keyboard-protocol = false
+[keyboard]
+use-kitty-keyboard-protocol = true
 # disable-ctlseqs-alt = false
 
 # Fonts
@@ -161,7 +162,7 @@ backend = "Automatic"
 #
 # Example:
 # [fonts]
-# size = 18
+size = 12
 #
 # [fonts.regular]
 # family = "cascadiamono"
@@ -195,9 +196,9 @@ backend = "Automatic"
 # Multiplier default is 3.0.
 # Divider default is 1.0.
 # Example:
-# [scroll]
-# multiplier = 3.0
-# divider = 1.0
+[scroll]
+multiplier = 3.0
+divider = 1.0
 
 # Navigation
 #
@@ -218,7 +219,7 @@ backend = "Automatic"
 mode = "BottomTab"
 clickable = true
 use-current-path = true
-# color-automation = []
+color-automation = []
 
 # Shell
 #
@@ -264,8 +265,8 @@ use-current-path = true
 # background = '#0F0D0E'
 # foreground = '#F9F4DA'
 # cursor = '#F38BA3'
-tabs = '#443d40'
-tabs-active = '#F38BA3'
+tabs = '#3d4440'
+tabs-active = '#8BF3A3'
 # green = '#0BA95B'
 # red = '#ED203D'
 # blue = '#12B5E5'
@@ -282,7 +283,7 @@ keys = [
 #   { key = "q", with = "super", action = "Quit" },
 #   # Bytes[27, 91, 53, 126] is equivalent to "\x1b[5~"
 # { key = "home", with = "super | shift", bytes = [27, 91, 53, 126] },
-  { key = "return", with = "control | shift", action = "CreateTab" },
+  { key = "return", with = "control | shift", action = "SplitVertically" },
 ]
 
 # Log level
