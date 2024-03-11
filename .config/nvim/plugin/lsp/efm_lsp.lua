@@ -21,6 +21,7 @@ local black = require("efmls-configs.formatters.black")
 local isort = require("efmls-configs.formatters.isort")
 local autopep8 = require("efmls-configs.formatters.autopep8")
 local flake8 = require("efmls-configs.linters.flake8")
+local mypy = require("efmls-configs.linters.mypy")
 -- Haskell
 local formulu = require("efmls-configs.formatters.fourmolu")
 local typstfmt = require("efmls-configs.formatters.typstfmt")
@@ -37,11 +38,11 @@ local cmake_format = {
 	formatStdin = true,
 	rootMarkers = { "CMakeLists.txt" },
 }
-local dotnet_format = {
-	formatCommand = "dotnet format --include %s",
-	formatStdin = true,
-	rootMarkers = { ".editorconfig" },
-}
+-- local dotnet_format = {
+-- 	formatCommand = "dotnet format --include %s",
+-- 	formatStdin = true,
+-- 	rootMarkers = { ".editorconfig" },
+-- }
 
 nvim_lsp_efm.setup({
 	init_options = {
@@ -75,7 +76,7 @@ nvim_lsp_efm.setup({
 			c = { clang_format, clang_tidy },
 			cmake = { cmake_lint, cmake_format },
 			cpp = { clang_format, clang_tidy },
-			cs = { dotnet_format },
+			-- cs = { dotnet_format },
 			css = { prettier, stylelint_formatter },
 			haskell = { formulu },
 			javascript = { eslint_linter, biome, prettier, eslint_formatter },
@@ -84,7 +85,7 @@ nvim_lsp_efm.setup({
 			latex = { latexindent },
 			lua = { stylua },
 			markdown = { cspell, textlint },
-			python = { black, isort, autopep8, flake8 },
+			python = { black, isort, autopep8, flake8, mypy },
 			rust = { rustfmt },
 			sh = { shellcheck },
 			typescript = { eslint_linter, prettier, eslint_formatter, biome },

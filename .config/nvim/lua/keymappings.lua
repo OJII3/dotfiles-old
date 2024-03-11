@@ -75,9 +75,6 @@ keymap.set("n", "<Space>tt", "<cmd>lua tig_toggle()<CR>", { noremap = true, sile
 keymap.set("n", "<Space>tl", "<cmd>lua lazygit_toggle()<CR>", { noremap = true, silent = true })
 keymap.set("t", "<C-n>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 
--- git
-keymap.set("n", "<Leader>fl", "<cmd>Flog<CR>", { noremap = true, silent = true })
-
 -- copolot chat
 -- keymap.set("n", "<leader>cce", "<cmd>CopilotChatExplain<cr>", { noremap = true, silent = true })
 -- keymap.set("n", "<leader>cct", "<cmd>CopilotChatTests<cr>", { noremap = true, silent = true })

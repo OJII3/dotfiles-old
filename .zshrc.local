@@ -35,13 +35,12 @@ eval "$(starship init zsh)"
 
 # node ################################################################
 
-# pnpm
-export PNPM_HOME="/home/ojii3/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-## nodenv
+# export PNPM_HOME="/home/ojii3/.local/share/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
+
 if [ -e "$HOME/.nodenv" ]
 then
 	export NODENV_ROOT="$HOME/.nodenv"
@@ -51,12 +50,14 @@ then
 		eval "$(nodenv init -)"
 	fi
 fi
+
 # volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
 source ~/.zshrc.mise
 # bun completions
 [ -s "/home/ojii3/.bun/_bun" ] && source "/home/ojii3/.bun/_bun"
+
 alias yarn="corepack yarn"
 alias yarnpkg="corepack yarnpkg"
 alias pnpm="corepack pnpm"
@@ -67,6 +68,5 @@ alias npx="corepack npx"
 
 # python ##############################################################
 
-# python env(rye) : Don't use this, because global python should be managed by pacman
-# source "$HOME/.rye/env" 
+source "$HOME/.rye/env" 
 

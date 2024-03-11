@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 -- vim.g.mapleader = ' ' -- make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup({
+	{ import = "plugins" },
 	{ "folke/which-key.nvim" },
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
@@ -29,6 +30,8 @@ require("lazy").setup({
 			"MunifTanjim/nui.nvim",
 			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 		},
+		event = "VeryLazy",
+		lazy = true,
 	},
 	{
 		"s1n7ax/nvim-window-picker",
@@ -75,21 +78,18 @@ require("lazy").setup({
 	-- 	branch = "main",
 	-- },
 	-- cmp
-	{
-		"hrsh7th/nvim-cmp",
-		dependencies = {
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-vsnip" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "hrsh7th/cmp-cmdline" },
-			{ "hrsh7th/cmp-nvim-lsp-signature-help" },
-			{ "onsails/lspkind-nvim" },
-		},
-	},
-	-- { 'mfussenegger/nvim-lint' },
-	-- { 'mhartington/formatter.nvim' },
-	-- { 'mattn/efm-langserver' },
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	dependencies = {
+	-- 		{ "hrsh7th/cmp-nvim-lsp" },
+	-- 		{ "hrsh7th/cmp-vsnip" },
+	-- 		{ "hrsh7th/cmp-buffer" },
+	-- 		{ "hrsh7th/cmp-path" },
+	-- 		{ "hrsh7th/cmp-cmdline" },
+	-- 		{ "hrsh7th/cmp-nvim-lsp-signature-help" },
+	-- 		{ "onsails/lspkind-nvim" },
+	-- 	},
+	-- },
 	{ "creativenull/efmls-configs-nvim", dependencies = {
 		{ "neovim/nvim-lspconfig" },
 	} },
@@ -99,10 +99,6 @@ require("lazy").setup({
 		dependencies = { "rafamadriz/friendly-snippets" },
 		build = "make install_jsregexp",
 	},
-	{
-		"karb94/neoscroll.nvim",
-	},
-	{ "rafamadriz/friendly-snippets" },
 	{
 		"windwp/nvim-autopairs",
 		init = function()
@@ -116,7 +112,7 @@ require("lazy").setup({
 		end,
 	},
 	-- { "lewis6991/gitsigns.nvim", lazy = true },
-	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" }, event = "VeryLazy", lazy = true },
 	{ "windwp/nvim-ts-autotag" },
 	{ "ggandor/lightspeed.nvim" },
 	{
@@ -147,27 +143,14 @@ require("lazy").setup({
 	-- { 'haya14busa/vim-edgemotion' },
 	{ "tpope/vim-commentary" },
 	{ "johngrib/vim-game-code-break" },
-	{
-		"iamcco/markdown-preview.nvim",
-		config = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-		ft = { "markdown" },
-	},
-	{ "romgrk/barbar.nvim" },
+	-- { "romgrk/barbar.nvim" },
 	{ "akinsho/toggleterm.nvim", config = true },
 	{ "goolord/alpha-nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
-	{
-		"lervag/vimtex",
-		lazy = true,
-		ft = { "tex" },
-	},
 	{
 		"kaarmu/typst.vim",
 		lazy = true,
 		ft = { "typst" },
 	},
-	{ "dstein64/vim-startuptime" },
 	{ "monaqa/dial.nvim" },
 	{
 		"mfussenegger/nvim-dap",
@@ -188,10 +171,6 @@ require("lazy").setup({
 		lazy = true,
 	},
 	{
-		"akinsho/git-conflict.nvim",
-		config = true,
-	},
-	{
 		"lukas-reineke/indent-blankline.nvim",
 	},
 	{
@@ -200,39 +179,5 @@ require("lazy").setup({
 		build = function()
 			vim.fn["firenvim#install"](0)
 		end,
-	},
-	{
-		"rbong/vim-flog",
-		lazy = true,
-		cmd = { "Flog", "Flogsplit", "Floggit" },
-		dependencies = {
-			"tpope/vim-fugitive",
-			event = "VeryLazy",
-		},
-	},
-	{
-		"jellydn/CopilotChat.nvim",
-		opts = {
-			mode = "split",
-			prompts = {
-				Explain = "Explain how it works.",
-				Review = "Review the following code and provide concise suggestions.",
-				Tests = "Briefly explain how the selected code works, then generate unit tests.",
-				Refactor = "Refactor the code to improve clarity and readability.",
-			},
-		},
-		build = function()
-			vim.defer_fn(function()
-				vim.cmd("UpdateRemotePlugins")
-				vim.notify("CopilotChat - Updated remote plugins. Please restart Neovim.")
-			end, 3000)
-		end,
-		event = "VeryLazy",
-		keys = {
-			{ "<leader>cce", "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat - Explain code" },
-			{ "<leader>cct", "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },
-			{ "<leader>ccr", "<cmd>CopilotChatReview<cr>", desc = "CopilotChat - Review code" },
-			{ "<leader>ccR", "<cmd>CopilotChatRefactor<cr>", desc = "CopilotChat - Refactor code" },
-		},
 	},
 })

@@ -1,4 +1,4 @@
-export TERM=wezterm
+# export TERM=kitty
 
 # ros
 source /opt/ros/humble/setup.zsh

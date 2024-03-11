@@ -5,6 +5,7 @@
 # editor, ime
 !/.config/nvim/
 !/.config/nvim/**
+/.config/nvim/lazy-lock.json
 !.vimrc
 !/.vim/
 !/.vim/coc-settings.json

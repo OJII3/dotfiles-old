@@ -5,6 +5,6 @@ local ok, secrets = pcall(require, "secrets")
 if ok then
 	require("secrets")
 end
-require("plugins")
+require("plugin")
 require("colorscheme")
 require("keymappings")

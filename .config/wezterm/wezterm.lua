@@ -41,4 +41,7 @@ config.window_frame = {
 	font_size = 10,
 }
 
+-- keymap ------------------------------------------------
+config.keys = require("keybindings").keys
+
 return config
