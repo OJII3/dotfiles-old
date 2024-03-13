@@ -148,7 +148,7 @@ require("lazy").setup({
 	{ "goolord/alpha-nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	{
 		"kaarmu/typst.vim",
-		lazy = true,
+		lazy = false,
 		ft = { "typst" },
 	},
 	{ "monaqa/dial.nvim" },

@@ -24,7 +24,8 @@ local flake8 = require("efmls-configs.linters.flake8")
 local mypy = require("efmls-configs.linters.mypy")
 -- Haskell
 local formulu = require("efmls-configs.formatters.fourmolu")
-local typstfmt = require("efmls-configs.formatters.typstfmt")
+-- local typstfmt = require("efmls-configs.formatters.typstfmt")
+-- local prettypst = require("efmls-configs.formatters.prettypst")
 local textlint = require("efmls-configs.linters.textlint")
 
 -- customized or manually installed linters/formatters
@@ -37,6 +38,10 @@ local cmake_format = {
 	formatCommand = "cmake-format ${--line-width:100} -",
 	formatStdin = true,
 	rootMarkers = { "CMakeLists.txt" },
+}
+local prettypst = {
+	formatCommand = "prettypst --use-std-in --use-std-out",
+	formatStdin = true,
 }
 -- local dotnet_format = {
 -- 	formatCommand = "dotnet format --include %s",
@@ -90,7 +95,7 @@ nvim_lsp_efm.setup({
 			sh = { shellcheck },
 			typescript = { eslint_linter, prettier, eslint_formatter, biome },
 			typescriptreact = { eslint_linter, prettier, eslint_formatter, biome },
-			typst = { typstfmt, cspell, textlint },
+			typst = { prettypst }, --, cspell, textlint },
 			yaml = { yamllint },
 		}),
 	},

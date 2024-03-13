@@ -70,3 +70,7 @@ alias npx="corepack npx"
 
 source "$HOME/.rye/env" 
 
+# rust ################################################################
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
