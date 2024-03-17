@@ -70,7 +70,7 @@ require("lazy").setup({
 				"williamboman/mason-lspconfig.nvim",
 				cmd = { "LspInstall", "LspUninstall" },
 			},
-			{ "lvimuser/lsp-inlayhints.nvim" },
+			-- { "lvimuser/lsp-inlayhints.nvim" },
 		},
 	},
 	-- {
