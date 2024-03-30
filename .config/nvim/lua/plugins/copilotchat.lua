@@ -1,14 +1,11 @@
 return {
-	"jellydn/CopilotChat.nvim",
-	opts = {
-		mode = "split",
-		prompts = {
-			Explain = "Explain how it works.",
-			Review = "Review the following code and provide concise suggestions.",
-			Tests = "Briefly explain how the selected code works, then generate unit tests.",
-			Refactor = "Refactor the code to improve clarity and readability.",
-		},
+	"CopilotC-Nvim/CopilotChat.nvim",
+	branch = "canary",
+	dependencies = {
+		{ "github/copilot.vim" },
+		{ "nvim-lua/plenary.nvim" },
 	},
+	opts = {},
 	build = function()
 		vim.defer_fn(function()
 			vim.cmd("UpdateRemotePlugins")
@@ -16,11 +13,4 @@ return {
 		end, 3000)
 	end,
 	event = "VeryLazy",
-	keys = {
-		{ "<leader>cce", "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat - Explain code" },
-		{ "<leader>cct", "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },
-		{ "<leader>ccr", "<cmd>CopilotChatReview<cr>", desc = "CopilotChat - Review code" },
-		{ "<leader>ccR", "<cmd>CopilotChatRefactor<cr>", desc = "CopilotChat - Refactor code" },
-	},
 }
-

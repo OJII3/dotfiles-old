@@ -37,7 +37,7 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.abort(),
 				["<CR>"] = cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace }),
-				["<C-y>"] = cmp.mapping.confirm({ select = true }),
+				["<C-i>"] = cmp.mapping.confirm({ select = true }),
 				["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
 				["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }),
 				["<Tab>"] = cmp.config.disable,

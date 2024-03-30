@@ -2,6 +2,7 @@ local keymap = vim.keymap
 
 -- builtin
 keymap.set("i", "jj", "<ESC>", { noremap = true, silent = true })
+keymap.set("i", "っj", "<ESC>", { noremap = true, silent = true }) -- while using skkeleton
 keymap.set("n", "j", "gj", { noremap = true, silent = true })
 keymap.set("n", "k", "gk", { noremap = true, silent = true })
 keymap.set("v", "j", "gj", { noremap = true, silent = true })
@@ -46,7 +47,7 @@ keymap.set("n", "<C-s>", "<Plug>Lightspeed_s", { noremap = true, silent = true }
 -- builtin lsp
 keymap.set("n", "<Leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { silent = true }) -- rename
 keymap.set("n", "<Leader>fm", "<cmd>lua vim.lsp.buf.format()<CR>", { silent = true }) -- format
-keymap.set("n", "<Leader>c", "<cmd>lua vim.lsp.buf.code_action()<CR>", { silent = true }) -- code
+-- keymap.set("n", "<Leader>c", "<cmd>lua vim.lsp.buf.code_action()<CR>", { silent = true }) -- code
 keymap.set("n", "<Leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", { silent = true }) -- code
 keymap.set("n", "ge", "<cmd>lua vim.lcwsp.diagnostic.open_float()<CR>", { silent = true }) -- code
 -- keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { silent = true })               -- references
@@ -60,9 +61,9 @@ keymap.set("n", "<Leader>q", "<cmd>lua vim.diagnostic.set_loclist()<CR>", { sile
 
 -- skkeleton
 keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })
-keymap.set("i", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
-keymap.set("c", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = false, silent = true })
-keymap.set("c", "<C-l>", "<Plug>(skkeleton-enable)<Plug>(skkeleton-disable)", { noremap = false, silent = true })
+keymap.set("i", "<C-l>", "<Plug>(skkeleton-disable)", { noremap = true, silent = false })
+keymap.set("c", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })
+keymap.set("c", "<C-l>", "<Plug>(skkeleton-disable)", { noremap = true, silent = false })
 
 -- markdown-preview
 keymap.set("n", "<leader>lv", "<Plug>MarkdownPreviewToggle", { noremap = false, silent = true })

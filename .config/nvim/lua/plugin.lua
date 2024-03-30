@@ -17,7 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 -- vim.g.mapleader = ' ' -- make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup({
-	{ import = "plugins" },
 	{ "folke/which-key.nvim" },
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
@@ -33,12 +32,12 @@ require("lazy").setup({
 		event = "VeryLazy",
 		lazy = true,
 	},
-	{
-		"s1n7ax/nvim-window-picker",
-		name = "window-picker",
-		event = "VeryLazy",
-		version = "2.*",
-	},
+	-- {
+	-- 	"s1n7ax/nvim-window-picker",
+	-- 	name = "window-picker",
+	-- 	event = "VeryLazy",
+	-- 	version = "2.*",
+	-- },
 	{ "nvim-lualine/lualine.nvim" },
 	-- colorscheme ----------------
 	{ "folke/tokyonight.nvim", lazy = true },
@@ -100,12 +99,6 @@ require("lazy").setup({
 		build = "make install_jsregexp",
 	},
 	{
-		"windwp/nvim-autopairs",
-		init = function()
-			require("nvim-autopairs").setup()
-		end,
-	},
-	{
 		"kylechui/nvim-surround",
 		init = function()
 			require("nvim-surround").setup()
@@ -142,16 +135,11 @@ require("lazy").setup({
 	-- { "ryicoh/deepl.vim", },
 	-- { 'haya14busa/vim-edgemotion' },
 	{ "tpope/vim-commentary" },
-	{ "johngrib/vim-game-code-break" },
+	{ "johngrib/vim-game-code-break", event = "VeryLazy" },
 	-- { "romgrk/barbar.nvim" },
 	{ "akinsho/toggleterm.nvim", config = true },
 	{ "goolord/alpha-nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
-	{
-		"kaarmu/typst.vim",
-		lazy = false,
-		ft = { "typst" },
-	},
-	{ "monaqa/dial.nvim" },
+	-- { "monaqa/dial.nvim" },
 	{
 		"mfussenegger/nvim-dap",
 		dependencies = { "rcarriga/nvim-dap-ui" },
@@ -180,4 +168,5 @@ require("lazy").setup({
 			vim.fn["firenvim#install"](0)
 		end,
 	},
+	{ import = "plugins", lazy = true },
 })
