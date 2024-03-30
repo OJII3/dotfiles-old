@@ -26,4 +26,5 @@ return {
 			preset = "default",
 		},
 	},
+	event = "BufRead",
 }

@@ -20,24 +20,6 @@ require("lazy").setup({
 	{ "folke/which-key.nvim" },
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v3.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
-			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-		},
-		event = "VeryLazy",
-		lazy = true,
-	},
-	-- {
-	-- 	"s1n7ax/nvim-window-picker",
-	-- 	name = "window-picker",
-	-- 	event = "VeryLazy",
-	-- 	version = "2.*",
-	-- },
 	{ "nvim-lualine/lualine.nvim" },
 	-- colorscheme ----------------
 	{ "folke/tokyonight.nvim", lazy = true },
@@ -124,7 +106,6 @@ require("lazy").setup({
 	},
 	{ "github/Copilot.vim" },
 	{ "vim-denops/denops.vim" },
-	{ "vim-skk/skkeleton", dependencies = { "vim-denops/denops.vim" } },
 	{
 		"lambdalisue/kensaku-search.vim",
 		dependencies = {
@@ -136,8 +117,6 @@ require("lazy").setup({
 	-- { 'haya14busa/vim-edgemotion' },
 	{ "tpope/vim-commentary" },
 	{ "johngrib/vim-game-code-break", event = "VeryLazy" },
-	-- { "romgrk/barbar.nvim" },
-	{ "akinsho/toggleterm.nvim", config = true },
 	{ "goolord/alpha-nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	-- { "monaqa/dial.nvim" },
 	{

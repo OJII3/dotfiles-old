@@ -92,4 +92,5 @@ return {
 		--   capabilities = capabilities
 		-- }
 	end,
+	-- event = "InsertEnter",
 }

@@ -17,10 +17,7 @@ keymap.set("n", "<C-b><C-l>", "<cmd>BufferNext<CR>", { noremap = true, silent = 
 keymap.set("n", "<C-b>d", "<cmd>BufferDelete<CR>", { noremap = true, silent = true })
 keymap.set("n", "<C-b><C-d>", "<cmd>BufferClose<CR>", { noremap = true, silent = true })
 
--- plugins
--- Neo-tree
-keymap.set("n", "<Space>e", "<cmd>Neotree toggle<CR>", { noremap = true, silent = true })
--- ohters in neo-tree.lua
+-- plugins --
 
 -- telescope
 keymap.set("n", "<Space>g", "<cmd>Telescope git_files<CR>", { noremap = true, silent = true })
@@ -60,21 +57,13 @@ keymap.set("n", "]g", "<cmd>lua vim.diagnostic.goto_next()<CR>", { silent = true
 keymap.set("n", "<Leader>q", "<cmd>lua vim.diagnostic.set_loclist()<CR>", { silent = true }) -- set loclist
 
 -- skkeleton
-keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })
-keymap.set("i", "<C-l>", "<Plug>(skkeleton-disable)", { noremap = true, silent = false })
-keymap.set("c", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })
-keymap.set("c", "<C-l>", "<Plug>(skkeleton-disable)", { noremap = true, silent = false })
+-- keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })
+-- keymap.set("i", "<C-l>", "<Plug>(skkeleton-disable)", { noremap = true, silent = false })
+-- keymap.set("c", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })
+-- keymap.set("c", "<C-l>", "<Plug>(skkeleton-disable)", { noremap = true, silent = false })
 
 -- markdown-preview
 keymap.set("n", "<leader>lv", "<Plug>MarkdownPreviewToggle", { noremap = false, silent = true })
-
--- toggleterm
-keymap.set("n", "<Space>tv", "<cmd>ToggleTerm direction=vertical size=100<CR>", { noremap = true, silent = true })
-keymap.set("n", "<Space>th", "<cmd>ToggleTerm direction=horizontal size=12<CR>", { noremap = true, silent = true })
-keymap.set("n", "<Space>tf", "<cmd>ToggleTerm direction=float<CR>", { noremap = true, silent = true })
-keymap.set("n", "<Space>tt", "<cmd>lua tig_toggle()<CR>", { noremap = true, silent = true })
-keymap.set("n", "<Space>tl", "<cmd>lua lazygit_toggle()<CR>", { noremap = true, silent = true })
-keymap.set("t", "<C-n>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 
 -- copolot chat
 -- keymap.set("n", "<leader>cce", "<cmd>CopilotChatExplain<cr>", { noremap = true, silent = true })
