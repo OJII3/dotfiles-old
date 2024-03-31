@@ -17,10 +17,8 @@ vim.opt.rtp:prepend(lazypath)
 -- vim.g.mapleader = ' ' -- make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup({
-	{ "folke/which-key.nvim" },
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
-	{ "nvim-lualine/lualine.nvim" },
 	-- colorscheme ----------------
 	{ "folke/tokyonight.nvim", lazy = true },
 	{ "ayu-theme/ayu-vim", lazy = true },
@@ -32,28 +30,6 @@ require("lazy").setup({
 	--   config = function() require('guess-indent').setup {} end,
 	-- },
 	-- builtin lsp
-	{
-		"williamboman/mason.nvim",
-		event = "VeryLazy",
-	},
-	{
-		"neovim/nvim-lspconfig",
-		dependencies = {
-			{
-				"folke/neodev.nvim",
-				config = function()
-					require("neodev").setup({})
-				end,
-				ft = { "lua" },
-			},
-			{ "folke/neoconf.nvim" },
-			{
-				"williamboman/mason-lspconfig.nvim",
-				cmd = { "LspInstall", "LspUninstall" },
-			},
-			-- { "lvimuser/lsp-inlayhints.nvim" },
-		},
-	},
 	-- {
 	-- 	"glepnir/lspsaga.nvim",
 	-- 	branch = "main",
@@ -71,9 +47,9 @@ require("lazy").setup({
 	-- 		{ "onsails/lspkind-nvim" },
 	-- 	},
 	-- },
-	{ "creativenull/efmls-configs-nvim", dependencies = {
-		{ "neovim/nvim-lspconfig" },
-	} },
+	-- { "creativenull/efmls-configs-nvim", dependencies = {
+	-- 	{ "neovim/nvim-lspconfig" },
+	-- } },
 	{
 		"L3MON4D3/LuaSnip",
 		lazy = true,
@@ -85,16 +61,24 @@ require("lazy").setup({
 		init = function()
 			require("nvim-surround").setup()
 		end,
+		event = "BufRead",
 	},
 	-- { "lewis6991/gitsigns.nvim", lazy = true },
 	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" }, event = "VeryLazy", lazy = true },
-	{ "windwp/nvim-ts-autotag" },
-	{ "ggandor/lightspeed.nvim" },
+	{
+		"windwp/nvim-ts-autotag",
+		event = "InsertEnter",
+	},
+	{
+		"ggandor/lightspeed.nvim",
+		event = "VeryLazy",
+	},
 	{
 		"nvim-treesitter/nvim-treesitter",
 		init = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
+		event = "BufRead",
 	},
 	{
 		"nvim-treesitter/nvim-tree-docs",
@@ -104,41 +88,25 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 	},
-	{ "github/Copilot.vim" },
 	{ "vim-denops/denops.vim" },
-	{
-		"lambdalisue/kensaku-search.vim",
-		dependencies = {
-			{ "vim-denops/denops.vim" },
-			{ "lambdalisue/kensaku.vim" },
-		},
-	},
 	-- { "ryicoh/deepl.vim", },
 	-- { 'haya14busa/vim-edgemotion' },
-	{ "tpope/vim-commentary" },
 	{ "johngrib/vim-game-code-break", event = "VeryLazy" },
 	{ "goolord/alpha-nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	-- { "monaqa/dial.nvim" },
 	{
 		"mfussenegger/nvim-dap",
 		dependencies = { "rcarriga/nvim-dap-ui" },
-		lazy = true,
+		event = "VeryLazy",
 	},
 	{
 		"theHamsta/nvim-dap-virtual-text",
 		dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
-		lazy = true,
-	},
-	{
-		"rcarriga/nvim-dap-ui",
-		lazy = true,
+		event = "VeryLazy",
 	},
 	{
 		"mxsdev/nvim-dap-vscode-js",
-		lazy = true,
-	},
-	{
-		"lukas-reineke/indent-blankline.nvim",
+		event = "VeryLazy",
 	},
 	{
 		"glacambre/firenvim",

@@ -1,7 +1,6 @@
 return {
 	"rbong/vim-flog",
 	lazy = true,
-  event = "VeryLazy",
 	cmd = { "Flog", "Flogsplit", "Floggit" },
 	dependencies = {
 		"tpope/vim-fugitive",
@@ -10,4 +9,5 @@ return {
 	keys = {
 		{ "<Leader>fl", "<cmd>Flog -raw-args='--all'<CR>", { noremap = true, silent = true } },
 	},
+  event = "VeryLazy",
 }

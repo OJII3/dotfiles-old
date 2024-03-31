@@ -62,13 +62,6 @@ keymap.set("n", "<Leader>q", "<cmd>lua vim.diagnostic.set_loclist()<CR>", { sile
 -- keymap.set("c", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })
 -- keymap.set("c", "<C-l>", "<Plug>(skkeleton-disable)", { noremap = true, silent = false })
 
--- markdown-preview
-keymap.set("n", "<leader>lv", "<Plug>MarkdownPreviewToggle", { noremap = false, silent = true })
-
--- copolot chat
--- keymap.set("n", "<leader>cce", "<cmd>CopilotChatExplain<cr>", { noremap = true, silent = true })
--- keymap.set("n", "<leader>cct", "<cmd>CopilotChatTests<cr>", { noremap = true, silent = true })
-
 -- luasnip
 local status, ls = pcall(require, "luasnip")
 if status then
