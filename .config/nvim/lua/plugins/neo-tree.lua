@@ -27,7 +27,7 @@ return {
 		},
 	},
 	keys = {
-		{ "<space>e", ":Neotree toggle<CR>", mode = "n" },
+		{ "<space>e", ":Neotree toggle reveal=true<CR>", mode = "n" },
 	},
 	config = function()
 		-- If you want icons for diagnostic errors, you'll need to define them somewhere:
@@ -195,14 +195,15 @@ return {
 			filesystem = {
 				filtered_items = {
 					visible = false, -- when true, they will just be displayed differently than normal items
-					hide_dotfiles = true,
-					hide_gitignored = true,
-					hide_hidden = true, -- only works on Windows for hidden files/directories
+					hide_dotfiles = false,
+					hide_gitignored = false,
+					hide_hidden = false, -- only works on Windows for hidden files/directories
 					hide_by_name = {
-						--"node_modules"
+						"node_modules",
+						".git",
 					},
 					hide_by_pattern = { -- uses glob style patterns
-						--"*.meta",
+						"*.meta",
 						--"*/src/*/tsconfig.json",
 					},
 					always_show = { -- remains visible even if other settings would normally hide it

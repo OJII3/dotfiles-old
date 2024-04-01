@@ -17,6 +17,10 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			cmd = { "LspInstall", "LspUninstall" },
 		},
+		{
+			"b0o/schemastore.nvim",
+			ft = { "json", "yaml", "toml" },
+		},
 		-- { "lvimuser/lsp-inlayhints.nvim" },
 	},
 	config = function()
@@ -95,6 +99,23 @@ return {
 					opts.root_dir = nvim_lsp.util.root_pattern(".eslintrc.js", ".eslintrc.json", ".eslintrc")
 				elseif server_name == "stylelint_lsp" then
 					opts.filetypes = { "css", "scss", "less", "sass" } -- exclude javascript and typescript
+				elseif server_name == "jsonls" then
+					opts.settings = {
+						json = {
+							schemas = require("schemastore").json.schemas(),
+							validate = true,
+						},
+					}
+				elseif server_name == "yamlls" then
+					opts.settings = {
+						yaml = {
+							schemaStore = {
+								enable = true,
+								url = "",
+							},
+							schemas = require("schemastore").yaml.schemas(),
+						},
+					}
 				end
 				nvim_lsp[server_name].setup(opts)
 			end,

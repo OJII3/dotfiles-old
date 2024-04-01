@@ -29,27 +29,15 @@ require("lazy").setup({
 	--   'nmac427/guess-indent.nvim',
 	--   config = function() require('guess-indent').setup {} end,
 	-- },
-	-- builtin lsp
 	-- {
 	-- 	"glepnir/lspsaga.nvim",
 	-- 	branch = "main",
 	-- },
-	-- cmp
-	-- {
-	-- 	"hrsh7th/nvim-cmp",
-	-- 	dependencies = {
-	-- 		{ "hrsh7th/cmp-nvim-lsp" },
-	-- 		{ "hrsh7th/cmp-vsnip" },
-	-- 		{ "hrsh7th/cmp-buffer" },
-	-- 		{ "hrsh7th/cmp-path" },
-	-- 		{ "hrsh7th/cmp-cmdline" },
-	-- 		{ "hrsh7th/cmp-nvim-lsp-signature-help" },
-	-- 		{ "onsails/lspkind-nvim" },
-	-- 	},
 	-- },
-	-- { "creativenull/efmls-configs-nvim", dependencies = {
-	-- 	{ "neovim/nvim-lspconfig" },
-	-- } },
+	{
+		"b0o/schemastore.nvim",
+		ft = { "json", "yaml", "toml" },
+	},
 	{
 		"L3MON4D3/LuaSnip",
 		lazy = true,
