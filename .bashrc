@@ -132,24 +132,21 @@ case ":$PATH:" in
 esac
 # pnpm endsource 
 
-source ~/.ws_gateway_secret.sh
-
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 eval "$(starship init bash)"
 
-export PATH="/usr/local/bin/nvim-linux64/bin:$PATH"
+# export PATH="/usr/local/bin/nvim-linux64/bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-source /opt/ros/humble/setup.bash
-source ~/src/rur/ros2_humble/install/local_setup.bash
+[ -d /opt/ros/humble/ ] && source /opt/ros/humble/setup.bash
+[ -d ~/src/rur/ros2_humbe ] && source ~/src/rur/ros2_humble/install/local_setup.bash
 
 # export PATH="$HOME/.nodenv/bin:$PATH"
 # eval "$(nodenv init - bash)"
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
 
-eval "$(starship init bash)"
-
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+source "$HOME/.rye/env"
