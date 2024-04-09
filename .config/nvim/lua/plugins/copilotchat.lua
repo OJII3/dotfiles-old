@@ -2,7 +2,19 @@ return {
 	"CopilotC-Nvim/CopilotChat.nvim",
 	branch = "canary",
 	dependencies = {
-		{ "github/copilot.vim" },
+		{
+			"github/Copilot.vim",
+			config = function()
+				vim.g.copilot_filetypes = {
+					markdown = true,
+					yaml = true,
+					toml = true,
+					gitcommit = true,
+					text = true,
+				}
+			end,
+			event = "InsertEnter",
+		},
 		{ "nvim-lua/plenary.nvim" },
 	},
 	opts = {},
