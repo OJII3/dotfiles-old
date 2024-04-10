@@ -31,8 +31,8 @@ return {
 		local mypy = require("efmls-configs.linters.mypy")
 		-- Haskell
 		local formulu = require("efmls-configs.formatters.fourmolu")
-		-- local typstfmt = require("efmls-configs.formatters.typstfmt")
-		    -- local prettypst = require("efmls-configs.formatters.prettypst")
+		local typstfmt = require("efmls-configs.formatters.typstfmt")
+		-- local prettypst = require("efmls-configs.formatters.prettypst")
 		local textlint = require("efmls-configs.linters.textlint")
 
 		-- customized or manually installed linters/formatters
@@ -46,14 +46,9 @@ return {
 			formatStdin = true,
 			rootMarkers = { "CMakeLists.txt" },
 		}
-		local prettypst = {
-			formatCommand = "prettypst --use-std-in --use-std-out",
-			formatStdin = true,
-		}
-		-- local dotnet_format = {
-		-- 	formatCommand = "dotnet format --include %s",
+		-- local prettypst = {
+		-- 	formatCommand = "prettypst --use-std-in --use-std-out",
 		-- 	formatStdin = true,
-		-- 	rootMarkers = { ".editorconfig" },
 		-- }
 
 		nvim_lsp_efm.setup({
@@ -102,7 +97,7 @@ return {
 					sh = { shellcheck },
 					typescript = { eslint_linter, prettier, eslint_formatter, biome },
 					typescriptreact = { eslint_linter, prettier, eslint_formatter, biome },
-					typst = { prettypst }, --, cspell, textlint },
+					typst = { typstfmt }, --, cspell, textlint },
 					yaml = { yamllint },
 				}),
 			},
