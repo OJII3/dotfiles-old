@@ -1,4 +1,4 @@
-vim.cmd [[
+vim.cmd([[
 let g:firenvim_config = {
     \ 'localSettings': {
         \ '.*': {
@@ -13,6 +13,10 @@ let g:firenvim_config = {
             \ 'selector': 'textarea',
             \ 'priority': 1,
         \ },
+        \ 'mail\.google\.com*': {
+            \ 'selector': 'textarea',
+            \ 'priority': 1,
+        \ },
     \ }
 \ }
-]]
+]])
