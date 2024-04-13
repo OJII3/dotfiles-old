@@ -7,7 +7,7 @@ return {
 				hide_inactive_statusline = true,
 				on_highlights = function(highlights, colors)
 					highlights.LspInlayHint = {
-						fg = "#33dd88",
+						fg = "#435346",
 					}
 				end,
 			})
