@@ -6,5 +6,4 @@ if ok then
 	require("secrets")
 end
 require("plugin")
-require("colorscheme")
 require("keymappings")

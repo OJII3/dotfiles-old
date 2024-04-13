@@ -20,9 +20,6 @@ require("lazy").setup({
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	-- colorscheme ----------------
-	{ "folke/tokyonight.nvim", lazy = true },
-	{ "ayu-theme/ayu-vim", lazy = true },
-	{ "cocopon/iceberg.vim", lazy = true },
 	------------------------------
 	-- { "neoclide/coc.nvim",        branch = "release" },
 	-- {
@@ -48,7 +45,7 @@ require("lazy").setup({
 		event = "BufRead",
 	},
 	-- { "lewis6991/gitsigns.nvim", lazy = true },
-	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" }, event = "VeryLazy", lazy = true },
+	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"windwp/nvim-ts-autotag",
 		event = "InsertEnter",
