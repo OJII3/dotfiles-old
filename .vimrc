@@ -29,7 +29,7 @@ Plug 'lervag/vimtex'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'EdenEast/nightfox.nvim'
+Plug 'sainnhe/sonokai'
 Plug 'tpope/vim-fugitive'
 Plug 'psliwka/vim-smoothie'
 Plug 'liuchengxu/vim-which-key'
@@ -47,7 +47,7 @@ call plug#end()
 " colorscheme  ==================================================================================
 
 syntax on
-colorscheme carbonfox
+colorscheme sonokai
 " make background transparent
 autocmd VimEnter * highlight Normal ctermbg=NONE guibg=NONE 
 set background=dark
