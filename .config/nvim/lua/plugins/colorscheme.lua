@@ -14,6 +14,6 @@ return {
 			vim.cmd("colorscheme tokyonight-night")
 		end,
 	},
-	{ "ayu-theme/ayu-vim", lazy = true },
-	{ "cocopon/iceberg.vim", lazy = true },
+	-- { "ayu-theme/ayu-vim", lazy = true },
+	-- { "cocopon/iceberg.vim", lazy = true },
 }
