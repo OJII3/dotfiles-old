@@ -148,5 +148,6 @@ eval "$(starship init bash)"
 # eval "$(nodenv init - bash)"
 # export VOLTA_HOME="$HOME/.volta"
 # export PATH="$VOLTA_HOME/bin:$PATH"
+eval "$(mise activate)"
 
 source "$HOME/.rye/env"
