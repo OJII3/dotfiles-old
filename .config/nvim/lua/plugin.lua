@@ -73,7 +73,7 @@ require("lazy").setup({
 	-- { "ryicoh/deepl.vim", },
 	-- { 'haya14busa/vim-edgemotion' },
 	{ "johngrib/vim-game-code-break", event = "VeryLazy" },
-	{ "goolord/alpha-nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+	-- { "goolord/alpha-nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	-- { "monaqa/dial.nvim" },
 	{
 		"mfussenegger/nvim-dap",
