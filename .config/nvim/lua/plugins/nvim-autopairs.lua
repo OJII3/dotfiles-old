@@ -4,6 +4,7 @@ return {
 		local autopairs = require("nvim-autopairs")
 		local Rule = require("nvim-autopairs.rule")
 		autopairs.add_rule(Rule("$$", "$$", "tex"))
+		autopairs.add_rule(Rule("$", "$", "typst"))
 	end,
 	opts = {
 		map_c_w = true,
