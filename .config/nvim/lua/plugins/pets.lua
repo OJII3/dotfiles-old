@@ -4,6 +4,6 @@ return {
 		{ "MunifTanjim/nui.nvim" },
 		{ "giusgad/hologram.nvim" },
 	},
-	lazy = false,
 	opts = true,
+	event = "VeryLazy",
 }

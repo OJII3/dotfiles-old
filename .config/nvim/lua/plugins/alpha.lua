@@ -13,7 +13,6 @@ return {
 		local dashboard = require("alpha.themes.dashboard")
 		dashboard.section.header.val = {}
 		dashboard.section.header.opts.hl = "CustomAlphaHeader"
-		-- dashboard.section.buttons.val = {}
 		dashboard.section.footer.opts.hl = "CustomAlphaFooter"
 
 		local api = require("image")
@@ -27,12 +26,13 @@ return {
 			-- inline = true,
 
 			-- geometry (optional)
-			x = 64,
+			x = 65,
 			y = 5,
 			width = 80,
 		})
 
 		if image ~= nil then
+			-- dashboard.section.buttons.val = {}
 			dashboard.section.header.val = {
 				[[]],
 				[[]],
@@ -62,6 +62,7 @@ return {
 			autocmd User AlphaClosed lua require('image').clear()
 			]])
 		else
+			dashboard.section.buttons.val = nil
 			dashboard.section.header.val = {
 				[[                                                                                                                        ......:o'.                               ]],
 				[[                                                                                                                     c:,,,;',cxxlc,                              ]],
