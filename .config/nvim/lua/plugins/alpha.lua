@@ -15,23 +15,22 @@ return {
 		dashboard.section.header.opts.hl = "CustomAlphaHeader"
 		dashboard.section.footer.opts.hl = "CustomAlphaFooter"
 
-		local api = require("image")
-		local image = api.from_file("/home/ojii3/.config/nvim/media/NeovimShadowed.png", {
-			-- window = 1000, -- optional, binds image to a window and its bounds
-			-- buffer = 1000, -- optional, binds image to a buffer (paired with window binding)
-			-- with_virtual_padding = true, -- optional, pads vertically with extmarks, defaults to false
+		if os.getenv("TERM") == "xterm-kitty" then
+			local api = require("image")
+			local image = api.from_file("/home/ojii3/.config/nvim/media/NeovimShadowed.png", {
+				-- window = 1000, -- optional, binds image to a window and its bounds
+				-- buffer = 1000, -- optional, binds image to a buffer (paired with window binding)
+				-- with_virtual_padding = true, -- optional, pads vertically with extmarks, defaults to false
 
-			-- optional, binds image to an extmark which it follows. Forced to be true when
-			-- `with_virtual_padding` is true. defaults to false.
-			-- inline = true,
+				-- optional, binds image to an extmark which it follows. Forced to be true when
+				-- `with_virtual_padding` is true. defaults to false.
+				-- inline = true,
 
-			-- geometry (optional)
-			x = 65,
-			y = 5,
-			width = 80,
-		})
-
-		if image ~= nil then
+				-- geometry (optional)
+				x = 80,
+				y = 5,
+				width = 80,
+			})
 			-- dashboard.section.buttons.val = {}
 			dashboard.section.header.val = {
 				[[]],
@@ -55,12 +54,25 @@ return {
 				[[]],
 				[[]],
 				[[]],
+				[[]],
+				[[]],
+				[[]],
+				[[]],
 			}
 
-			image.render(image)
-			vim.cmd([[
-			autocmd User AlphaClosed lua require('image').clear()
-			]])
+			-- image.render(image)
+			vim.api.nvim_create_autocmd({ "User" }, {
+				callback = function()
+					image.render(image)
+				end,
+				pattern = "AlphaReady",
+			})
+			vim.api.nvim_create_autocmd({ "User" }, {
+				callback = function()
+					image.clear(image)
+				end,
+				pattern = "AlphaClosed",
+			})
 		else
 			dashboard.section.buttons.val = nil
 			dashboard.section.header.val = {
