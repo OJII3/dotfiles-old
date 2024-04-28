@@ -9,6 +9,7 @@ return {
       augroup ft_markdown
         au!
         au FileType markdown let b:auto_save = 1
+        au Filetype typst let b:auto_save = 1
       augroup END
     ]])
 	end,
