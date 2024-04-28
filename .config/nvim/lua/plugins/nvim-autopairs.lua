@@ -3,8 +3,11 @@ return {
 	init = function()
 		local autopairs = require("nvim-autopairs")
 		local Rule = require("nvim-autopairs.rule")
+		local conds = require("nvim-autopairs.conds")
 		autopairs.add_rule(Rule("$$", "$$", "tex"))
-		autopairs.add_rule(Rule("$", "$", "typst"))
+		autopairs.add_rules({
+			Rule("$", "$", { "typst" }):with_pair(conds.not_after_regex(".")),
+		})
 	end,
 	opts = {
 		map_c_w = true,
