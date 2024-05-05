@@ -96,15 +96,10 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
@@ -123,31 +118,34 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+bind 'set completion-ignore-case on'
 
 # pnpm
-export PNPM_HOME="/$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm endsource 
+# export PNPM_HOME="/$HOME/.local/share/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
 
-export DENO_INSTALL="$HOME/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+# export DENO_INSTALL="$HOME/.deno"
+# export PATH="$DENO_INSTALL/bin:$PATH"
 
 eval "$(starship init bash)"
 
-# export PATH="/usr/local/bin/nvim-linux64/bin:$PATH"
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-[ -d /opt/ros/humble/ ] && source /opt/ros/humble/setup.bash
-[ -d ~/src/rur/ros2_humbe ] && source ~/src/rur/ros2_humble/install/local_setup.bash
 
 # export PATH="$HOME/.nodenv/bin:$PATH"
 # eval "$(nodenv init - bash)"
 # export VOLTA_HOME="$HOME/.volta"
 # export PATH="$VOLTA_HOME/bin:$PATH"
-eval "$(mise activate)"
+eval "$(/home/ojii3/.local/bin/mise activate)"
 
 source "$HOME/.rye/env"
+. "$HOME/.cargo/env"
+
+
+[ -d /opt/ros/humble/ ] && source /opt/ros/humble/setup.bash
+[ -d ~/src/rur/ros2_humbe ] && source ~/src/rur/ros2_humble/install/local_setup.bash
+[ -f ~/ros2_rur_ws/install/setup.bash ] && source ~/ros2_rur_ws/install/setup.bash
+[ -f ~/ros2_rur_ws/install/local_setup.bash ] && source ~/ros2_rur_ws/install/local_setup.bash

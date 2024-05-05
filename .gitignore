@@ -81,6 +81,9 @@
 !.zshrc.pre
 !.zshrc.local
 !.zshrc.*
+# bash
+!.bashrc
+!.bash_aliases
 # misc
 !/.config/fcitx5/
 !/.config/fcitx5/config
@@ -99,7 +102,6 @@
 !/.latexmkrc
 !/.tigrc
 !.profile
-!.bashrc
 !.gitconfig_shared
 !.gitignore
 !.tmux.conf
