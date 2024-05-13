@@ -29,11 +29,11 @@ dap.adapters.lldb = {
   command = "/usr/bin/lldb-vscode",
   name = "lldb",
 }
-dap.adapters.cppdbg = {
-  id = "cppdbg",
-  type = "executable",
-  command = "/home/ojii3/.vscode/extensions/ms-vscode.cpptools-1.16.3-linux-x64/debugAdapters/bin/OpenDebugAD7",
-}
+-- dap.adapters.cppdbg = {
+--   id = "cppdbg",
+--   type = "executable",
+--   command = "/home/ojii3/.vscode/extensions/ms-vscode.cpptools-1.16.3-linux-x64/debugAdapters/bin/OpenDebugAD7",
+-- }
 dap.configurations.cpp = {
   {
     name = "Launch file",
