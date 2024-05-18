@@ -51,6 +51,11 @@
 !/.config/tint2/**
 !/.config/dunst/
 !/.config/dunst/**
+# xfce4
+!/.config/xfce4/
+!/.config/xfce4/xfconf
+!/.config/xfce4/xfconf/xfce-perchannel-xml/
+!/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 # kde
 !/.config/kglobalshortcutsrc
 !/.config/kdedefaults/
