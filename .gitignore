@@ -40,6 +40,8 @@
 !/.config/hypr/**
 !/.config/waybar/
 !/.config/waybar/**
+!/.config/swaylock/
+!/.config/swaylock/**
 # launcher, status bar
 !/.config/rofi/
 !/.config/rofi/**

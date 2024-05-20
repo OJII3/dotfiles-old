@@ -1,20 +1,26 @@
-# Set device to be toggled
-HYPRLAND_DEVICE="syna32af:00-06cb:ce17-touchpad"
-HYPRLAND_VARIABLE="device:syna32af:00-06cb:ce17-touchpad:enabled"
+#!/bin/sh
 
-if [ -z "$XDG_RUNTIME_DIR" ]; then
-  export XDG_RUNTIME_DIR=/run/user/$(id -u)
-fi
+export STATUS_FILE="$XDG_RUNTIME_DIR/keyboard.status"
 
-# Check if device is currently enabled (1 = enabled, 0 = disabled)
-DEVICE="$(hyprctl getoption $HYPRLAND_VARIABLE | grep 'int: 1')"
 
-if [ -z "$DEVICE" ]; then
-	# if the device is disabled, then enable
-  	notify-send -u normal "Enabling Touchpad"
-	hyprctl keyword $HYPRLAND_VARIABLE true
+enable_keyboard() {
+    printf "true" >"$STATUS_FILE"
+    notify-send -u normal "Enabling Keyboard"
+    hyprctl keyword '$LAPTOP_KB_ENABLED' "true" -r
+}
+
+disable_keyboard() {
+    printf "false" >"$STATUS_FILE"
+    notify-send -u normal "Disabling Keyboard"
+    hyprctl keyword '$LAPTOP_KB_ENABLED' "false" -r
+}
+
+if ! [ -f "$STATUS_FILE" ]; then
+  enable_keyboard
 else
-	# if the device is enabled, then disable
-	notify-send -u normal "Disabling Touchpad"
-	hyprctl keyword $HYPRLAND_VARIABLE false
+  if [ "$(cat "$STATUS_FILE")" = "true" ]; then
+    disable_keyboard
+  elif [ "$(cat "$STATUS_FILE")" = "false" ]; then
+    enable_keyboard
+  fi
 fi

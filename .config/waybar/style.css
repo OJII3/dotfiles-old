@@ -2,6 +2,7 @@
   /* `otf-font-awesome` is required to be installed for icons */
   font-family:
     JetBrains Mono,
+    Symbols Nerd Font,
     Noto Sans JP,
     Noto Sans Emoji,
     Arial,
@@ -10,12 +11,7 @@
 }
 
 window#waybar {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 200, 0) 50%
-  );
-  /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+  background: linear-gradient(to right, #039393, #000000);
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -61,15 +57,17 @@ button:hover {
   padding: 0 5px;
   background-color: transparent;
   color: #ffffff;
+  font-weight: bold;
 }
 
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces button.focused {
-  background-color: #64727d;
-  box-shadow: inset 0 -3px #ffffff;
+#workspaces button.active {
+  /* background-color: #64727d; */
+  /* box-shadow: inset 0 -3px #ffffff; */
+  border-bottom: 4px solid #e12885;
 }
 
 #workspaces button.urgent {
@@ -98,8 +96,6 @@ button:hover {
 #scratchpad,
 #mpd {
   padding: 0 10px;
-  border-radius: 16px;
-  margin: 4px 0 0;
 }
 
 #window,
@@ -117,55 +113,60 @@ button:hover {
   margin-right: 0;
 }
 
-.modules-right > widget:nth-child(1) > * {
-  background-color: #f9f871;
-  color: #000000;
+.modules-right > * {
+  color: #039393;
 }
 
-.modules-right > widget:nth-child(2) > * {
-  background-color: #d0ff85;
-  color: #000000;
-}
+/* .modules-right > widget:nth-last-child(1) > * { */
+/*   color: #ffffff; */
+/*   opacity: 1; */
+/* } */
 
-.modules-right > widget:nth-child(3) > * {
-  background-color: #a6ffa1;
-  color: #000000;
-}
+/* .modules-right > widget:nth-last-child(2) > * { */
+/*   color: #ffffff; */
+/*   opacity: 0.9; */
+/* } */
 
-.modules-right > widget:nth-child(4) > * {
-  background-color: #49ffdf;
-  color: #000000;
-}
+/* .modules-right > widget:nth-last-child(3) > * { */
+/*   color: #ffffff; */
+/* } */
 
-.modules-right > widget:nth-child(5) > * {
-  background-color: #49ffdf;
-  color: #000000;
-}
+/* .modules-right > widget:nth-last-child(4) > * { */
+/*   color: #ffffff; */
+/*   opacity: 0.8; */
+/* } */
 
-.modules-right > widget:nth-child(6) > * {
-  background-color: #00fffb;
-  color: #000000;
-}
+/* .modules-right > widget:nth-last-child(5) > * { */
+/*   color: #ffffff; */
+/*   opacity: 0.7; */
+/* } */
 
-.modules-right > widget:nth-child(7) > * {
-  background-color: #00cac8;
-  color: #000000;
-}
+/* .modules-right > widget:nth-last-child(6) > * { */
+/*   color: #ffffff; */
+/*   opacity: 0.6; */
+/* } */
 
-.modules-right > widget:nth-child(8) > * {
-  background-color: #009896;
-  color: #ffffff;
-}
+/* .modules-right > widget:nth-last-child(7) > * { */
+/*   color: #ffffff; */
+/*   opacity: 0.5; */
+/* } */
 
-.modules-right > widget:nth-child(9) > * {
-  background-color: #006868;
-  color: #ffffff;
-}
+/* .modules-right > widget:nth-last-child(8) > * { */
+/*   color: #ffffff; */
+/*   opacity: 0.4; */
+/* } */
 
-.modules-right > widget:nth-child(10) > * {
-  background-color: #003b3d;
-  color: #ffffff;
-}
+/* .modules-right > widget:nth-last-child(9) > * { */
+/*   background-color: #006868; */
+/*   color: #ffffff; */
+/*   opacity: 0.3; */
+/* } */
+
+/* .modules-right > widget:nth-last-child(10) > * { */
+/*   background-color: #003b3d; */
+/*   color: #ffffff; */
+/*   opacity: 0.2; */
+/* } */
 
 #clock {
 }
