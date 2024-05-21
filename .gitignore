@@ -40,6 +40,10 @@
 !/.config/hypr/**
 !/.config/waybar/
 !/.config/waybar/**
+!/.config/anyrun/
+!/.config/anyrun/**
+!/.config/swaync/
+!/.config/swaync/**
 !/.config/swaylock/
 !/.config/swaylock/**
 # launcher, status bar
