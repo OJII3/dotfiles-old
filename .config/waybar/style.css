@@ -8,6 +8,7 @@
     Arial,
     sans-serif;
   font-size: 13px;
+  font-weight: bold;
 }
 
 window#waybar {
@@ -58,6 +59,7 @@ button:hover {
   background-color: transparent;
   color: #ffffff;
   font-weight: bold;
+  border-bottom: 4px solid transparent;
 }
 
 #workspaces button:hover {
