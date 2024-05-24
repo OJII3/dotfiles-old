@@ -4,6 +4,8 @@
 
 .notification {
   background: rgba(255, 255, 255, 0.8);
+  margin: 2px;
+  box-shadow: 0 0 4px rgba(1, 0, 1, 1);
 }
 
 .notification-content {
