@@ -4,7 +4,7 @@
 -- })
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-	pattern = { "*.cpp", "*.hpp", "*.python" },
+	pattern = { "*.c", "*.h", "*.cpp", "*.hpp", "*.py" },
 	command = "set shiftwidth=4",
 })
 
@@ -15,10 +15,5 @@ vim.api.nvim_create_autocmd({ "TermOpen" }, {
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*.typ", "*.tex" },
-	command = "silent! %s/。/./g",
-})
-
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	pattern = { "*.typ", "*.tex" },
-	command = "silent! %s/、/, /g",
+	command = "silent! %s/。/./g | silent! %s/、/, /g",
 })
