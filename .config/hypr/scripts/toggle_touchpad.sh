@@ -2,7 +2,6 @@
 
 export STATUS_FILE="$XDG_RUNTIME_DIR/keyboard.status"
 
-
 enable_keyboard() {
     printf "true" >"$STATUS_FILE"
     hyprctl keyword '$LAPTOP_KB_ENABLED' "true" -r &&
@@ -16,7 +15,7 @@ disable_keyboard() {
 }
 
 if ! [ -f "$STATUS_FILE" ]; then
-  enable_keyboard
+  disable_keyboard
 else
   if [ "$(cat "$STATUS_FILE")" = "true" ]; then
     disable_keyboard
