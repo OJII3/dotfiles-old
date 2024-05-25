@@ -5,7 +5,7 @@
     "spacing": 10,
     "margin-bottom": 4,
     "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "hyprland/window"],
-    "modules-right": ["tray", "jack", "backlight", "battery", "clock"],
+    "modules-right": ["tray", "custom/pipewire", "backlight", "battery", "clock"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -109,32 +109,15 @@
     "battery#bat2": {
         "bat": "BAT2"
     },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
+    "custom/pipewire": {
+      "format": "{icon}",
+      "return-type": "json",
+      "signal": 8,
+      "interval": 1,
+      "format-icons": {
+          "mute": "󰖁",
+          "default": ["", "", ""]
+      },
+      "exec": "pw-volume status"
     },
 }
