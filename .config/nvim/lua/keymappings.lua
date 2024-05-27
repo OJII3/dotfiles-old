@@ -1,6 +1,6 @@
 -- builtin
-vim.keymap.set("i", "jj", "<ESC>", { noremap = true, silent = true })
-vim.keymap.set("i", "っj", "<ESC>", { noremap = true, silent = true }) -- while using skkeleton
+vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true })
+-- vim.keymap.set("i", "", "<ESC>", { noremap = true, silent = true }) -- while using skkeleton
 vim.keymap.set("n", "j", "gj", { noremap = true, silent = true })
 vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
 vim.keymap.set("v", "j", "gj", { noremap = true, silent = true })
@@ -26,7 +26,6 @@ vim.keymap.set("n", "<Space>r", "<cmd>Telescope live_grep<CR>", { noremap = true
 -- lightspeed
 vim.keymap.set("n", "s", "<Plug>Lightspeed_s", { noremap = true, silent = true })
 -- vim.keymap.del("n", "s")
-
 -- coc
 -- vim.keymap.set("i", "<C-Space>", "coc#refresh()", { expr = true, silent = true })    -- trigger completion
 -- vim.keymap.set("n", "<Leader>rn", "<Plug>(coc-rename)", { silent = true })           -- rename

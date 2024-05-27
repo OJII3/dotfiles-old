@@ -39,5 +39,5 @@ opt.list = true
 opt.cursorline = true
 
 if vim.g.neovide then
-	opt.guifont = "HackGen:h9"
+	opt.guifont = "HackGen:h12"
 end

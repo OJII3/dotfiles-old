@@ -38,7 +38,6 @@ require("lazy").setup({
 		end,
 		event = "BufRead",
 	},
-	-- { "lewis6991/gitsigns.nvim", lazy = true },
 	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"windwp/nvim-ts-autotag",
