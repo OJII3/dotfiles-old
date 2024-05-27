@@ -1,7 +1,7 @@
 return {
 	{
 		"kaarmu/typst.vim",
-		lazy = false,
+		lazy = true,
 		ft = { "typst" },
 	},
 	-- {

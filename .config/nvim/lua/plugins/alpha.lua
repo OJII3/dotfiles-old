@@ -5,7 +5,7 @@ return {
 		{ "3rd/image.nvim" },
 	},
 	lazy = false,
-	init = function()
+	config = function()
 		local alpha = require("alpha")
 
 		vim.api.nvim_set_hl(0, "CustomAlphaHeader", { fg = "#00ffff", bold = true })
@@ -66,8 +66,8 @@ return {
 					image.render(image)
 				end,
 				pattern = "AlphaReady",
-				once = true,
 			})
+
 			vim.api.nvim_create_autocmd({ "User" }, {
 				callback = function()
 					image.clear(image)

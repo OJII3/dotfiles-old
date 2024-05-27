@@ -353,3 +353,6 @@ setopt EXTENDED_HISTORY
 
 export GPG_TTY=$(tty)
 
+
+# bun completions
+[ -s "/home/ojii3/.bun/_bun" ] && source "/home/ojii3/.bun/_bun"

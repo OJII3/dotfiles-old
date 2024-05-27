@@ -32,14 +32,8 @@ require("lazy").setup({
 	-- },
 	-- },
 	{
-		"L3MON4D3/LuaSnip",
-		lazy = true,
-		dependencies = { "rafamadriz/friendly-snippets" },
-		build = "make install_jsregexp",
-	},
-	{
 		"kylechui/nvim-surround",
-		init = function()
+		config = function()
 			require("nvim-surround").setup()
 		end,
 		event = "BufRead",
@@ -56,7 +50,7 @@ require("lazy").setup({
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
-		init = function()
+		config = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
 		event = "BufRead",
@@ -64,22 +58,23 @@ require("lazy").setup({
 	{
 		"nvim-treesitter/nvim-tree-docs",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		event = "BufRead",
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		event = "BufRead",
 	},
-	{ "vim-denops/denops.vim" },
 	-- { "ryicoh/deepl.vim", },
 	-- { 'haya14busa/vim-edgemotion' },
-	{ "johngrib/vim-game-code-break", event = "VeryLazy" },
+	-- { "johngrib/vim-game-code-break", event = "VeryLazy" },
 	-- { "goolord/alpha-nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	-- { "monaqa/dial.nvim" },
-	{
-		"mfussenegger/nvim-dap",
-		dependencies = { "rcarriga/nvim-dap-ui" },
-		event = "VeryLazy",
-	},
+	-- {
+	-- 	"mfussenegger/nvim-dap",
+	-- 	dependencies = { "rcarriga/nvim-dap-ui" },
+	-- 	event = "VeryLazy",
+	-- },
 	{
 		"theHamsta/nvim-dap-virtual-text",
 		dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
@@ -89,12 +84,12 @@ require("lazy").setup({
 		"mxsdev/nvim-dap-vscode-js",
 		event = "VeryLazy",
 	},
-	{
-		"glacambre/firenvim",
-		lazy = not vim.g.started_by_firenvim,
-		build = function()
-			vim.fn["firenvim#install"](0)
-		end,
-	},
-	{ import = "plugins", lazy = true },
+	-- {
+	-- 	"glacambre/firenvim",
+	-- 	lazy = not vim.g.started_by_firenvim,
+	-- 	build = function()
+	-- 		vim.fn["firenvim#install"](0)
+	-- 	end,
+	-- },
+  { import = "plugins", lazy = true },
 })

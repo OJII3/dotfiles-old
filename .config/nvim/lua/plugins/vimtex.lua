@@ -22,5 +22,5 @@ let g:vimtex_compiler_latexmk = {
             \}
 ]])
 	end,
-  ft = { "tex" },
+	ft = { "tex" },
 }

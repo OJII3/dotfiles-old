@@ -16,7 +16,7 @@ return {
 		local shellcheck = require("efmls-configs.linters.shellcheck")
 		local rustfmt = require("efmls-configs.formatters.rustfmt")
 		local yamllint = require("efmls-configs.linters.yamllint")
-		local cspell = require("efmls-configs.linters.cspell")
+		-- local cspell = require("efmls-configs.linters.cspell")
 		local stylelint_formatter = require("efmls-configs.formatters.stylelint")
 		-- TypeScript, JavaScript
 		local eslint_linter = require("efmls-configs.linters.eslint_d")
@@ -24,6 +24,7 @@ return {
 		local prettier = require("efmls-configs.formatters.prettier_d")
 		-- local biome = require("efmls-configs.formatters.biome")
 		-- Python
+		local ruff = require("efmls-configs.formatters.ruff")
 		local black = require("efmls-configs.formatters.black")
 		local isort = require("efmls-configs.formatters.isort")
 		local autopep8 = require("efmls-configs.formatters.autopep8")
@@ -91,13 +92,13 @@ return {
 					json = { prettier },
 					latex = { latexindent },
 					lua = { stylua },
-					markdown = { cspell, textlint },
-					python = { black, isort, autopep8, flake8, mypy },
+					markdown = { textlint },
+					python = { ruff, black, isort, autopep8, flake8, mypy },
 					rust = { rustfmt },
 					sh = { shellcheck },
 					typescript = { eslint_linter, prettier, eslint_formatter, biome },
 					typescriptreact = { eslint_linter, prettier, eslint_formatter, biome },
-					typst = { typstfmt, cspell, textlint },
+					typst = { typstfmt, textlint },
 					yaml = { yamllint },
 				}),
 			},
@@ -108,7 +109,7 @@ return {
 		vim.api.nvim_create_autocmd("BufWritePost", {
 			group = lsp_fmt_group,
 			callback = function(ev)
-				local efm = vim.lsp.get_active_clients({ name = "efm", bufnr = ev.buf })
+				local efm = vim.lsp.get_clients({ name = "efm", bufnr = ev.buf })
 
 				if vim.tbl_isempty(efm) then
 					return

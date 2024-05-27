@@ -1,128 +1,55 @@
-local keymap = vim.keymap
-
 -- builtin
-keymap.set("i", "jj", "<ESC>", { noremap = true, silent = true })
-keymap.set("i", "っj", "<ESC>", { noremap = true, silent = true }) -- while using skkeleton
-keymap.set("n", "j", "gj", { noremap = true, silent = true })
-keymap.set("n", "k", "gk", { noremap = true, silent = true })
-keymap.set("v", "j", "gj", { noremap = true, silent = true })
-keymap.set("v", "k", "gk", { noremap = true, silent = true })
-keymap.set("t", "<ESC>", "<C-\\><C-n>", { noremap = true, silent = true })
-keymap.set("t", "<C-[>", "<C-\\><C-n>", { noremap = true, silent = true })
+vim.keymap.set("i", "jj", "<ESC>", { noremap = true, silent = true })
+vim.keymap.set("i", "っj", "<ESC>", { noremap = true, silent = true }) -- while using skkeleton
+vim.keymap.set("n", "j", "gj", { noremap = true, silent = true })
+vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
+vim.keymap.set("v", "j", "gj", { noremap = true, silent = true })
+vim.keymap.set("v", "k", "gk", { noremap = true, silent = true })
+vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { noremap = true, silent = true })
+vim.keymap.set("t", "<C-[>", "<C-\\><C-n>", { noremap = true, silent = true })
 
-keymap.set("n", "<C-b>h", "<cmd>BufferPrevious<CR>", { noremap = true, silent = true })
-keymap.set("n", "<C-b><C-h>", "<cmd>BufferPrevious<CR>", { noremap = true, silent = true })
-keymap.set("n", "<C-b>l", "<cmd>BufferNext<CR>", { noremap = true, silent = true })
-keymap.set("n", "<C-b><C-l>", "<cmd>BufferNext<CR>", { noremap = true, silent = true })
-keymap.set("n", "<C-b>d", "<cmd>BufferDelete<CR>", { noremap = true, silent = true })
-keymap.set("n", "<C-b><C-d>", "<cmd>BufferClose<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-b>h", "<cmd>BufferPrevious<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-b><C-h>", "<cmd>BufferPrevious<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-b>l", "<cmd>BufferNext<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-b><C-l>", "<cmd>BufferNext<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-b>d", "<cmd>BufferDelete<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-b><C-d>", "<cmd>BufferClose<CR>", { noremap = true, silent = true })
 
 -- plugins --
 
 -- telescope
-keymap.set("n", "<Space>g", "<cmd>Telescope git_files<CR>", { noremap = true, silent = true })
-keymap.set("n", "<Space>f", "<cmd>Telescope find_files<CR>", { noremap = true, silent = true })
-keymap.set("n", "<Space>o", "<cmd>Telescope oldfiles<cr>", { noremap = true, silent = true })
-keymap.set("n", "<Space>r", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Space>g", "<cmd>Telescope git_files<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Space>f", "<cmd>Telescope find_files<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Space>o", "<cmd>Telescope oldfiles<cr>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Space>r", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
 
 -- lightspeed
-keymap.set("n", "<C-s>", "<Plug>Lightspeed_s", { noremap = true, silent = true })
--- keymap.del("n", "s")
+vim.keymap.set("n", "s", "<Plug>Lightspeed_s", { noremap = true, silent = true })
+-- vim.keymap.del("n", "s")
 
 -- coc
--- keymap.set("i", "<C-Space>", "coc#refresh()", { expr = true, silent = true })    -- trigger completion
--- keymap.set("n", "<Leader>rn", "<Plug>(coc-rename)", { silent = true })           -- rename
--- keymap.set("n", "<Leader>fm", "<Plug>(coc-format)", { silent = true })           -- format
--- keymap.set("n", "<Leader>c", "<Plug>(coc-codeaction-cursor)", { silent = true }) -- code action
--- keymap.set("n", "<Leader>a", "<Plug>(coc-codeaction)", { silent = true })        -- code action
--- keymap.set("n", "gr", "<Plug>(coc-references)", { silent = true })               -- references
--- keymap.set("n", "gd", "<Plug>(coc-definition)", { silent = true })               -- go to definition
--- keymap.set("n", "gy", "<Plug>(coc-type-definition)", { silent = true })          -- go to type definition
--- keymap.set("n", "[g", "<Plug>(coc-diagnostic-prev)", { silent = true })          -- go to previous diagnostic
--- keymap.set("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true })          -- go to next diagnostic
+-- vim.keymap.set("i", "<C-Space>", "coc#refresh()", { expr = true, silent = true })    -- trigger completion
+-- vim.keymap.set("n", "<Leader>rn", "<Plug>(coc-rename)", { silent = true })           -- rename
+-- vim.keymap.set("n", "<Leader>fm", "<Plug>(coc-format)", { silent = true })           -- format
+-- vim.keymap.set("n", "<Leader>c", "<Plug>(coc-codeaction-cursor)", { silent = true }) -- code action
+-- vim.keymap.set("n", "<Leader>a", "<Plug>(coc-codeaction)", { silent = true })        -- code action
+-- vim.keymap.set("n", "gr", "<Plug>(coc-references)", { silent = true })               -- references
+-- vim.keymap.set("n", "gd", "<Plug>(coc-definition)", { silent = true })               -- go to definition
+-- vim.keymap.set("n", "gy", "<Plug>(coc-type-definition)", { silent = true })          -- go to type definition
+-- vim.keymap.set("n", "[g", "<Plug>(coc-diagnostic-prev)", { silent = true })          -- go to previous diagnostic
+-- vim.keymap.set("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true })          -- go to next diagnostic
 
 -- builtin lsp
-keymap.set("n", "<Leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { silent = true }) -- rename
-keymap.set("n", "<Leader>fm", "<cmd>lua vim.lsp.buf.format()<CR>", { silent = true }) -- format
--- keymap.set("n", "<Leader>c", "<cmd>lua vim.lsp.buf.code_action()<CR>", { silent = true }) -- code
-keymap.set("n", "<Leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", { silent = true }) -- code
-keymap.set("n", "ge", "<cmd>lua vim.lcwsp.diagnostic.open_float()<CR>", { silent = true }) -- code
--- keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { silent = true })               -- references
--- keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { silent = true })               -- go to definition
-keymap.set("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", { silent = true }) -- references
-keymap.set("n", "gd", "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>", { silent = true }) -- go to definition
-keymap.set("n", "gy", "<cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>", { silent = true }) -- go to type definition
-keymap.set("n", "[g", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { silent = true }) -- go to previous diagnostic
-keymap.set("n", "]g", "<cmd>lua vim.diagnostic.goto_next()<CR>", { silent = true }) -- go to next diagnostic
-keymap.set("n", "<Leader>q", "<cmd>lua vim.diagnostic.set_loclist()<CR>", { silent = true }) -- set loclist
-
--- skkeleton
--- keymap.set("i", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })
--- keymap.set("i", "<C-l>", "<Plug>(skkeleton-disable)", { noremap = true, silent = false })
--- keymap.set("c", "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = false })
--- keymap.set("c", "<C-l>", "<Plug>(skkeleton-disable)", { noremap = true, silent = false })
-
--- luasnip
-local status, ls = pcall(require, "luasnip")
-if status then
-	keymap.set({ "i" }, "<C-K>", function()
-		ls.expand()
-	end, { silent = true })
-	keymap.set({ "i", "s" }, "<C-Shift-l>", function()
-		ls.jump(1)
-	end, { silent = true })
-	keymap.set({ "i", "s" }, "<C-Shift-j>", function()
-		ls.jump(-1)
-	end, { silent = true })
-	keymap.set({ "i", "s" }, "<C-E>", function()
-		if ls.choice_active() then
-			ls.change_choice(1)
-		end
-	end, { silent = true })
-end
-
--- nvim-dap
-local status, dap = pcall(require, "dap")
-if status then
-	keymap.set("n", "<F5>", function()
-		dap.continue()
-	end)
-	keymap.set("n", "<F10>", function()
-		dap.step_over()
-	end)
-	keymap.set("n", "<F11>", function()
-		dap.step_into()
-	end)
-	keymap.set("n", "<F12>", function()
-		dap.step_out()
-	end)
-	keymap.set("n", "<Leader>b", function()
-		dap.toggle_breakpoint()
-	end)
-	keymap.set("n", "<Leader>B", function()
-		dap.set_breakpoint()
-	end)
-	keymap.set("n", "<Leader>lp", function()
-		dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
-	end)
-	keymap.set("n", "<Leader>dr", function()
-		dap.repl.open()
-	end)
-	keymap.set("n", "<Leader>dl", function()
-		dap.run_last()
-	end)
-	keymap.set({ "n", "v" }, "<Leader>dh", function()
-		require("dap.ui.widgets").hover()
-	end)
-	keymap.set({ "n", "v" }, "<Leader>dp", function()
-		require("dap.ui.widgets").preview()
-	end)
-	keymap.set("n", "<Leader>df", function()
-		local widgets = require("dap.ui.widgets")
-		widgets.centered_float(widgets.frames)
-	end)
-	keymap.set("n", "<Leader>ds", function()
-		local widgets = require("dap.ui.widgets")
-		widgets.centered_float(widgets.scopes)
-	end)
-end
+vim.keymap.set("n", "<Leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { silent = true }) -- rename
+vim.keymap.set("n", "<Leader>fm", "<cmd>lua vim.lsp.buf.format()<CR>", { silent = true }) -- format
+-- vim.keymap.set("n", "<Leader>c", "<cmd>lua vim.lsp.buf.code_action()<CR>", { silent = true }) -- code
+vim.keymap.set("n", "<Leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", { silent = true }) -- code
+vim.keymap.set("n", "ge", "<cmd>lua vim.lcwsp.diagnostic.open_float()<CR>", { silent = true }) -- code
+-- vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { silent = true })               -- references
+-- vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { silent = true })               -- go to definition
+vim.keymap.set("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", { silent = true }) -- references
+vim.keymap.set("n", "gd", "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>", { silent = true }) -- go to definition
+vim.keymap.set("n", "gy", "<cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>", { silent = true }) -- go to type definition
+vim.keymap.set("n", "[g", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { silent = true }) -- go to previous diagnostic
+vim.keymap.set("n", "]g", "<cmd>lua vim.diagnostic.goto_next()<CR>", { silent = true }) -- go to next diagnostic
+vim.keymap.set("n", "<Leader>q", "<cmd>lua vim.diagnostic.set_loclist()<CR>", { silent = true }) -- set loclist
