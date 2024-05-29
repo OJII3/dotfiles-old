@@ -10,7 +10,7 @@ cd dotfiles
 
 ## Main Environment
 
-- OS: ArchLinux
+- OS: Arch Linux
 - DE/WM: Hyprland ~~i3~~
 - Shell: zsh
 - Terminal: ~~Wezterm~~ Kitty
