@@ -10,8 +10,8 @@ cd dotfiles
 
 ## Main Environment
 
-- OS: ArchLinux
-- DE/WM: ~~Hyprland~~ i3
+- OS: Arch Linux
+- DE/WM: Hyprland ~~i3~~
 - Shell: zsh
 - Terminal: ~~Wezterm~~ Kitty
 - Editor: Neovim
