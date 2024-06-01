@@ -21,7 +21,6 @@ return {
 			"b0o/schemastore.nvim",
 			ft = { "json", "yaml", "toml" },
 		},
-		-- { "lvimuser/lsp-inlayhints.nvim" },
 	},
 	config = function()
 		require("mason").setup()
@@ -56,7 +55,7 @@ return {
 				"taplo",
 				"texlab",
 				"tsserver",
-				"typst_lsp",
+				"tinymist",
 				"vimls",
 				"yamlls",
 			},
@@ -115,6 +114,11 @@ return {
 							},
 							schemas = require("schemastore").yaml.schemas(),
 						},
+					}
+				elseif server_name == "tinymist" then
+					opts.settings = {
+						exportPdf = "auto",
+						formatterMode = "typstyle",
 					}
 				end
 				nvim_lsp[server_name].setup(opts)

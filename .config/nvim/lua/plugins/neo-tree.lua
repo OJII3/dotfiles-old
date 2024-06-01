@@ -309,5 +309,4 @@ return {
 		})
 		-- vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
 	end,
-	event = "BufWinEnter",
 }

@@ -8,5 +8,4 @@ return {
 		{ "<CR>", "<Plug>(kensaku-search-replace)<CR>", mode = "c" },
 	},
   lazy = false,
-	-- 以下のようにすると、プラグインの設定を上書きできる
 }

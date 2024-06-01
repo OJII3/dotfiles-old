@@ -38,11 +38,7 @@ require("lazy").setup({
 		end,
 		event = "BufRead",
 	},
-	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
-	{
-		"windwp/nvim-ts-autotag",
-		event = "InsertEnter",
-	},
+	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" }, lazy = false },
 	{
 		"ggandor/lightspeed.nvim",
 		event = "VeryLazy",
@@ -75,11 +71,6 @@ require("lazy").setup({
 	-- 	event = "VeryLazy",
 	-- },
 	{
-		"theHamsta/nvim-dap-virtual-text",
-		dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
-		event = "VeryLazy",
-	},
-	{
 		"mxsdev/nvim-dap-vscode-js",
 		event = "VeryLazy",
 	},
@@ -90,5 +81,5 @@ require("lazy").setup({
 	-- 		vim.fn["firenvim#install"](0)
 	-- 	end,
 	-- },
-  { import = "plugins", lazy = true },
+	{ import = "plugins", lazy = true },
 })

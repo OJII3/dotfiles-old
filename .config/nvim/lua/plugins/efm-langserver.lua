@@ -32,9 +32,9 @@ return {
 		local mypy = require("efmls-configs.linters.mypy")
 		-- Haskell
 		local formulu = require("efmls-configs.formatters.fourmolu")
-		local typstfmt = require("efmls-configs.formatters.typstfmt")
 		-- local prettypst = require("efmls-configs.formatters.prettypst")
 		local textlint = require("efmls-configs.linters.textlint")
+		local typstyle = require("efmls-configs.formatters.typstyle")
 
 		-- customized or manually installed linters/formatters
 		local biome = {
@@ -98,7 +98,7 @@ return {
 					sh = { shellcheck },
 					typescript = { eslint_linter, prettier, eslint_formatter, biome },
 					typescriptreact = { eslint_linter, prettier, eslint_formatter, biome },
-					typst = { typstfmt, textlint },
+					typst = { typstyle },
 					yaml = { yamllint },
 				}),
 			},

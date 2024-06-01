@@ -7,5 +7,4 @@ return {
 	keys = {
 		{ "<Space>y", "<cmd>Yazi<CR>", desc = "Toggle Yazi" },
 	},
-	event = "VeryLazy",
 }

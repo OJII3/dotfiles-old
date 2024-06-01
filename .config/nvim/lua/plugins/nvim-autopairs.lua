@@ -6,7 +6,7 @@ return {
 		local conds = require("nvim-autopairs.conds")
 		autopairs.add_rule(Rule("$$", "$$", "tex"))
 		autopairs.add_rules({
-			Rule("$", "$", { "typst" }):with_pair(conds.not_after_regex(".")),
+			Rule("$", "$", { "typst" }):with_pair(conds.not_after_regex("[a-zA-Z0-9_]")),
 		})
 	end,
 	opts = {
