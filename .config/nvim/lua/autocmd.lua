@@ -12,8 +12,3 @@ vim.api.nvim_create_autocmd({ "TermOpen" }, {
 	pattern = "*",
 	command = "startinsert",
 })
-
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	pattern = { "*.typ", "*.tex" },
-	command = "silent! %s/。/./g | silent! %s/、/, /g",
-})

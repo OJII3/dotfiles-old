@@ -115,6 +115,10 @@ return {
 					return
 				end
 
+				if vim.bo.filetype == "typst" or vim.bo.filetype == "tex" then
+					vim.cmd("silent! %s/。/. /g | silent! %s/、/, /g")
+				end
+
 				vim.lsp.buf.format({ name = "efm" })
 			end,
 		})
