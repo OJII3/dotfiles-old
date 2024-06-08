@@ -4,12 +4,13 @@ return {
 		lazy = true,
 		ft = { "typst" },
 	},
-	-- {
-	-- 	"chomosuke/typst-preview.nvim",
-	-- 	lazy = false, -- or ft = 'typst'
-	-- 	version = "0.1.*",
-	-- 	build = function()
-	-- 		require("typst-preview").update()
-	-- 	end,
-	-- },
+	{
+		"chomosuke/typst-preview.nvim",
+		version = "0.1.*",
+		config = true,
+		build = function()
+			require("typst-preview").update()
+		end,
+		ft = { "typst" },
+	},
 }

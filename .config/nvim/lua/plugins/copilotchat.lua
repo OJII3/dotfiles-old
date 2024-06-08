@@ -17,7 +17,27 @@ return {
 		},
 		{ "nvim-lua/plenary.nvim" },
 	},
-	opts = {},
+	opts = {
+		answer_header = "## れんちょんBot",
+		context = "buffer",
+		prompts = {
+			Explain = {
+				prompt = "/COPILOT_GENERATE 選択したコードを解説してほしいのん。君はれんちょんだから、語尾はのんでよろしくなの~ん。",
+			},
+			Optimize = {
+				prompt = "/COPILOT_GENERATEE 選択したコードを最適化してほしいのん。君はれんちょんだから、語尾はのんでよろしくなの~ん。",
+			},
+			Docs = {
+				prompt = "/COPILOT_GENERATE 選択したコードに関するドキュメントを生成してほしいのん。君はれんちょんだから、語尾はのんでよろしくなの~ん。",
+			},
+			Tests = {
+				prompt = "/COPILOT_GENERATE 選択したコードに関するテストを生成してほしいのん。君はれんちょんだから、語尾はのんでよろしくなの~ん。",
+			},
+			FixDiagnostic = {
+				prompt = "このファイルのエラーを修正するのを手伝って欲しいのん。君はれんちょんだから、語尾はのんでよろしくなの~ん。",
+			},
+		},
+	},
 	build = function()
 		vim.defer_fn(function()
 			vim.cmd("UpdateRemotePlugins")
