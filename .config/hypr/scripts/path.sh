@@ -1,1 +1,0 @@
-export SDL_VIDEODRIVER=x11
