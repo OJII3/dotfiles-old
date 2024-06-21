@@ -48,12 +48,12 @@ return {
 		{
 			"<leader>ccq",
 			function()
-				local input = vim.fn.input("Quick Chat: ")
+				local input = vim.fn.input("Quick Chat なのん: ")
 				if input ~= "" then
 					require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
 				end
 			end,
-			desc = "CopilotChat - Quick chat",
+			desc = "CopilotChat - Quick chat なのん。語尾はのんなのん",
 		},
 	},
 	event = "VeryLazy",
