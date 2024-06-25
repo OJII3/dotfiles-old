@@ -1,16 +1,16 @@
 #!/bin/sh
 
-STATUS_FILE="$XDG_RUNTIME_DIR/keyboard.status"
+STATUS_FILE="$XDG_RUNTIME_DIR/touchpad.status"
 
 enable_keyboard() {
     printf "true" >"$STATUS_FILE"
-    hyprctl keyword '$LAPTOP_KB_ENABLED' "true" -r &&
+    hyprctl keyword '$LAPTOP_TOUCHPAD_ENABLED' "true" -r &&
       notify-send -u normal "Touchpad Enabled"
 }
 
 disable_keyboard() {
     printf "false" >"$STATUS_FILE"
-    hyprctl keyword '$LAPTOP_KB_ENABLED' "false" -r &&
+    hyprctl keyword '$LAPTOP_TOUCHPAD_ENABLED' "false" -r &&
       notify-send -u normal "Touchpad Disabled"
 }
 
@@ -25,3 +25,4 @@ else
 fi
 
 exit 0
+
