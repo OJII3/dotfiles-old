@@ -13,7 +13,6 @@ opt.smartindent = true
 opt.breakindent = true
 opt.hlsearch = true
 opt.backup = false
-opt.showcmd = true
 opt.cmdheight = 2
 opt.laststatus = 2
 opt.expandtab = true
@@ -37,6 +36,10 @@ opt.wrap = true
 opt.pumblend = 7
 opt.list = true
 opt.cursorline = true
+opt.showcmd = true
+opt.showmode = false
+opt.ruler = true
+opt.laststatus = 2
 
 if vim.g.neovide then
 	opt.guifont = "HackGen:h12"

@@ -27,7 +27,7 @@ return {
 		},
 	},
 	keys = {
-		{ "<space>e", ":Neotree toggle reveal=true<CR>", mode = "n" },
+		{ "<space>e", "<cmd>silent! Neotree toggle reveal=true<CR>", mode = "n" },
 	},
 	config = function()
 		-- If you want icons for diagnostic errors, you'll need to define them somewhere:

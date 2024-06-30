@@ -9,6 +9,7 @@
 	gpgsign = true
 [core]
 	editor = vim
+  pager = delta
 [init]
 	defaultBranch = main
 [alias]
