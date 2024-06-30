@@ -16,5 +16,5 @@
   sw = switch
   c = commit -m
   pr = !gh pr
-  yolo = !git commit -m "$(curl -s https://whatthecommit.com/index.txt)"
+  yolo = !git commit -m "'$(curl -s https://whatthecommit.com/index.txt)'"
 
