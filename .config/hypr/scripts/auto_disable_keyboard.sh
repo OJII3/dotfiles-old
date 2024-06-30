@@ -12,13 +12,13 @@ check_external_keyboard() {
 enable_keyboard() {
   HOST_KB_ENABLED=true
   hyprctl keyword '$LAPTOP_KB_ENABLED' "true" -r &&
-    notify-send -u normal "Host Keyboard Enabled"
+    notify-send -u low "Host Keyboard Enabled"
 }
 
 disable_keyboard() {
   HOST_KB_ENABLED=false
   hyprctl keyword '$LAPTOP_KB_ENABLED' "false" -r &&
-    notify-send -u normal "Host Keyboard Disabled"
+    notify-send -u low "Host Keyboard Disabled"
 }
 
 # Infinite loop to check for external keyboard and disable host keyboard

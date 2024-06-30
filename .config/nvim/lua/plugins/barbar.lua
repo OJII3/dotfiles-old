@@ -1,7 +1,7 @@
 return {
 	"romgrk/barbar.nvim",
 	opts = {
-		animation = false,
+		animation = true,
 		auto_hide = false,
 		tabpages = true,
 		icons = {

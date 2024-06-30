@@ -41,11 +41,8 @@ vim.keymap.set("n", "s", "<Plug>Lightspeed_s", { noremap = true, silent = true }
 -- builtin lsp
 vim.keymap.set("n", "<Leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { silent = true }) -- rename
 vim.keymap.set("n", "<Leader>fm", "<cmd>lua vim.lsp.buf.format()<CR>", { silent = true }) -- format
--- vim.keymap.set("n", "<Leader>c", "<cmd>lua vim.lsp.buf.code_action()<CR>", { silent = true }) -- code
 vim.keymap.set("n", "<Leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", { silent = true }) -- code
 vim.keymap.set("n", "ge", "<cmd>lua vim.lcwsp.diagnostic.open_float()<CR>", { silent = true }) -- code
--- vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { silent = true })               -- references
--- vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { silent = true })               -- go to definition
 vim.keymap.set("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", { silent = true }) -- references
 vim.keymap.set("n", "gd", "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>", { silent = true }) -- go to definition
 vim.keymap.set("n", "gy", "<cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>", { silent = true }) -- go to type definition
