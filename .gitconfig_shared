@@ -11,3 +11,9 @@
 	editor = vim
 [init]
 	defaultBranch = main
+[alias]
+  st = status
+  sw = switch
+  c = commit -m
+  yolo = !git commit -m "$(curl -s https://whatthecommit.com/index.txt)"
+
