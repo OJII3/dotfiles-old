@@ -17,7 +17,8 @@ return {
 		local rustfmt = require("efmls-configs.formatters.rustfmt")
 		local yamllint = require("efmls-configs.linters.yamllint")
 		-- local cspell = require("efmls-configs.linters.cspell")
-		local stylelint_formatter = require("efmls-configs.formatters.stylelint")
+		local stylelint_linter = require("efmls-configs.linters.stylelint")
+		-- local stylelint_formatter = require("efmls-configs.formatters.stylelint")
 		-- TypeScript, JavaScript
 		local eslint_linter = require("efmls-configs.linters.eslint_d")
 		local eslint_formatter = require("efmls-configs.formatters.eslint_d")
@@ -85,7 +86,7 @@ return {
 					cmake = { cmake_lint, cmake_format },
 					cpp = { clang_format, clang_tidy },
 					-- cs = { dotnet_format },
-					css = { prettier, stylelint_formatter },
+					css = { prettier, stylelint_linter },
 					haskell = { formulu },
 					javascript = { eslint_linter, biome, prettier, eslint_formatter },
 					javascriptreact = { eslint_linter, biome, prettier, eslint_formatter },
