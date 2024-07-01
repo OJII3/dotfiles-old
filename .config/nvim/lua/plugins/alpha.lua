@@ -17,18 +17,14 @@ return {
 
 		if os.getenv("TERM") == "xterm-kitty" then
 			local api = require("image")
-			local image = api.from_file("/home/ojii3/.config/nvim/media/NeovimShadowed.png", {
-				-- window = 1000, -- optional, binds image to a window and its bounds
-				-- buffer = 1000, -- optional, binds image to a buffer (paired with window binding)
-				-- with_virtual_padding = true, -- optional, pads vertically with extmarks, defaults to false
-				-- optional, binds image to an extmark which it follows. Forced to be true when
-				-- `with_virtual_padding` is true. defaults to false.
-				-- inline = true,
-
-				-- geometry (optional)
-				x = 64,
-				y = 5,
-				width = 80,
+			-- local image = api.from_file("/home/ojii3/.config/nvim/media/NeovimShadowed.png", {
+			-- 	x = vim.api.nvim_win_get_width(0) / 2 - 40,
+			-- 	y = 5,
+			-- 	width = 80,
+			-- })
+			local image = api.from_file("/home/ojii3/.config/nvim/media/hatsune-miku-chibi.png", {
+				x = vim.api.nvim_win_get_width(0) / 2 - 20,
+        y = 5,
 			})
 			if image ~= nil then
 				-- dashboard.section.buttons.val = {}
