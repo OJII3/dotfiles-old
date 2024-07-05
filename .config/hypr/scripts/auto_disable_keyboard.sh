@@ -1,6 +1,6 @@
 #!/bin/sh
 
-HOST_KB_ENABLED=true
+export HOST_KB_ENABLED=true
 
 # Function to check if an external keyboard is connected
 check_external_keyboard() {
@@ -10,24 +10,27 @@ check_external_keyboard() {
 # Function to disable the host keyboard
 
 enable_keyboard() {
-  HOST_KB_ENABLED=true
-  hyprctl keyword '$LAPTOP_KB_ENABLED' "true" -r &&
+  hyprctl keyword '$LAPTOP_KB_ENABLED' "true" -r
+  if ! HOST_KB_ENABLED; then
+    HOST_KB_ENABLED=true
     notify-send -u low "Host Keyboard Enabled"
+  fi
 }
 
 disable_keyboard() {
-  HOST_KB_ENABLED=false
-  hyprctl keyword '$LAPTOP_KB_ENABLED' "false" -r &&
+  hyprctl keyword '$LAPTOP_KB_ENABLED' "false" -r
+  if HOST_KB_ENABLED; then
+    HOST_KB_ENABLED=false
     notify-send -u low "Host Keyboard Disabled"
+  fi
 }
 
 # Infinite loop to check for external keyboard and disable host keyboard
 
-
 while true; do
-  if $HOST_KB_ENABLED && check_external_keyboard; then
+  if check_external_keyboard; then
     disable_keyboard
-  elif ! $HOST_KB_ENABLED && ! check_external_keyboard; then
+  else
     enable_keyboard
   fi
   sleep 2
