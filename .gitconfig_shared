@@ -16,5 +16,7 @@
   st = status
   sw = switch
   c = commit -m
+  ps = push
+  pl = pull
   pr = !gh pr
-
+  repo = !gh repo
