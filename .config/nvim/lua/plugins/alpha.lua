@@ -24,7 +24,7 @@ return {
 			-- })
 			local image = api.from_file("/home/ojii3/.config/nvim/media/hatsune-miku-chibi.png", {
 				x = vim.api.nvim_win_get_width(0) / 2 - 20,
-        y = 5,
+				y = 5,
 			})
 			if image ~= nil then
 				-- dashboard.section.buttons.val = {}
