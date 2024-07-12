@@ -4,7 +4,8 @@ return {
 	end,
 	"3rd/image.nvim",
 	dependencies = {
-		{ "luarocks.nvim" },
+		{ "vhyrro/luarocks.nvim" },
 	},
+	build = false,
 	config = true,
 }

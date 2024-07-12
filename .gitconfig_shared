@@ -13,10 +13,10 @@
 [init]
 	defaultBranch = main
 [alias]
-  st = status
+  s = status
   sw = switch
   c = commit -m
-  ps = push
+  ph = push
   pl = pull
   pr = !gh pr
   repo = !gh repo

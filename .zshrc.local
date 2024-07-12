@@ -21,6 +21,7 @@ alias la="ls -a"
 alias ll="ls -l"
 alias ip="ip -c"
 alias diff="diff --color=auto"
+alias cat="bat"
 
 export EDITOR=nvim
 
